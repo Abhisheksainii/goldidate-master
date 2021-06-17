@@ -1,0 +1,9 @@
+class AppRoutes {
+  static final String splashRoute = "/splash";
+  static final String welcomeRoute = "/welcome";
+  static final String getStartedRoute = "/get-started";
+  static final String clubRulesRoute = "/club-rules";
+  static final String signInSocialRoute = "/social-sign-in";
+  static final String signUpInAppRoute = "/sign-up-in-app";
+  static final String tempHomeRoute = "/temp-home";
+}
