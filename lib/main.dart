@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
 import 'package:goldidate/screens/screens_exporter.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
-import 'screens/coins_feature/getcoins.dart';
+
 import 'routes/app_routes.dart';
+import 'utils/widgets/tabview.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.splashRoute,
+      initialRoute: "tab",
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.tempHomeRoute: (context) => TempHome(),
         AppRoutes.createAccountInAppRoute: (context) => CreateAccount(),
         AppRoutes.getcoins: (context) => GetCoins(),
+        "tab": (context) => TabBarViewPage(),
       },
     );
   }

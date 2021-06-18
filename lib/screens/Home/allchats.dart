@@ -8,6 +8,12 @@ class AllChats extends StatefulWidget {
 class _AllChatsState extends State<AllChats> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: Text("chat screen"),
+        ),
+      ),
+    );
   }
 }

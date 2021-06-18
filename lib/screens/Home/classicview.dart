@@ -8,6 +8,12 @@ class Classicview extends StatefulWidget {
 class _ClassicviewState extends State<Classicview> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: Text("classic"),
+        ),
+      ),
+    );
   }
 }

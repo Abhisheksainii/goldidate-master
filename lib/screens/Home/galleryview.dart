@@ -8,6 +8,12 @@ class GalleryView extends StatefulWidget {
 class _GalleryViewState extends State<GalleryView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: Text("gallery"),
+        ),
+      ),
+    );
   }
 }
