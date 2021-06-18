@@ -61,7 +61,8 @@ class _GetStartedState extends State<GetStarted> {
                               child: PrimaryOutlineButton(
                                 buttonText: "Create Account",
                                 onPressed: () => Navigator.of(context)
-                                    .pushNamed(AppRoutes.signInSocialRoute),
+                                    .pushNamed(
+                                        AppRoutes.createAccountInAppRoute),
                               ),
                             ),
                           ],
