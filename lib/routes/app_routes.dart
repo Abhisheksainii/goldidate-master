@@ -9,4 +9,5 @@ class AppRoutes {
   static final String createAccountInAppRoute = "/create-account";
   static final String getcoins = "/getcoins";
   static final String Tabview = "/tabview";
+  static final String myprofile = "/myProfile";
 }
