@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
 import 'package:goldidate/screens/screens_exporter.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
-
+import 'screens/coins_feature/getcoins.dart';
 import 'routes/app_routes.dart';
 
 void main() async {
@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.signUpInAppRoute: (context) => SignUpInApp(),
         AppRoutes.tempHomeRoute: (context) => TempHome(),
         AppRoutes.createAccountInAppRoute: (context) => CreateAccount(),
+        AppRoutes.getcoins: (context) => GetCoins(),
       },
     );
   }

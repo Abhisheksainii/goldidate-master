@@ -7,3 +7,4 @@ export 'startup/welcome.dart';
 export 'startup/welcome_club_rules.dart';
 export 'startup/welcome_slides/descriptive_slide_text.dart';
 export 'startup/welcome_slides/welcome_slide.dart';
+export 'package:goldidate/screens/coins_feature/getcoins.dart';
