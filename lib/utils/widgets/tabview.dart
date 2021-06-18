@@ -14,47 +14,57 @@ class TabBarViewPage extends StatefulWidget {
 
 class _TabBarViewState extends State<TabBarViewPage>
     with SingleTickerProviderStateMixin {
+  int indexx;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: DefaultTabController(
+          initialIndex: 0,
           length: 4,
           child: Column(
             children: <Widget>[
               Container(
                 constraints: BoxConstraints.expand(height: height * 0.075),
                 child: TabBar(
+                    onTap: (index) {
+                      print(index);
+                      setState(() {
+                        indexx = index;
+                      });
+                    },
                     labelPadding: EdgeInsets.fromLTRB(0, height * 0.04, 0, 0),
                     indicatorWeight: 0.000001,
-                    labelColor: Colors.black,
-                    automaticIndicatorColorAdjustment: false,
                     unselectedLabelColor: Colors.grey,
                     tabs: [
                       Tab(
-                        key: ValueKey(1),
                         child: ImageIcon(
                           AssetImage(Common.assetsImages + "Group 296.png"),
-                          color: AppColors.goldColor,
+                          size: height * 0.11,
+                          color:
+                              indexx == 0 ? AppColors.goldColor : Colors.grey,
                         ),
                       ),
                       Tab(
                         icon: ImageIcon(
                           AssetImage(Common.assetsImages + "Group.png"),
-                          color: Colors.red,
+                          color: indexx == 1 ? Colors.red : Colors.grey,
+                          size: height * 0.11,
                         ),
                       ),
                       Tab(
                         icon: ImageIcon(
                           AssetImage(Common.assetsImages + "message icon.png"),
-                          color: Colors.blue,
+                          color: indexx == 2 ? Colors.blue : Colors.grey,
+                          size: height * 0.11,
                         ),
                       ),
                       Tab(
                         icon: ImageIcon(
                           AssetImage(Common.assetsImages + "user icon.png"),
-                          color: Colors.green,
+                          color: indexx == 3 ? Colors.green : Colors.grey,
+                          size: height * 0.11,
                         ),
                       ),
                     ]),

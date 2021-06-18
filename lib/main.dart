@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: "tab",
+      initialRoute: AppRoutes.Tabview,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.tempHomeRoute: (context) => TempHome(),
         AppRoutes.createAccountInAppRoute: (context) => CreateAccount(),
         AppRoutes.getcoins: (context) => GetCoins(),
-        "tab": (context) => TabBarViewPage(),
+        AppRoutes.Tabview: (context) => TabBarViewPage(),
       },
     );
   }

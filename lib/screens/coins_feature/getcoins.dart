@@ -46,7 +46,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -56,7 +56,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -66,7 +66,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -76,7 +76,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -86,7 +86,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -96,7 +96,7 @@ class GetCoins extends StatelessWidget {
                 ),
                 Divider(
                   color: AppColors.goldColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 PriceTags(
                   size: size,
@@ -108,14 +108,7 @@ class GetCoins extends StatelessWidget {
                   height: height * 0.02,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
-                    width: 120.0,
-                    height: 120.0,
-                    decoration: new BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
+                  Image.asset(Common.assetsImages + "bigcoin.png"),
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
@@ -130,13 +123,66 @@ class GetCoins extends StatelessWidget {
                   )
                 ]),
                 SizedBox(
-                  height: height * 0.05,
+                  height: height * 0.04,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  RichText(
+                    text: TextSpan(
+                      text: 'By clicking "Buy now",you agree with our ',
+                      style: TextStyle(
+                          fontSize: 11, color: Colors.grey.withOpacity(0.7)),
+                      children: [
+                        TextSpan(
+                          text: 'Terms.',
+                          style: TextStyle(
+                            color: AppColors.greyColor,
+                            fontSize: 11,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Learn',
+                          style: TextStyle(
+                            color: Colors.grey.withOpacity(0.7),
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  RichText(
+                    text: TextSpan(
+                      text: 'how we process your data in our',
+                      style: TextStyle(
+                          fontSize: 11, color: Colors.grey.withOpacity(0.7)),
+                      children: [
+                        TextSpan(
+                          text: ' Privacy Policy',
+                          style: TextStyle(
+                            color: AppColors.greyColor,
+                            fontSize: 11,
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' and',
+                          style: TextStyle(
+                            color: Colors.grey.withOpacity(0.7),
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
-                    "Terms and conditions",
-                    style: TextStyle(color: AppColors.greyColor),
-                  )
+                    "Cookies Policy",
+                    style: TextStyle(
+                      color: AppColors.greyColor,
+                      fontSize: 11,
+                    ),
+                  ),
                 ]),
               ],
             ),
@@ -170,14 +216,7 @@ class PriceTags extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
-            child: Container(
-              width: 40.0,
-              height: 40.0,
-              decoration: new BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-              ),
-            ),
+            child: Image.asset(Common.assetsImages + "smallcoin.png"),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,12 +241,7 @@ class PriceTags extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'for',
-                      style:
-                          TextStyle(fontSize: 24, color: AppColors.greyColor),
-                    ),
-                    TextSpan(
-                      text: Cost,
+                      text: r"for $" "$Cost",
                       style:
                           TextStyle(fontSize: 24, color: AppColors.greyColor),
                     ),
@@ -216,7 +250,7 @@ class PriceTags extends StatelessWidget {
               ),
               Text(
                 conversion,
-                style: TextStyle(fontSize: 11, color: AppColors.greyColor),
+                style: TextStyle(fontSize: 8.5, color: AppColors.greyColor),
               ),
             ],
           ),

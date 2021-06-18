@@ -8,4 +8,5 @@ class AppRoutes {
   static final String tempHomeRoute = "/temp-home";
   static final String createAccountInAppRoute = "/create-account";
   static final String getcoins = "/getcoins";
+  static final String Tabview = "/tabview";
 }
