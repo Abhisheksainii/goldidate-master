@@ -35,7 +35,7 @@ class _MyProfileState extends State<MyProfile> {
               children: [
                 Padding(
                   padding:
-                      EdgeInsets.only(top: height * 0.01, left: width * 0.26),
+                      EdgeInsets.only(top: height * 0.01, left: width * 0.32),
                   child: Row(
                     children: [
                       Text(
@@ -58,7 +58,7 @@ class _MyProfileState extends State<MyProfile> {
                   height: height * 0.01,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: width * 0.28),
+                  padding: EdgeInsets.only(left: width * 0.33),
                   child: Row(
                     children: [
                       Text("Instagram: "),
@@ -71,7 +71,7 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsets.only(left: width * 0.35, top: height * 0.003),
+                      EdgeInsets.only(left: width * 0.4, top: height * 0.003),
                   child: Row(
                     children: [
                       Opacity(
@@ -226,7 +226,7 @@ class _MyProfileState extends State<MyProfile> {
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
-                    width: 22.0,
+                    width: width * 0.2,
                   ),
                   ElevatedButton(
                     onPressed: () {},
