@@ -51,12 +51,13 @@ class _ClassicviewState extends State<Classicview> {
                           color: AppColors.goldColor,
                           width: 4,
                         ),
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.black.withOpacity(0.5),
-                            Colors.black.withOpacity(0.7),
-                          ],
-                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
+                          ),
+                        ],
                         image: DecorationImage(
                             image:
                                 AssetImage(_swipeItems[index].content.imageURl),
@@ -143,12 +144,16 @@ class _ClassicviewState extends State<Classicview> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   RoundButton(
+                    width1: width * 0.08,
+                    height1: height * 0.06,
                     height: height * 0.12,
                     width: width * 0.12,
                     iconasset: Common.assetsImages + "reload.png",
                     onpressed: () {},
                   ),
                   RoundButton(
+                    width1: width * 0.08,
+                    height1: height * 0.06,
                     height: height * 0.12,
                     width: width * 0.16,
                     iconasset: Common.assetsImages + "dislike icon.png",
@@ -159,12 +164,16 @@ class _ClassicviewState extends State<Classicview> {
                   InkWell(
                     onTap: () {},
                     child: Container(
+                      alignment: Alignment.center,
                       width: width * 0.12,
                       height: height * 0.12,
+                      child: Image.asset(
+                        Common.assetsImages + "gift.png",
+                        fit: BoxFit.fitWidth,
+                        height: height * 0.05,
+                        width: width * 0.05,
+                      ),
                       decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(Common.assetsImages + "gift.png"),
-                            fit: BoxFit.contain),
                         shape: BoxShape.circle,
                         color: AppColors.goldColor,
                         boxShadow: [
@@ -178,6 +187,8 @@ class _ClassicviewState extends State<Classicview> {
                     ),
                   ),
                   RoundButton(
+                    width1: width * 0.08,
+                    height1: height * 0.06,
                     height: height * 0.12,
                     width: width * 0.16,
                     iconasset: Common.assetsImages + "tick.png",
@@ -186,6 +197,8 @@ class _ClassicviewState extends State<Classicview> {
                     },
                   ),
                   RoundButton(
+                    width1: width * 0.08,
+                    height1: height * 0.06,
                     height: height * 0.12,
                     width: width * 0.12,
                     iconasset: Common.assetsImages + "smallcoin.png",
@@ -200,23 +213,36 @@ class _ClassicviewState extends State<Classicview> {
 
 class RoundButton extends StatelessWidget {
   const RoundButton(
-      {Key key, this.height, this.width, this.iconasset, this.onpressed})
+      {Key key,
+      this.height,
+      this.width,
+      this.iconasset,
+      this.onpressed,
+      this.width1,
+      this.height1})
       : super(key: key);
   final double height;
   final double width;
   final String iconasset;
   final Function onpressed;
+  final double height1;
+  final double width1;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onpressed,
       child: Container(
+        alignment: Alignment.center,
         width: width,
         height: height,
+        child: Image.asset(
+          iconasset,
+          fit: BoxFit.fitWidth,
+          height: height1,
+          width: width1,
+        ),
         decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(iconasset), fit: BoxFit.scaleDown),
           shape: BoxShape.circle,
           color: Colors.white,
           boxShadow: [

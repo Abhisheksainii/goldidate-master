@@ -20,7 +20,7 @@ class _AddMediaState extends State<AddMedia> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.of(context).pushNamed(AppRoutes.myprofile);
+                  Navigator.of(context).pushNamed(AppRoutes.Tabview);
                 },
                 child: Icon(
                   Icons.arrow_back,

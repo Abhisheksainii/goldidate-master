@@ -17,7 +17,7 @@ class _MyProfileState extends State<MyProfile> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: width * 0.04),
+            padding: EdgeInsets.only(left: width * 0.04, top: height * 0.03),
             child: Container(
               height: height * 0.2,
               width: width * 0.4,
