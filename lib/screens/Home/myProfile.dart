@@ -17,7 +17,7 @@ class _MyProfileState extends State<MyProfile> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: height * 0.15, left: width * 0.04),
+            padding: EdgeInsets.only(left: width * 0.04),
             child: Container(
               height: height * 0.2,
               width: width * 0.4,
@@ -82,6 +82,11 @@ class _MyProfileState extends State<MyProfile> {
                             fontSize: 10.0,
                           ),
                         ),
+                      ),
+                      Image.asset(
+                        Common.assetsImages + "smallcoin.png",
+                        width: 10,
+                        height: 10,
                       ),
                       SizedBox(
                         width: width * 0.02,
