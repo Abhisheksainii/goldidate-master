@@ -11,4 +11,5 @@ class AppRoutes {
   static final String Tabview = "/tabview";
   static final String myprofile = "/myProfile";
   static final String allchats = "/allchats";
+  static final String addMedia = "/addMedia";
 }

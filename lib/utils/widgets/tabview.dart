@@ -5,7 +5,7 @@ import 'package:goldidate/screens/coins_feature/getcoins.dart';
 import 'package:goldidate/screens/Home/classicview.dart';
 import 'package:goldidate/screens/Home/galleryview.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
-import 'package:goldidate/screens/Home/myProfile.dart';
+import 'package:goldidate/screens/Home/Profile/myProfile.dart';
 
 class TabBarViewPage extends StatefulWidget {
   @override

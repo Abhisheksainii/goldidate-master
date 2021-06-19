@@ -25,7 +25,7 @@ class _AllChatsState extends State<AllChats> {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: height * 0.10, left: width * 0.10),
+        padding: EdgeInsets.only(top: height * 0.07, left: width * 0.05),
         child: ListView.builder(
             itemCount: names.length,
             itemBuilder: (context, int index) {
