@@ -10,4 +10,5 @@ class AppRoutes {
   static final String getcoins = "/getcoins";
   static final String Tabview = "/tabview";
   static final String myprofile = "/myProfile";
+  static final String allchats = "/allchats";
 }

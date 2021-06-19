@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:goldidate/screens/Home/allchats.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
 import 'package:goldidate/screens/screens_exporter.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.Tabview,
+      initialRoute: AppRoutes.allchats,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.createAccountInAppRoute: (context) => CreateAccount(),
         AppRoutes.getcoins: (context) => GetCoins(),
         AppRoutes.Tabview: (context) => TabBarViewPage(),
+        AppRoutes.allchats: (context) => AllChats(),
       },
     );
   }
