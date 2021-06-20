@@ -14,4 +14,5 @@ class AppRoutes {
   static final String addMedia = "/addMedia";
   static final String settings = "/Settings";
   static final String goldidatePlus = "/goldidatePlus";
+  static final String editProfile = "/editProfile";
 }

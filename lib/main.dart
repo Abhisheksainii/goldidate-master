@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/screens/Home/Profile/Settings.dart';
 import 'package:goldidate/screens/Home/Profile/addMedia.dart';
+import 'package:goldidate/screens/Home/Profile/editProfile.dart';
 import 'package:goldidate/screens/Home/Profile/goldidatePlus.dart';
 import 'package:goldidate/screens/Home/Profile/myProfile.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.Tabview,
+      initialRoute: AppRoutes.editProfile,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.myprofile: (context) => MyProfile(),
         AppRoutes.settings: (context) => Settings(),
         AppRoutes.goldidatePlus: (context) => GoldidatePlus(),
+        AppRoutes.editProfile: (context) => EditProfile(),
       },
     );
   }

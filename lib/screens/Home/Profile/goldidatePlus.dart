@@ -182,14 +182,11 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            width: width * 0.01,
-                          ),
                           Padding(
-                            padding: EdgeInsets.only(left: width * 0.003),
+                            padding: EdgeInsets.only(left: width * 0.001),
                             child: Container(
                               height: height * 0.27,
-                              width: width * 0.33,
+                              width: width * 0.31,
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Color(0xFF579DDB),
@@ -281,11 +278,8 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            width: width * 0.01,
-                          ),
                           Padding(
-                            padding: EdgeInsets.only(left: width * 0.003),
+                            padding: EdgeInsets.only(left: width * 0.001),
                             child: Container(
                               height: height * 0.22,
                               width: height * 0.14,
