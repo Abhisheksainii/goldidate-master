@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/screens/Home/Profile/Settings.dart';
 import 'package:goldidate/screens/Home/Profile/addMedia.dart';
+import 'package:goldidate/screens/Home/Profile/goldidatePlus.dart';
 import 'package:goldidate/screens/Home/Profile/myProfile.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.addMedia: (context) => AddMedia(),
         AppRoutes.myprofile: (context) => MyProfile(),
         AppRoutes.settings: (context) => Settings(),
+        AppRoutes.goldidatePlus: (context) => GoldidatePlus(),
       },
     );
   }
