@@ -308,70 +308,313 @@ class _ClassicviewState extends State<Classicview> {
                           ),
                           Column(
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: AppColors.greyColor,
-                                        offset: const Offset(
-                                          5.0,
-                                          5.0,
+                              InkWell(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (ctx) => AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20.0))),
+                                      title: Center(
+                                          child: Text(
+                                        "Share",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600),
+                                      )),
+                                      content: Container(
+                                        child: Stack(
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Tap an icon below to share your",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                )
+                                              ],
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.026),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "content directly",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.06),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                    Common.assetsIcons +
+                                                        "instagram logo.png",
+                                                    height: height * 0.08,
+                                                    width: width * 0.08,
+                                                  ),
+                                                  SizedBox(
+                                                    width: width * 0.05,
+                                                  ),
+                                                  Image.asset(
+                                                    Common.assetsIcons +
+                                                        "facebook logo.png",
+                                                    height: height * 0.04,
+                                                    width: width * 0.05,
+                                                  ),
+                                                  SizedBox(
+                                                    width: width * 0.05,
+                                                  ),
+                                                  Image.asset(
+                                                    Common.assetsIcons +
+                                                        "whatsapp logo.png",
+                                                    height: height * 0.08,
+                                                    width: width * 0.08,
+                                                  ),
+                                                  SizedBox(
+                                                    width: width * 0.05,
+                                                  ),
+                                                  Image.asset(
+                                                    Common.assetsIcons +
+                                                        "snapchat logo.png",
+                                                    height: height * 0.08,
+                                                    width: width * 0.08,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                        blurRadius: 10.0,
-                                        spreadRadius: 1.0,
-                                      ), //BoxShadow
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: const Offset(0.0, 0.0),
-                                        blurRadius: 0.0,
-                                        spreadRadius: 0.0,
-                                      ), //BoxShadow
-                                    ],
-                                    borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(width * 0.05),
-                                        topLeft:
-                                            Radius.circular(width * 0.05))),
-                                height: height * 0.044,
-                                width: width * 0.3,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  "Share",
-                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: AppColors.greyColor,
+                                          offset: const Offset(
+                                            5.0,
+                                            5.0,
+                                          ),
+                                          blurRadius: 10.0,
+                                          spreadRadius: 1.0,
+                                        ), //BoxShadow
+                                        BoxShadow(
+                                          color: Colors.white,
+                                          offset: const Offset(0.0, 0.0),
+                                          blurRadius: 0.0,
+                                          spreadRadius: 0.0,
+                                        ), //BoxShadow
+                                      ],
+                                      borderRadius: BorderRadius.only(
+                                          topRight:
+                                              Radius.circular(width * 0.05),
+                                          topLeft:
+                                              Radius.circular(width * 0.05))),
+                                  height: height * 0.044,
+                                  width: width * 0.3,
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    "Share",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w600),
+                                  ),
                                 ),
                               ),
                               SizedBox(
                                 height: height * 0.0009,
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: AppColors.greyColor,
-                                        offset: const Offset(
-                                          5.0,
-                                          5.0,
+                              InkWell(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (ctx) => AlertDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20.0))),
+                                      title: Center(
+                                          child: Text(
+                                        "Report User",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600),
+                                      )),
+                                      content: Container(
+                                        child: Stack(
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Is this person bothering you? Tell us",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                )
+                                              ],
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.026),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "what they did",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.08),
+                                              child: Divider(
+                                                thickness: 1,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.12),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Inappropriate Photos",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.159),
+                                              child: Divider(
+                                                thickness: 1,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.19),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Feels Like Spam",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.229),
+                                              child: Divider(
+                                                thickness: 1,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.26),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "User is underage",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.299),
+                                              child: Divider(
+                                                thickness: 1,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.33,
+                                                  bottom: height * 0.02),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Other",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                        blurRadius: 10.0,
-                                        spreadRadius: 1.0,
-                                      ), //BoxShadow
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: const Offset(0.0, 0.0),
-                                        blurRadius: 0.0,
-                                        spreadRadius: 0.0,
-                                      ), //BoxShadow
-                                    ],
-                                    borderRadius: BorderRadius.only(
-                                        bottomRight:
-                                            Radius.circular(width * 0.05),
-                                        bottomLeft:
-                                            Radius.circular(width * 0.05))),
-                                height: height * 0.044,
-                                width: width * 0.3,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  "Report",
-                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: AppColors.greyColor,
+                                          offset: const Offset(
+                                            5.0,
+                                            5.0,
+                                          ),
+                                          blurRadius: 10.0,
+                                          spreadRadius: 1.0,
+                                        ), //BoxShadow
+                                        BoxShadow(
+                                          color: Colors.white,
+                                          offset: const Offset(0.0, 0.0),
+                                          blurRadius: 0.0,
+                                          spreadRadius: 0.0,
+                                        ), //BoxShadow
+                                      ],
+                                      borderRadius: BorderRadius.only(
+                                          bottomRight:
+                                              Radius.circular(width * 0.05),
+                                          bottomLeft:
+                                              Radius.circular(width * 0.05))),
+                                  height: height * 0.044,
+                                  width: width * 0.3,
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    "Report",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w600),
+                                  ),
                                 ),
                               ),
                               SizedBox(

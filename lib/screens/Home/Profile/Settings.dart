@@ -58,34 +58,38 @@ class _SettingsState extends State<Settings> {
                     top: height * 0.03,
                     left: width * 0.05,
                     right: width * 0.05),
-                child: Container(
-                  height: height * 0.10,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18.0),
-                      color: Color(0xFFD12BD1)),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: height * 0.02),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Goldidate Plus",
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        SizedBox(
-                          height: height * 0.015,
-                        ),
-                        Text(
-                          "Unlimited likes & more!",
-                          style: TextStyle(
-                              fontSize: 16.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
-                        )
-                      ],
+                child: InkWell(
+                  onTap: () =>
+                      Navigator.of(context).pushNamed(AppRoutes.goldidatePlus),
+                  child: Container(
+                    height: height * 0.10,
+                    width: width * 1.5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18.0),
+                        color: Color(0xFFD12BD1)),
+                    child: Padding(
+                      padding: EdgeInsets.only(top: height * 0.02),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Goldidate Plus",
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(
+                            height: height * 0.015,
+                          ),
+                          Text(
+                            "Unlimited likes & more!",
+                            style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
