@@ -106,6 +106,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.07,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -155,6 +156,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.16,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -227,6 +229,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.10,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                      color: Color(0xfff5f5f5),
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(color: Color(0xFFE0E0E0))),
                   child: Padding(
@@ -279,6 +282,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.12,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                      color: Color(0xfff5f5f5),
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(color: Color(0xFFE0E0E0))),
                   child: Padding(
@@ -345,6 +349,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -384,6 +389,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -423,6 +429,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.10,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                      color: Color(0xfff5f5f5),
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(color: Color(0xFFE0E0E0))),
                   child: Padding(
@@ -475,6 +482,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -514,6 +522,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -553,6 +562,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -592,6 +602,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.2,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -667,6 +678,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.12,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                      color: Color(0xfff5f5f5),
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(color: Color(0xFFE0E0E0))),
                   child: Padding(
@@ -731,6 +743,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.18,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -809,6 +822,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.10,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                      color: Color(0xfff5f5f5),
                       borderRadius: BorderRadius.circular(18.0),
                       border: Border.all(color: Color(0xFFE0E0E0))),
                   child: Padding(
@@ -861,6 +875,7 @@ class _SettingsState extends State<Settings> {
                   height: height * 0.08,
                   width: width * 1.5,
                   decoration: BoxDecoration(
+                    color: Color(0xfff5f5f5),
                     border: Border.all(
                       color: Color(0xFFE0E0E0),
                     ),
@@ -917,6 +932,9 @@ class _SettingsState extends State<Settings> {
                       ),
                     )),
               ),
+              SizedBox(
+                height: height * 0.05,
+              ),
             ],
           ),
         ),
@@ -941,6 +959,7 @@ class CustomCard extends StatelessWidget {
       height: height * 0.16,
       width: width * 1.5,
       decoration: BoxDecoration(
+        color: Color(0xfff5f5f5),
         border: Border.all(
           color: Color(0xFFE0E0E0),
         ),

@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.allchats,
+      initialRoute: AppRoutes.Tabview,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),

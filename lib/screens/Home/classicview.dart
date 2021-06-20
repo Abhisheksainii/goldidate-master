@@ -4,6 +4,7 @@ import 'package:goldidate/routes/app_routes.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:goldidate/screens/Home/Profile/Settings.dart';
 
 class Classicview extends StatefulWidget {
   @override
@@ -60,123 +61,327 @@ class _ClassicviewState extends State<Classicview> {
                       height1: height * 0.06,
                       height: height * 0.12,
                       width: width * 0.12,
-                      iconasset: Common.assetsImages + "smallcoin.png",
+                      iconasset: Common.assetsIcons + "downarrow.png",
                       onpressed: () => Navigator.of(context).pop(),
                     ),
                   ),
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                  SingleChildScrollView(
+                    child: Container(
+                      child: Column(
                         children: [
-                          RoundButton(
-                            width1: width * 0.08,
-                            height1: height * 0.06,
-                            height: height * 0.12,
-                            width: width * 0.16,
-                            iconasset: Common.assetsImages + "dislike icon.png",
-                            onpressed: () {
-                              _matchEngine.currentItem.nope();
-                            },
-                          ),
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              margin: EdgeInsets.symmetric(
-                                  horizontal: width * 0.04),
-                              alignment: Alignment.center,
-                              width: width * 0.12,
-                              height: height * 0.12,
-                              child: Image.asset(
-                                Common.assetsImages + "gift.png",
-                                fit: BoxFit.fitWidth,
-                                height: height * 0.05,
-                                width: width * 0.05,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RoundButton(
+                                width1: width * 0.08,
+                                height1: height * 0.06,
+                                height: height * 0.12,
+                                width: width * 0.16,
+                                iconasset:
+                                    Common.assetsImages + "dislike icon.png",
+                                onpressed: () {
+                                  _matchEngine.currentItem.nope();
+                                },
                               ),
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: AppColors.goldColor,
-                                boxShadow: [
-                                  BoxShadow(
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  margin: EdgeInsets.symmetric(
+                                      horizontal: width * 0.04),
+                                  alignment: Alignment.center,
+                                  width: width * 0.12,
+                                  height: height * 0.12,
+                                  child: Image.asset(
+                                    Common.assetsImages + "gift.png",
+                                    fit: BoxFit.fitWidth,
+                                    height: height * 0.05,
+                                    width: width * 0.05,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: AppColors.goldColor,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey,
+                                        offset: Offset(0.0, 1.0), //(x,y)
+                                        blurRadius: 6.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              RoundButton(
+                                width1: width * 0.08,
+                                height1: height * 0.06,
+                                height: height * 0.12,
+                                width: width * 0.16,
+                                iconasset: Common.assetsImages + "tick.png",
+                                onpressed: () {
+                                  _matchEngine.currentItem.like();
+                                },
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Eliza Williams",
+                                style: TextStyle(
+                                    fontSize: height * 0.03,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                ",23",
+                                style: TextStyle(
+                                  fontSize: height * 0.03,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: height * 0.01,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Art Manager",
+                                style: TextStyle(
                                     color: Colors.grey,
-                                    offset: Offset(0.0, 1.0), //(x,y)
-                                    blurRadius: 6.0,
+                                    fontSize: height * 0.019),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(
+                                    width * 0.04, 0, width * 0.01, 0),
+                                child: Image.asset(
+                                  Common.assetsImages + "location.png",
+                                  height: height * 0.03,
+                                  width: width * 0.03,
+                                  color: AppColors.goldColor,
+                                ),
+                              ),
+                              Text(
+                                "10 miles",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: height * 0.015),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: height * 0.01,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                children: [
+                                  Text(
+                                    "Feminists.Cats.Other stuff",
+                                    style: TextStyle(color: Colors.grey),
                                   ),
                                 ],
                               ),
-                            ),
+                            ],
                           ),
-                          RoundButton(
-                            width1: width * 0.08,
-                            height1: height * 0.06,
-                            height: height * 0.12,
-                            width: width * 0.16,
-                            iconasset: Common.assetsImages + "tick.png",
-                            onpressed: () {
-                              _matchEngine.currentItem.like();
-                            },
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: height * 0.01,
+                                    left: width * 0.05,
+                                    right: width * 0.05,
+                                    bottom: height * 0.01),
+                                child: Container(
+                                  height: height * 0.1,
+                                  width: width * 0.85,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xfff5f5f5),
+                                    border: Border.all(
+                                      color: Color(0xFFE0E0E0),
+                                    ),
+                                    borderRadius: BorderRadius.circular(18.0),
+                                  ),
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.only(left: width * 0.05),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            "I'm a photographer,yoga enthusiast, love to relax but very adventures and lover of superheros movives",
+                                            style: TextStyle(
+                                                fontSize: width * 0.035,
+                                                color: Color(0xFF757575),
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Eliza Williams",
-                            style: TextStyle(
-                                fontSize: height * 0.03,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Text(
-                            ",23",
-                            style: TextStyle(
-                              fontSize: height * 0.03,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Art Manager",
-                            style: TextStyle(
-                                color: Colors.grey, fontSize: height * 0.019),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(
-                                width * 0.04, 0, width * 0.01, 0),
-                            child: Image.asset(
-                              Common.assetsImages + "location.png",
-                              height: height * 0.03,
-                              width: width * 0.03,
-                              color: AppColors.goldColor,
-                            ),
-                          ),
-                          Text(
-                            "10 miles",
-                            style: TextStyle(
-                                color: Colors.grey, fontSize: height * 0.015),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: height * 0.013,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "Feminists.Cats.Other stuff",
-                                style: TextStyle(color: Colors.grey),
+                                "Gender:",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: height * 0.018),
+                              ),
+                              Text(
+                                " Female",
+                                style: TextStyle(
+                                    color: AppColors.goldColor,
+                                    fontSize: height * 0.018),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: height * 0.005,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Instagram:",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: height * 0.018),
+                              ),
+                              Text(
+                                " @Eliza-williams",
+                                style: TextStyle(
+                                    color: AppColors.goldColor,
+                                    fontSize: height * 0.018),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                                top: height * 0.015,
+                                left: width * 0.08,
+                                right: width * 0.08,
+                                bottom: height * 0.01),
+                            child: Expanded(
+                              child: Container(
+                                width: width * 0.85,
+                                child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "Hobbies",
+                                              style: TextStyle(
+                                                  fontSize: height * 0.02,
+                                                  color: Colors.grey.shade700),
+                                            ),
+                                            SizedBox(
+                                              height: height * 0.01,
+                                            ),
+                                            Text(
+                                              "Computer Programming, Archery, Drawing, Chess, Poetry",
+                                              style: TextStyle(
+                                                  fontSize: height * 0.017,
+                                                  color: Colors.grey),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ]),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: height * 0.05,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.greyColor,
+                                        offset: const Offset(
+                                          5.0,
+                                          5.0,
+                                        ),
+                                        blurRadius: 10.0,
+                                        spreadRadius: 1.0,
+                                      ), //BoxShadow
+                                      BoxShadow(
+                                        color: Colors.white,
+                                        offset: const Offset(0.0, 0.0),
+                                        blurRadius: 0.0,
+                                        spreadRadius: 0.0,
+                                      ), //BoxShadow
+                                    ],
+                                    borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(width * 0.05),
+                                        topLeft:
+                                            Radius.circular(width * 0.05))),
+                                height: height * 0.044,
+                                width: width * 0.3,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Share",
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              SizedBox(
+                                height: height * 0.0009,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.greyColor,
+                                        offset: const Offset(
+                                          5.0,
+                                          5.0,
+                                        ),
+                                        blurRadius: 10.0,
+                                        spreadRadius: 1.0,
+                                      ), //BoxShadow
+                                      BoxShadow(
+                                        color: Colors.white,
+                                        offset: const Offset(0.0, 0.0),
+                                        blurRadius: 0.0,
+                                        spreadRadius: 0.0,
+                                      ), //BoxShadow
+                                    ],
+                                    borderRadius: BorderRadius.only(
+                                        bottomRight:
+                                            Radius.circular(width * 0.05),
+                                        bottomLeft:
+                                            Radius.circular(width * 0.05))),
+                                height: height * 0.044,
+                                width: width * 0.3,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Report",
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              SizedBox(
+                                height: height * 0.05,
                               ),
                             ],
                           ),
                         ],
                       ),
-                    ],
+                    ),
                   ),
                 ],
               ),

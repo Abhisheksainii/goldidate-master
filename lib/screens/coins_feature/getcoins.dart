@@ -5,6 +5,7 @@ class GetCoins extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
@@ -108,18 +109,22 @@ class GetCoins extends StatelessWidget {
                   height: height * 0.02,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Image.asset(Common.assetsImages + "bigcoin.png"),
+                  Image.asset(
+                    Common.assetsImages + "bigcoin.png",
+                  ),
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     "Only 500,000 ",
-                    style: TextStyle(fontSize: 30, color: AppColors.greyColor),
+                    style: TextStyle(
+                        fontSize: height * 0.037, color: AppColors.greyColor),
                   )
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     "Goldicoins left",
-                    style: TextStyle(fontSize: 20, color: AppColors.greyColor),
+                    style: TextStyle(
+                        fontSize: height * 0.025, color: AppColors.greyColor),
                   )
                 ]),
                 SizedBox(
@@ -130,20 +135,21 @@ class GetCoins extends StatelessWidget {
                     text: TextSpan(
                       text: 'By clicking "Buy now",you agree with our ',
                       style: TextStyle(
-                          fontSize: 11, color: Colors.grey.withOpacity(0.7)),
+                          fontSize: height * 0.014,
+                          color: Colors.grey.withOpacity(0.7)),
                       children: [
                         TextSpan(
                           text: 'Terms.',
                           style: TextStyle(
                             color: AppColors.greyColor,
-                            fontSize: 11,
+                            fontSize: height * 0.014,
                           ),
                         ),
                         TextSpan(
                           text: 'Learn',
                           style: TextStyle(
                             color: Colors.grey.withOpacity(0.7),
-                            fontSize: 11,
+                            fontSize: height * 0.014,
                           ),
                         ),
                       ],
@@ -155,20 +161,21 @@ class GetCoins extends StatelessWidget {
                     text: TextSpan(
                       text: 'how we process your data in our',
                       style: TextStyle(
-                          fontSize: 11, color: Colors.grey.withOpacity(0.7)),
+                          fontSize: height * 0.014,
+                          color: Colors.grey.withOpacity(0.7)),
                       children: [
                         TextSpan(
                           text: ' Privacy Policy',
                           style: TextStyle(
                             color: AppColors.greyColor,
-                            fontSize: 11,
+                            fontSize: height * 0.014,
                           ),
                         ),
                         TextSpan(
                           text: ' and',
                           style: TextStyle(
                             color: Colors.grey.withOpacity(0.7),
-                            fontSize: 11,
+                            fontSize: height * 0.014,
                           ),
                         ),
                       ],
@@ -211,6 +218,7 @@ class PriceTags extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Container(
       child: Row(
         children: [
@@ -224,33 +232,35 @@ class PriceTags extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   text: Gcamount,
-                  style: TextStyle(fontSize: 24, color: AppColors.greyColor),
+                  style: TextStyle(
+                      fontSize: height * 0.028, color: AppColors.greyColor),
                   children: [
                     TextSpan(
                       text: 'G',
                       style: TextStyle(
                         color: AppColors.greyColor,
-                        fontSize: 14,
+                        fontSize: height * 0.018,
                       ),
                     ),
                     TextSpan(
                       text: 'c ',
                       style: TextStyle(
                         color: AppColors.greyColor,
-                        fontSize: 10,
+                        fontSize: height * 0.012,
                       ),
                     ),
                     TextSpan(
                       text: r"for $" "$Cost",
-                      style:
-                          TextStyle(fontSize: 24, color: AppColors.greyColor),
+                      style: TextStyle(
+                          fontSize: height * 0.028, color: AppColors.greyColor),
                     ),
                   ],
                 ),
               ),
               Text(
                 conversion,
-                style: TextStyle(fontSize: 8.5, color: AppColors.greyColor),
+                style: TextStyle(
+                    fontSize: height * 0.011, color: AppColors.greyColor),
               ),
             ],
           ),
@@ -258,7 +268,8 @@ class PriceTags extends StatelessWidget {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(
               "Buy now",
-              style: TextStyle(color: AppColors.goldColor),
+              style: TextStyle(
+                  color: AppColors.goldColor, fontSize: height * 0.018),
             ),
           ]),
         ],
