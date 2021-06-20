@@ -32,18 +32,20 @@ class _AddMediaState extends State<AddMedia> {
               ),
               Text(
                 "My photos",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+                style: TextStyle(
+                    fontSize: width * 0.046, fontWeight: FontWeight.w700),
               )
             ],
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: height * 0.03, left: width * 0.25),
+          padding: EdgeInsets.only(top: height * 0.02, left: width * 0.2),
           child: Row(
             children: [
               Text(
                 "Use Drag’n’Drop to sort the photos!",
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400),
+                style: TextStyle(
+                    fontSize: width * 0.042, fontWeight: FontWeight.w400),
               )
             ],
           ),

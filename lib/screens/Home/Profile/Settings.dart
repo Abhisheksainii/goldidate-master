@@ -34,13 +34,16 @@ class _SettingsState extends State<Settings> {
                 child: Row(
                   children: [
                     InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(AppRoutes.Tabview);
+                      },
                       child: Icon(
                         Icons.arrow_back,
                         color: Color(0xFFD12BD1),
                       ),
                     ),
                     SizedBox(
-                      width: width * 0.3,
+                      width: width * 0.26,
                     ),
                     Text(
                       "Settings",
@@ -115,23 +118,23 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Phone Number",
                           style: TextStyle(
-                              fontSize: 17,
+                              fontSize: width * 0.04,
                               color: Color(0xFF757575),
                               fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
-                          width: width * 0.18,
+                          width: width * 0.14,
                         ),
                         Text(
                           "+1 354 112 2376",
                           style: TextStyle(
-                            fontSize: 15.0,
+                            fontSize: width * 0.038,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF757575),
                           ),
                         ),
                         SizedBox(
-                          width: width * 0.07,
+                          width: width * 0.028,
                         ),
                         InkWell(
                             child: Icon(
@@ -149,7 +152,7 @@ class _SettingsState extends State<Settings> {
                     left: width * 0.05,
                     right: width * 0.05),
                 child: Container(
-                  height: height * 0.15,
+                  height: height * 0.16,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -183,10 +186,11 @@ class _SettingsState extends State<Settings> {
                             Text(
                               "Current Location",
                               style: TextStyle(
-                                  fontSize: 17.0, color: Color(0xFF757575)),
+                                  fontSize: width * 0.04,
+                                  color: Color(0xFF757575)),
                             ),
                             SizedBox(
-                              width: width * 0.4,
+                              width: width * 0.34,
                             ),
                             Image(
                               image: AssetImage(
@@ -195,14 +199,14 @@ class _SettingsState extends State<Settings> {
                           ],
                         ),
                         SizedBox(
-                          height: height * 0.02,
+                          height: height * 0.015,
                         ),
                         Row(
                           children: [
                             Text(
                               "Add a new location",
                               style: TextStyle(
-                                fontSize: 17.0,
+                                fontSize: width * 0.043,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xFFD12BD1),
                               ),
@@ -239,19 +243,19 @@ class _SettingsState extends State<Settings> {
                               color: Color(0xFF424242)),
                         ),
                         SizedBox(
-                          height: height * 0.02,
+                          height: height * 0.015,
                         ),
                         Row(
                           children: [
                             Text(
                               "Women",
                               style: TextStyle(
-                                fontSize: 17.5,
+                                fontSize: width * 0.042,
                                 color: Color(0xFF757575),
                               ),
                             ),
                             SizedBox(
-                              width: width * 0.6,
+                              width: width * 0.55,
                             ),
                             InkWell(
                               child: Icon(
@@ -288,17 +292,17 @@ class _SettingsState extends State<Settings> {
                             Text(
                               "Maximum distance",
                               style: TextStyle(
-                                  fontSize: 18.0,
+                                  fontSize: width * 0.046,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xFF424242)),
                             ),
                             SizedBox(
-                              width: width * 0.38,
+                              width: width * 0.3,
                             ),
                             Text(
                               "30mi",
                               style: TextStyle(
-                                  fontSize: 17.0,
+                                  fontSize: width * 0.04,
                                   color: Color(0xFF757575),
                                   fontWeight: FontWeight.w600),
                             )
@@ -353,11 +357,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Share my feed",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.044,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.43),
+                        SizedBox(width: width * 0.42),
                         CustomSwitch(
                           value: _enable,
                           onChanged: (bool val) {
@@ -392,11 +396,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Recommended sort",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.045,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.35),
+                        SizedBox(width: width * 0.31),
                         CustomSwitch(
                           value: _enable2,
                           onChanged: (bool val) {
@@ -430,24 +434,24 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Data Usage",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.044,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
                         SizedBox(
-                          height: height * 0.02,
+                          height: height * 0.013,
                         ),
                         Row(
                           children: [
                             Text(
                               "Autoplay videos",
                               style: TextStyle(
-                                fontSize: 17.5,
+                                fontSize: width * 0.042,
                                 color: Color(0xFF757575),
                               ),
                             ),
                             SizedBox(
-                              width: width * 0.46,
+                              width: width * 0.4,
                             ),
                             InkWell(
                               child: Icon(
@@ -483,11 +487,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Show me in top picks",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.044,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.32),
+                        SizedBox(width: width * 0.29),
                         CustomSwitch(
                           value: _enable3,
                           onChanged: (bool val) {
@@ -522,11 +526,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Swipe Surge",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.044,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.45),
+                        SizedBox(width: width * 0.42),
                         CustomSwitch(
                           value: _enable4,
                           onChanged: (bool val) {
@@ -561,11 +565,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Active status",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.044,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.45),
+                        SizedBox(width: width * 0.41),
                         CustomSwitch(
                           value: _enable5,
                           onChanged: (bool val) {
@@ -585,7 +589,7 @@ class _SettingsState extends State<Settings> {
                     left: width * 0.05,
                     right: width * 0.05),
                 child: Container(
-                  height: height * 0.17,
+                  height: height * 0.2,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -602,7 +606,8 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Show distance in",
                           style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.w600),
+                              fontSize: width * 0.045,
+                              fontWeight: FontWeight.w600),
                         ),
                         Column(
                           children: [
@@ -723,7 +728,7 @@ class _SettingsState extends State<Settings> {
                     left: width * 0.05,
                     right: width * 0.05),
                 child: Container(
-                  height: height * 0.15,
+                  height: height * 0.18,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -750,13 +755,13 @@ class _SettingsState extends State<Settings> {
                             Text(
                               "Manage payment account",
                               style: TextStyle(
-                                fontSize: 18.0,
+                                fontSize: width * 0.044,
                                 fontWeight: FontWeight.w400,
                                 color: Color(0xFF757575),
                               ),
                             ),
                             SizedBox(
-                              width: width * 0.29,
+                              width: width * 0.22,
                             ),
                             InkWell(
                               child: Icon(
@@ -774,13 +779,13 @@ class _SettingsState extends State<Settings> {
                             Text(
                               "Manage payment account",
                               style: TextStyle(
-                                fontSize: 18.0,
+                                fontSize: width * 0.044,
                                 fontWeight: FontWeight.w400,
                                 color: Color(0xFF757575),
                               ),
                             ),
                             SizedBox(
-                              width: width * 0.29,
+                              width: width * 0.22,
                             ),
                             InkWell(
                               child: Icon(
@@ -820,19 +825,19 @@ class _SettingsState extends State<Settings> {
                               color: Color(0xFF424242)),
                         ),
                         SizedBox(
-                          height: height * 0.02,
+                          height: height * 0.012,
                         ),
                         Row(
                           children: [
                             Text(
                               "Help & Support",
                               style: TextStyle(
-                                fontSize: 17.5,
+                                fontSize: width * 0.044,
                                 color: Color(0xFFD12BD1),
                               ),
                             ),
                             SizedBox(
-                              width: width * 0.46,
+                              width: width * 0.39,
                             ),
                             InkWell(
                               child: Icon(
@@ -868,11 +873,11 @@ class _SettingsState extends State<Settings> {
                         Text(
                           "Share Dater",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: width * 0.045,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.52),
+                        SizedBox(width: width * 0.45),
                         InkWell(
                           child: Icon(
                             Icons.navigate_next,
@@ -933,7 +938,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height * 0.15,
+      height: height * 0.16,
       width: width * 1.5,
       decoration: BoxDecoration(
         border: Border.all(
@@ -964,7 +969,7 @@ class CustomCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: width * 0.55,
+                  width: width * 0.52,
                 ),
                 InkWell(
                   child: Icon(
@@ -975,7 +980,7 @@ class CustomCard extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: height * 0.015,
+              height: height * 0.013,
             ),
             Row(
               children: [
@@ -988,7 +993,7 @@ class CustomCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: width * 0.63,
+                  width: width * 0.6,
                 ),
                 InkWell(
                   child: Icon(

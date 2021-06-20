@@ -105,7 +105,9 @@ class _MyProfileState extends State<MyProfile> {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(AppRoutes.settings);
+                        },
                         child: Container(
                           height: height * 0.08,
                           width: width * 0.08,
@@ -223,10 +225,11 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                   Text(
                     "Matching Tip: The best photos are the one\nyou are in...",
-                    style: TextStyle(color: Colors.white),
+                    style:
+                        TextStyle(color: Colors.white, fontSize: width * 0.035),
                   ),
                   SizedBox(
-                    width: width * 0.2,
+                    width: width * 0.07,
                   ),
                   ElevatedButton(
                     onPressed: () {},

@@ -69,7 +69,7 @@ class _AllChatsState extends State<AllChats> {
                   ],
                 ),
                 SizedBox(
-                  width: width * 0.22,
+                  width: width * 0.28,
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: height * 0.02),
