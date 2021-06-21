@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
+import 'package:goldidate/screens/authentication/signup_in_app.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:goldidate/screens/Home/Profile/Settings.dart';
 
 class Classicview extends StatefulWidget {
   @override
@@ -19,6 +19,7 @@ class _ClassicviewState extends State<Classicview> {
     Common.assetsImages + "swipeimage.png",
     Common.assetsImages + "primary_background.png"
   ];
+  List<String> lovegifts = [Common.assetsImages + "rozes.png"];
 
   void initState() {
     for (int i = 0; i < _imageurl.length; i++) {
@@ -768,7 +769,153 @@ class _ClassicviewState extends State<Classicview> {
                     },
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        context: context,
+                        elevation: 0,
+                        backgroundColor: Colors.transparent.withOpacity(0.7),
+                        builder: (context) => SingleChildScrollView(
+                          child: Container(
+                            height: height * 2,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(50.0),
+                                topRight: Radius.circular(50.0),
+                              ),
+                            ),
+                            child: Container(
+                              child: Column(children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      top: height * 0.06, left: width * 0.06),
+                                  child: Row(
+                                    children: [
+                                      Image.asset(
+                                        Common.assetsImages + "smallcoin.png",
+                                        height: height * 0.06,
+                                        width: width * 0.06,
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.01,
+                                      ),
+                                      RichText(
+                                        text: TextSpan(
+                                          text: "4999",
+                                          style: TextStyle(
+                                              fontSize: height * 0.028,
+                                              color: AppColors.whiteColor),
+                                          children: [
+                                            TextSpan(
+                                              text: 'G',
+                                              style: TextStyle(
+                                                color: AppColors.whiteColor,
+                                                fontSize: height * 0.018,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: 'c ',
+                                              style: TextStyle(
+                                                color: AppColors.whiteColor,
+                                                fontSize: height * 0.012,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.only(left: width * 0.00001),
+                                  child: Text(
+                                    "Love gifts",
+                                    style:
+                                        TextStyle(color: AppColors.whiteColor),
+                                  ),
+                                ),
+                                Divider(
+                                  color: Colors.white,
+                                  thickness: 2,
+                                ),
+                                GridView.builder(
+                                  shrinkWrap: true,
+                                  itemCount: lovegifts.length,
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                    childAspectRatio: 0.5,
+                                    crossAxisCount: 3,
+                                    crossAxisSpacing: 5.0,
+                                    mainAxisSpacing: 5.0,
+                                  ),
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return Container(
+                                      child: Column(
+                                        children: [
+                                          Image.asset(lovegifts[index]),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.01),
+                                            child: Text(
+                                              "Chocolate Box",
+                                              style: TextStyle(
+                                                  color: AppColors.whiteColor),
+                                            ),
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                Common.assetsImages +
+                                                    "smallcoin.png",
+                                                height: height * 0.04,
+                                                width: width * 0.04,
+                                              ),
+                                              RichText(
+                                                text: TextSpan(
+                                                  text: "100",
+                                                  style: TextStyle(
+                                                      fontSize: height * 0.015,
+                                                      color:
+                                                          AppColors.whiteColor),
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'G',
+                                                      style: TextStyle(
+                                                        color: AppColors
+                                                            .whiteColor,
+                                                        fontSize:
+                                                            height * 0.011,
+                                                      ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: 'c ',
+                                                      style: TextStyle(
+                                                        color: AppColors
+                                                            .whiteColor,
+                                                        fontSize:
+                                                            height * 0.008,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ]),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       width: width * 0.12,
