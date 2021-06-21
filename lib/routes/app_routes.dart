@@ -16,4 +16,5 @@ class AppRoutes {
   static final String goldidatePlus = "/goldidatePlus";
   static final String editProfile = "/editProfile";
   static final String location = "/location";
+  static final String filters = "/filters";
 }
