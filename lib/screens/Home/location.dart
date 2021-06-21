@@ -17,17 +17,35 @@ class _LocationState extends State<Location> {
       "Los Angeles",
       "Sydney",
       "Tel Aviv-Yafo",
+      "Dubai",
+      "Los Angeles",
+      "Melbourne",
+      "New York",
+      "London",
+      "Amsterdam",
+      "Los Angeles",
+      "Sydney",
+      "Tel Aviv-Yafo",
       "Dubai"
     ];
     final List<String> cities = <String>[
-      "California",
-      "Victoria",
+      "Los Angeles",
+      "Melbourne",
       "New York",
-      "GB",
-      "North Holland",
-      "California",
-      "New South Wales",
-      "IL",
+      "London",
+      "Amsterdam",
+      "Los Angeles",
+      "Sydney",
+      "Tel Aviv-Yafo",
+      "Dubai"
+          "Los Angeles",
+      "Melbourne",
+      "New York",
+      "London",
+      "Amsterdam",
+      "Los Angeles",
+      "Sydney",
+      "Tel Aviv-Yafo",
       "Dubai"
     ];
     double height = MediaQuery.of(context).size.height;
@@ -121,6 +139,7 @@ class _LocationState extends State<Location> {
               Container(
                 height: height * 2,
                 child: ListView.separated(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: states.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(

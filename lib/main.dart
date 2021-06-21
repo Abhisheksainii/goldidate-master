@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.Tabview,
+      initialRoute: AppRoutes.location,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
