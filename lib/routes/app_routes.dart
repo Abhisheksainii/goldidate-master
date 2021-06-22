@@ -17,4 +17,5 @@ class AppRoutes {
   static final String editProfile = "/editProfile";
   static final String location = "/location";
   static final String filters = "/filters";
+  static final String innerProfile = "editInnerProfile";
 }
