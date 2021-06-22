@@ -5,13 +5,16 @@ import 'package:goldidate/screens/authentication/signup_in_app.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:goldidate/screens/Home/matchscreen.dart';
+import 'package:flutter/services.dart';
 
 class Classicview extends StatefulWidget {
   @override
   _ClassicviewState createState() => _ClassicviewState();
 }
 
-class _ClassicviewState extends State<Classicview> {
+class _ClassicviewState extends State<Classicview>
+    with SingleTickerProviderStateMixin {
   List<SwipeItem> _swipeItems = List<SwipeItem>();
   MatchEngine _matchEngine;
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
@@ -19,9 +22,29 @@ class _ClassicviewState extends State<Classicview> {
     Common.assetsImages + "swipeimage.png",
     Common.assetsImages + "primary_background.png"
   ];
-  List<String> lovegifts = [Common.assetsImages + "rozes.png"];
+  List<String> lovegifts = [
+    Common.assetsImages + "heartballon.png",
+    Common.assetsImages + "ross.png",
+    Common.assetsImages + "Bunny.png",
+    Common.assetsImages + "rozes.png",
+    Common.assetsImages + "teddybear.png",
+  ];
 
+  List<String> lovegiftsname = [
+    "Heart Ballon",
+    "Red Rose",
+    "Pink Bunny",
+    "Rose Bouquet",
+    "Teddy bear"
+  ];
+
+  List<String> lovegiftsprice = ["60", "75", "80", "100", "125"];
+
+  AnimationController controller;
+  Animation animation;
+  Animation animation1;
   void initState() {
+    super.initState();
     for (int i = 0; i < _imageurl.length; i++) {
       _swipeItems.add(SwipeItem(
         content: Content(imageURl: _imageurl[i]),
@@ -30,7 +53,21 @@ class _ClassicviewState extends State<Classicview> {
 
     _matchEngine = MatchEngine(swipeItems: _swipeItems);
 
-    super.initState();
+    controller = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: this,
+    );
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeIn);
+    animation1 = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
+
+    controller.forward();
+
+    controller.addListener(() {
+      setState(() {
+        print(animation.value);
+      });
+    });
   }
 
   void _onButtonPressed(BuildContext context) {
@@ -844,68 +881,94 @@ class _ClassicviewState extends State<Classicview> {
                                   itemCount: lovegifts.length,
                                   gridDelegate:
                                       SliverGridDelegateWithFixedCrossAxisCount(
-                                    childAspectRatio: 0.5,
+                                    childAspectRatio: 0.8,
                                     crossAxisCount: 3,
-                                    crossAxisSpacing: 5.0,
-                                    mainAxisSpacing: 5.0,
+                                    crossAxisSpacing: 6,
+                                    mainAxisSpacing: 1.0,
                                   ),
                                   itemBuilder:
                                       (BuildContext context, int index) {
-                                    return Container(
-                                      child: Column(
-                                        children: [
-                                          Image.asset(lovegifts[index]),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                top: height * 0.01),
-                                            child: Text(
-                                              "Chocolate Box",
-                                              style: TextStyle(
-                                                  color: AppColors.whiteColor),
+                                    return InkWell(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => MatchScreen(
+                                                imageUrl: lovegifts[index],
+                                                giftname: lovegiftsname[index],
+                                                giftpricecoin:
+                                                    lovegiftsprice[index],
+                                              ),
+                                            ));
+                                      },
+                                      child: Container(
+                                        child: Column(
+                                          children: [
+                                            Hero(
+                                              tag: 'logo',
+                                              child: Container(
+                                                child: Image.asset(
+                                                    lovegifts[index]),
+                                                height: animation.value * 100,
+                                              ),
                                             ),
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Image.asset(
-                                                Common.assetsImages +
-                                                    "smallcoin.png",
-                                                height: height * 0.04,
-                                                width: width * 0.04,
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                  top: height * 0.01),
+                                              child: Text(
+                                                lovegiftsname[index],
+                                                style: TextStyle(
+                                                    color:
+                                                        AppColors.whiteColor),
                                               ),
-                                              RichText(
-                                                text: TextSpan(
-                                                  text: "100",
-                                                  style: TextStyle(
-                                                      fontSize: height * 0.015,
-                                                      color:
-                                                          AppColors.whiteColor),
-                                                  children: [
-                                                    TextSpan(
-                                                      text: 'G',
-                                                      style: TextStyle(
-                                                        color: AppColors
-                                                            .whiteColor,
-                                                        fontSize:
-                                                            height * 0.011,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: 'c ',
-                                                      style: TextStyle(
-                                                        color: AppColors
-                                                            .whiteColor,
-                                                        fontSize:
-                                                            height * 0.008,
-                                                      ),
-                                                    ),
-                                                  ],
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Image.asset(
+                                                  Common.assetsImages +
+                                                      "smallcoin.png",
+                                                  height: height * 0.04,
+                                                  width: width * 0.04,
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                                SizedBox(
+                                                  width: width * 0.01,
+                                                ),
+                                                RichText(
+                                                  text: TextSpan(
+                                                    text: lovegiftsprice[index],
+                                                    style: TextStyle(
+                                                        fontSize:
+                                                            height * 0.015,
+                                                        color: AppColors
+                                                            .whiteColor),
+                                                    children: [
+                                                      TextSpan(
+                                                        text: ' G',
+                                                        style: TextStyle(
+                                                          color: AppColors
+                                                              .whiteColor,
+                                                          fontSize:
+                                                              height * 0.011,
+                                                        ),
+                                                      ),
+                                                      TextSpan(
+                                                        text: 'c ',
+                                                        style: TextStyle(
+                                                          color: AppColors
+                                                              .whiteColor,
+                                                          fontSize:
+                                                              height * 0.008,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     );
                                   },
