@@ -5,6 +5,7 @@ import 'package:goldidate/screens/Home/Profile/Settings.dart';
 import 'package:goldidate/screens/Home/Profile/addMedia.dart';
 import 'package:goldidate/screens/Home/Profile/editProfile.dart';
 import 'package:goldidate/screens/Home/Profile/goldidatePlus.dart';
+import 'package:goldidate/screens/Home/Profile/goldidatePlus2.dart';
 import 'package:goldidate/screens/Home/Profile/myProfile.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
 import 'package:goldidate/screens/Home/editInnerProfile.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.personal,
+      initialRoute: AppRoutes.goldidatePlus2,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.myprofile: (context) => MyProfile(),
         AppRoutes.settings: (context) => Settings(),
         AppRoutes.goldidatePlus: (context) => GoldidatePlus(),
+        AppRoutes.goldidatePlus2: (context) => GoldidatePlus2(),
         AppRoutes.editProfile: (context) => EditProfile(),
         AppRoutes.location: (context) => Location(),
         AppRoutes.filters: (context) => Filters(),
