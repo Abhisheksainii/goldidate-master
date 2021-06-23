@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:goldidate/screens/Home/Profile/Personal.dart';
 import 'package:goldidate/screens/Home/Profile/Settings.dart';
 import 'package:goldidate/screens/Home/Profile/addMedia.dart';
 import 'package:goldidate/screens/Home/Profile/editProfile.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.Tabview,
+      initialRoute: AppRoutes.personal,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.location: (context) => Location(),
         AppRoutes.filters: (context) => Filters(),
         AppRoutes.innerProfile: (context) => InnerProfile(),
+        AppRoutes.personal: (context) => Personal(),
       },
     );
   }
