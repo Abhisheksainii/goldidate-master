@@ -22,4 +22,5 @@ class AppRoutes {
   static final String innerProfile = "/editInnerProfile";
   static final String personal = "/Personal";
   static final String chatscreen = "/chat_screen";
+  static final String verifyCode = "/verifyCode";
 }

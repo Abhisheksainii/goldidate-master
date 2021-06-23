@@ -13,6 +13,7 @@ import 'package:goldidate/screens/Home/chat_screen.dart';
 import 'package:goldidate/screens/Home/editInnerProfile.dart';
 import 'package:goldidate/screens/Home/filters.dart';
 import 'package:goldidate/screens/Home/location.dart';
+import 'package:goldidate/screens/Home/verifyCode.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
 import 'package:goldidate/screens/screens_exporter.dart';
 
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.innerProfile: (context) => InnerProfile(),
         AppRoutes.personal: (context) => Personal(),
         AppRoutes.chatscreen: (context) => ChatScreen(),
+        AppRoutes.verifyCode: (context) => VerifyCode(),
       },
     );
   }
