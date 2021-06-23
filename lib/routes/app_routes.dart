@@ -12,6 +12,7 @@ class AppRoutes {
   static final String myprofile = "/myProfile";
   static final String allchats = "/allchats";
   static final String addMedia = "/addMedia";
+  static final String addPhotos = "/addPhotos";
   static final String settings = "/Settings";
   static final String goldidatePlus = "/goldidatePlus";
   static final String goldidatePlus2 = "/goldidatePlus2";

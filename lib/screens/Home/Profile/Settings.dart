@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
@@ -913,28 +914,49 @@ class _SettingsState extends State<Settings> {
                     top: height * 0.05,
                     left: width * 0.05,
                     right: width * 0.05),
-                child: Container(
-                    height: height * 0.07,
-                    width: width * 1.0,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Colors.black, Color(0xFFD12BD1)]),
-                      border: Border.all(
-                        color: Color(0xFFE0E0E0),
+                child: InkWell(
+                  onTap: () {
+                    return showDialog(
+                      context: context,
+                      builder: (BuildContext context) => CupertinoAlertDialog(
+                        title: Text("Logout?"),
+                        content: Text("Are you sure you want to log out?"),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, 'Cancel'),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, 'Logout'),
+                            child: const Text('OK'),
+                          ),
+                        ],
                       ),
-                      borderRadius: BorderRadius.circular(60.0),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Logout",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w700),
+                    );
+                  },
+                  child: Container(
+                      height: height * 0.07,
+                      width: width * 1.0,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [Colors.black, Color(0xFFD12BD1)]),
+                        border: Border.all(
+                          color: Color(0xFFE0E0E0),
+                        ),
+                        borderRadius: BorderRadius.circular(60.0),
                       ),
-                    )),
+                      child: Center(
+                        child: Text(
+                          "Logout",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      )),
+                ),
               ),
               SizedBox(
                 height: height * 0.05,
