@@ -148,8 +148,8 @@ class _MyProfileState extends State<MyProfile> {
                           height: height * 0.12,
                           width: width * 0.12,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "Vector-38.png"),
+                            image:
+                                AssetImage(Common.assetsImages + "camera.png"),
                           ),
                         ),
                         style: ElevatedButton.styleFrom(

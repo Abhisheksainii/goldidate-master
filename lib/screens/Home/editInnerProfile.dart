@@ -42,7 +42,7 @@ class _InnerProfileState extends State<InnerProfile> {
                     ),
                     Image(
                       image: AssetImage(
-                        Common.assetsImages + "Vector-38.png",
+                        Common.assetsImages + "camera.png",
                       ),
                     ),
                   ],

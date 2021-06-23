@@ -18,7 +18,6 @@ class _TabBarViewState extends State<TabBarViewPage>
   int indexx = 0;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _tabController = new TabController(length: 4, vsync: this);
   }

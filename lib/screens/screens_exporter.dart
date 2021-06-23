@@ -9,3 +9,4 @@ export 'startup/welcome_slides/descriptive_slide_text.dart';
 export 'startup/welcome_slides/welcome_slide.dart';
 export 'package:goldidate/screens/coins_feature/getcoins.dart';
 export 'package:goldidate/utils/widgets/tabview.dart';
+export 'package:goldidate/screens/Home/chat_screen.dart';
