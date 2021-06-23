@@ -15,6 +15,7 @@ import 'package:goldidate/screens/Home/filters.dart';
 import 'package:goldidate/screens/Home/location.dart';
 import 'package:goldidate/screens/authentication/create_account.dart';
 import 'package:goldidate/screens/screens_exporter.dart';
+
 import 'package:goldidate/utils/utils_exporter.dart';
 
 import 'routes/app_routes.dart';

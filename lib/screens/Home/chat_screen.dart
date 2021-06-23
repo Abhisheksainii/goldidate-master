@@ -151,20 +151,7 @@ class ChatScreen extends StatelessWidget {
                               ),
                               Container(
                                 child: Material(
-                                  borderRadius:
-                                      messages[index].messageType == "receiver"
-                                          ? BorderRadius.only(
-                                              topLeft: Radius.circular(30),
-                                              bottomLeft: Radius.circular(30),
-                                              topRight: Radius.circular(30))
-                                          : BorderRadius.only(
-                                              topRight: Radius.circular(0),
-                                              bottomLeft: Radius.circular(0),
-                                              topLeft: Radius.circular(0)),
-                                  color:
-                                      messages[index].messageType == "receiver"
-                                          ? Colors.lightBlueAccent
-                                          : Colors.transparent,
+                                  color: Colors.transparent,
                                   child: Padding(
                                     padding: EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 20),
@@ -178,6 +165,34 @@ class ChatScreen extends StatelessWidget {
                                               : Colors.black54),
                                     ),
                                   ),
+                                ),
+                                decoration: BoxDecoration(
+                                  gradient:
+                                      messages[index].messageType == "receiver"
+                                          ? LinearGradient(
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [
+                                                  Colors.black.withOpacity(0.6),
+                                                  Color(0xFFD12BD1),
+                                                ])
+                                          : LinearGradient(
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [
+                                                  Colors.transparent,
+                                                  Colors.transparent,
+                                                ]),
+                                  borderRadius:
+                                      messages[index].messageType == "receiver"
+                                          ? BorderRadius.only(
+                                              topLeft: Radius.circular(30),
+                                              bottomLeft: Radius.circular(30),
+                                              topRight: Radius.circular(30))
+                                          : BorderRadius.only(
+                                              topRight: Radius.circular(0),
+                                              bottomLeft: Radius.circular(0),
+                                              topLeft: Radius.circular(0)),
                                 ),
                               ),
                               SizedBox(
