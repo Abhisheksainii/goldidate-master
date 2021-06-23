@@ -117,7 +117,8 @@ class ChatScreen extends StatelessWidget {
             reverse: true,
             shrinkWrap: true,
             itemCount: messages.length,
-            padding: EdgeInsets.only(top: 10, bottom: 100, right: 20),
+            padding: EdgeInsets.only(
+                top: 10, bottom: 100, right: width * 0.03, left: width * 0.03),
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.all(10.0),
@@ -154,7 +155,12 @@ class ChatScreen extends StatelessWidget {
                                   color: Colors.transparent,
                                   child: Padding(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 20),
+                                        vertical: height * 0.02,
+                                        horizontal:
+                                            messages[index].messageType ==
+                                                    "receiver"
+                                                ? width * 0.05
+                                                : width * 0.019),
                                     child: Text(
                                       messages[index].messageContent,
                                       style: TextStyle(
@@ -198,9 +204,13 @@ class ChatScreen extends StatelessWidget {
                               SizedBox(
                                 height: height * 0.01,
                               ),
-                              Text(
-                                "12:15",
-                                style: TextStyle(color: Colors.grey),
+                              Padding(
+                                child: Text(
+                                  "12:15",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: width * 0.02),
                               ),
                             ]),
                       ],
