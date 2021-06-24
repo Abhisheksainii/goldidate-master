@@ -330,7 +330,8 @@ class _SignUpInAppState extends State<SignUpInApp> {
           ),
           const SizedBox(height: 70.0),
           PrimaryBackgroundButton(
-            onPressed: () => _processPhoneAuthentication(),
+            onPressed: () =>
+                Navigator.of(context).pushNamed(AppRoutes.verifyCode),
           ),
         ],
       );

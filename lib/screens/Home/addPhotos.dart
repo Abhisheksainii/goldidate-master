@@ -418,6 +418,10 @@ class _AddPhotosState extends State<AddPhotos> {
                   Padding(
                     padding: EdgeInsets.only(top: height * 0.02),
                     child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, AppRoutes.Tabview, (route) => false);
+                      },
                       child: Container(
                         width: width * 0.25,
                         height: height * 0.05,

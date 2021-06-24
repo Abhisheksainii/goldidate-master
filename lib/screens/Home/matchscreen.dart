@@ -137,6 +137,8 @@ class MatchScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: TextButton(
+                    onPressed: () =>
+                        Navigator.of(context).pushNamed(AppRoutes.chatscreen),
                     child: Text(
                       "Write to Marlene",
                       style: TextStyle(

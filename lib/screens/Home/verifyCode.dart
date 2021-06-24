@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 
 class VerifyCode extends StatefulWidget {
   @override
@@ -139,8 +140,8 @@ class _VerifyCodeState extends State<VerifyCode> {
                     borderRadius: BorderRadius.circular(22.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.008, left: width * 0.06),
+                    padding:
+                        EdgeInsets.only(top: height * 0.01, left: width * 0.06),
                     child: Container(
                       child: Text(
                         "Resend",
@@ -212,7 +213,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: height * 0.04, left: width * 0.1),
+                            top: height * 0.04, left: width * 0.09),
                         child: Container(
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -339,26 +340,30 @@ class _VerifyCodeState extends State<VerifyCode> {
                     top: height * 0.05,
                     left: width * 0.05,
                     right: width * 0.05),
-                child: Container(
-                  height: height * 0.07,
-                  width: width * 1.0,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black, Color(0xFFD12BD1)]),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
+                child: InkWell(
+                  onTap: () =>
+                      Navigator.of(context).pushNamed(AppRoutes.personal),
+                  child: Container(
+                    height: height * 0.07,
+                    width: width * 1.0,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.black, Color(0xFFD12BD1)]),
+                      border: Border.all(
+                        color: Color(0xFFE0E0E0),
+                      ),
+                      borderRadius: BorderRadius.circular(60.0),
                     ),
-                    borderRadius: BorderRadius.circular(60.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Submit",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w700),
+                    child: Center(
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w700),
+                      ),
                     ),
                   ),
                 ),

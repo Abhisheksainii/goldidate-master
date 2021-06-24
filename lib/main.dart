@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.chatscreen,
+      initialRoute: AppRoutes.splashRoute,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
