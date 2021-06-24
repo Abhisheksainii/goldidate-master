@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 
 class Location extends StatefulWidget {
   @override
@@ -62,9 +63,13 @@ class _LocationState extends State<Location> {
                   child: Row(
                     children: [
                       InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed(AppRoutes.filters);
+                        },
                         child: Icon(
                           Icons.arrow_back,
                           color: Color(0xFFD12BD1),
+                          size: width * 0.1,
                         ),
                       ),
                       SizedBox(

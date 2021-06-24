@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 
 class Filters extends StatefulWidget {
   @override
@@ -131,40 +132,45 @@ class _FiltersState extends State<Filters> {
               Padding(
                 padding:
                     EdgeInsets.only(top: height * 0.025, left: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 0.9,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    borderRadius: BorderRadius.circular(24.0),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRoutes.location);
+                  },
+                  child: Container(
+                    height: height * 0.08,
+                    width: width * 0.9,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      borderRadius: BorderRadius.circular(24.0),
+                      border: Border.all(
+                        color: Color(0xFFE0E0E0),
+                      ),
                     ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.05),
-                    child: Container(
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.location_on,
-                            color: Color(0xFFBDBDBD),
-                          ),
-                          SizedBox(
-                            width: width * 0.02,
-                          ),
-                          Text(
-                            "Current location",
-                            style: TextStyle(fontSize: width * 0.045),
-                          ),
-                          Text(
-                            "(Sans Francisco)",
-                            style: TextStyle(
-                              fontSize: width * 0.043,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: width * 0.05),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.location_on,
                               color: Color(0xFFBDBDBD),
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              width: width * 0.02,
+                            ),
+                            Text(
+                              "Current location",
+                              style: TextStyle(fontSize: width * 0.045),
+                            ),
+                            Text(
+                              "(Sans Francisco)",
+                              style: TextStyle(
+                                fontSize: width * 0.043,
+                                color: Color(0xFFBDBDBD),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

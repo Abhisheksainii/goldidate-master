@@ -77,9 +77,15 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                             SizedBox(
                               height: height * 0.01,
                             ),
-                            Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "bigcoin.png"),
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context)
+                                    .pushNamed(AppRoutes.goldidatePlus2);
+                              },
+                              child: Image(
+                                image: AssetImage(
+                                    Common.assetsImages + "bigcoin.png"),
+                              ),
                             ),
                             SizedBox(
                               height: height * 0.005,
@@ -366,14 +372,19 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: height * 0.02),
-                      child: Container(
-                        child: Center(
-                            child: Text(
-                          "NO THANKS",
-                          style: TextStyle(
-                              color: Color(0xFFB5B5B5),
-                              fontSize: width * 0.046),
-                        )),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed(AppRoutes.Tabview);
+                        },
+                        child: Container(
+                          child: Center(
+                              child: Text(
+                            "NO THANKS",
+                            style: TextStyle(
+                                color: Color(0xFFB5B5B5),
+                                fontSize: width * 0.046),
+                          )),
+                        ),
                       ),
                     ),
                   ],

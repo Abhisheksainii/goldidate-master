@@ -18,13 +18,18 @@ class _MyProfileState extends State<MyProfile> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: width * 0.04, top: height * 0.03),
-            child: Container(
-              height: height * 0.2,
-              width: width * 0.4,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: AssetImage(Common.assetsImages + "1p.png")),
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.settings);
+              },
+              child: Container(
+                height: height * 0.2,
+                width: width * 0.4,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: AssetImage(Common.assetsImages + "1p.png")),
+                ),
               ),
             ),
           ),
@@ -149,7 +154,7 @@ class _MyProfileState extends State<MyProfile> {
                           width: width * 0.12,
                           child: Image(
                             image:
-                                AssetImage(Common.assetsImages + "camera.png"),
+                                AssetImage(Common.assetsImages + "Camera.png"),
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -177,7 +182,10 @@ class _MyProfileState extends State<MyProfile> {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(AppRoutes.editProfile);
+                        },
                         child: Container(
                           height: height * 0.08,
                           width: width * 0.08,
@@ -296,7 +304,10 @@ class _MyProfileState extends State<MyProfile> {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(AppRoutes.goldidatePlus);
+                          },
                           child: Text(
                             "Goldidate Plus",
                             style: TextStyle(

@@ -375,14 +375,19 @@ class _GoldidatePlus2State extends State<GoldidatePlus2> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: height * 0.02),
-                      child: Container(
-                        child: Center(
-                            child: Text(
-                          "NO THANKS",
-                          style: TextStyle(
-                              color: Color(0xFFB5B5B5),
-                              fontSize: width * 0.046),
-                        )),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed(AppRoutes.Tabview);
+                        },
+                        child: Container(
+                          child: Center(
+                              child: Text(
+                            "NO THANKS",
+                            style: TextStyle(
+                                color: Color(0xFFB5B5B5),
+                                fontSize: width * 0.046),
+                          )),
+                        ),
                       ),
                     ),
                   ],

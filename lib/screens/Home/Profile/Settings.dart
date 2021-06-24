@@ -173,10 +173,15 @@ class _SettingsState extends State<Settings> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Location",
-                          style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.w600),
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(AppRoutes.location);
+                          },
+                          child: Text(
+                            "Location",
+                            style: TextStyle(
+                                fontSize: 20.0, fontWeight: FontWeight.w600),
+                          ),
                         ),
                         SizedBox(
                           height: height * 0.02,

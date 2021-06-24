@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 
 class EditProfile extends StatefulWidget {
   @override
@@ -254,6 +255,10 @@ class _EditProfileState extends State<EditProfile> {
                     Padding(
                       padding: EdgeInsets.only(top: height * 0.02),
                       child: InkWell(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed(AppRoutes.innerProfile);
+                        },
                         child: Container(
                           width: width * 0.25,
                           height: height * 0.05,
