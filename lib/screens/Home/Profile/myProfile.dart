@@ -223,9 +223,11 @@ class _MyProfileState extends State<MyProfile> {
               height: height * 0.08,
               width: width * 1.0,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(9.0),
-                  gradient: LinearGradient(
-                      colors: [Color(0xFFD12BD1), Colors.black87])),
+                borderRadius: BorderRadius.circular(9.0),
+                gradient: LinearGradient(
+                  colors: [Color(0xFFD12BD1), Colors.black87],
+                ),
+              ),
               child: Row(
                 children: [
                   SizedBox(

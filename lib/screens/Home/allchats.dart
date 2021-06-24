@@ -26,7 +26,10 @@ class _AllChatsState extends State<AllChats> {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: ListView.builder(
-          padding: EdgeInsets.only(top: height * 0.025, left: width * 0.05),
+          padding: EdgeInsets.only(
+            top: height * 0.025,
+            left: width * 0.05,
+          ),
           itemCount: names.length,
           itemBuilder: (context, int index) {
             return InkWell(
@@ -75,7 +78,7 @@ class _AllChatsState extends State<AllChats> {
                     ],
                   ),
                   SizedBox(
-                    width: width * 0.28,
+                    width: width * 0.25,
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: height * 0.02),
