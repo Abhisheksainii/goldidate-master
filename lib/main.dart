@@ -65,6 +65,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.personal: (context) => Personal(),
         AppRoutes.chatscreen: (context) => ChatScreen(),
         AppRoutes.verifyCode: (context) => VerifyCode(),
+        AppRoutes.terms_condititons: (context) => Terms_Conditions(),
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
+import 'package:goldidate/routes/app_routes.dart';
 
 class GetCoins extends StatelessWidget {
   @override
@@ -132,58 +133,70 @@ class GetCoins extends StatelessWidget {
                 SizedBox(
                   height: height * 0.04,
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  RichText(
-                    text: TextSpan(
-                      text: 'By clicking "Buy now",you agree with our ',
-                      style: TextStyle(
-                          fontSize: height * 0.014,
-                          color: Colors.grey.withOpacity(0.7)),
+                InkWell(
+                  onTap: () => Navigator.of(context)
+                      .pushNamed(AppRoutes.terms_condititons),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          text: 'Terms.',
-                          style: TextStyle(
-                            color: AppColors.greyColor,
-                            fontSize: height * 0.014,
+                        RichText(
+                          text: TextSpan(
+                            text: 'By clicking "Buy now",you agree with our ',
+                            style: TextStyle(
+                                fontSize: height * 0.014,
+                                color: Colors.grey.withOpacity(0.7)),
+                            children: [
+                              TextSpan(
+                                text: 'Terms.',
+                                style: TextStyle(
+                                  color: AppColors.greyColor,
+                                  fontSize: height * 0.014,
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'Learn',
+                                style: TextStyle(
+                                  color: Colors.grey.withOpacity(0.7),
+                                  fontSize: height * 0.014,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        TextSpan(
-                          text: 'Learn',
-                          style: TextStyle(
-                            color: Colors.grey.withOpacity(0.7),
-                            fontSize: height * 0.014,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ]),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  RichText(
-                    text: TextSpan(
-                      text: 'how we process your data in our',
-                      style: TextStyle(
-                          fontSize: height * 0.014,
-                          color: Colors.grey.withOpacity(0.7)),
+                      ]),
+                ),
+                InkWell(
+                  onTap: () => Navigator.of(context)
+                      .pushNamed(AppRoutes.terms_condititons),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          text: ' Privacy Policy',
-                          style: TextStyle(
-                            color: AppColors.greyColor,
-                            fontSize: height * 0.014,
+                        RichText(
+                          text: TextSpan(
+                            text: 'how we process your data in our',
+                            style: TextStyle(
+                                fontSize: height * 0.014,
+                                color: Colors.grey.withOpacity(0.7)),
+                            children: [
+                              TextSpan(
+                                text: ' Privacy Policy',
+                                style: TextStyle(
+                                  color: AppColors.greyColor,
+                                  fontSize: height * 0.014,
+                                ),
+                              ),
+                              TextSpan(
+                                text: ' and',
+                                style: TextStyle(
+                                  color: Colors.grey.withOpacity(0.7),
+                                  fontSize: height * 0.014,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        TextSpan(
-                          text: ' and',
-                          style: TextStyle(
-                            color: Colors.grey.withOpacity(0.7),
-                            fontSize: height * 0.014,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ]),
+                      ]),
+                ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     "Cookies Policy",

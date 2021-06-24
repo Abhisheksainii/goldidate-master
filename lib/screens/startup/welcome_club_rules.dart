@@ -92,9 +92,13 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
                       buttonText: "I Understand",
                     ),
                     const SizedBox(height: 25.0),
-                    Text(
-                      "Terms of Use and Privacy Policy",
-                      textAlign: TextAlign.center,
+                    InkWell(
+                      onTap: () => Navigator.of(context)
+                          .pushNamed(AppRoutes.terms_condititons),
+                      child: Text(
+                        "Terms of Use and Privacy Policy",
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     const SizedBox(height: 20.0),
                   ],
