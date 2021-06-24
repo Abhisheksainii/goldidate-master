@@ -12,281 +12,285 @@ class _EditProfileState extends State<EditProfile> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding:
-                    EdgeInsets.only(top: height * 0.05, left: width * 0.06),
-                child: Container(
-                  child: Row(
-                    children: [
-                      InkWell(
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Color(0xFFD12BD1),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding:
+                      EdgeInsets.only(top: height * 0.05, left: width * 0.06),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        InkWell(
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Color(0xFFD12BD1),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: width * 0.2,
-                      ),
-                      Text(
-                        "Edit Profile",
-                        style: TextStyle(
-                            fontSize: width * 0.06,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        width: width * 0.18,
-                      ),
-                      InkWell(
-                        child: Icon(
-                          Icons.more_horiz,
-                          color: Color(0xFFD12BD1),
+                        SizedBox(
+                          width: width * 0.2,
+                        ),
+                        Text(
+                          "Edit Profile",
+                          style: TextStyle(
+                              fontSize: width * 0.06,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          width: width * 0.18,
+                        ),
+                        InkWell(
+                          child: Icon(
+                            Icons.more_horiz,
+                            color: Color(0xFFD12BD1),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.03,
+                      left: width * 0.1,
+                      right: width * 0.06),
+                  child: CustomContainer(
+                      fontSize: 0.036,
+                      text1: "About Karter",
+                      text2:
+                          "Fashion lover, Other stuff that’s mildly interesting.",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 0.8,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Age",
+                      text2: "23",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Living in",
+                      text2: "Madrid, Spain",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Gender",
+                      text2: "Transgender Male",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Passions",
+                      text2: "Fashion, Instagram, Style, Art, Drawing, Poetry",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Profession",
+                      text2: "Fashion Critic",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Social media",
+                      text2: "Instagram",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: height * 0.0045,
+                      left: width * 0.1,
+                      right: width * 0.02),
+                  child: CustomContainer(
+                      fontSize: 0.04,
+                      text1: "Show my instagram photos",
+                      text2: "Yes",
+                      width: width,
+                      height: height),
+                ),
+                SizedBox(
+                  height: height * 0.005,
+                ),
+                Container(
+                  width: width * 1,
+                  child: Divider(
+                    indent: 40,
+                    endIndent: 50,
+                    thickness: 1,
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.175,
+                ),
+                Container(
+                  height: height * 0.09545,
+                  width: width * 1.8,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(color: Colors.black87, blurRadius: 14.0)
+                    ],
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(30.0),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: height * 0.02),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(AppRoutes.innerProfile);
+                          },
+                          child: Container(
+                            width: width * 0.25,
+                            height: height * 0.05,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(22.0),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: [
+                                      Color(0xFF532253),
+                                      Color(0xFFD12BD1)
+                                    ])),
+                            child: Center(
+                              child: Text(
+                                "Done",
+                                style: TextStyle(
+                                    fontSize: width * 0.04,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03, left: width * 0.1, right: width * 0.06),
-                child: CustomContainer(
-                    fontSize: 0.036,
-                    text1: "About Karter",
-                    text2:
-                        "Fashion lover, Other stuff that’s mildly interesting.",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 0.8,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Age",
-                    text2: "23",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Living in",
-                    text2: "Madrid, Spain",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Gender",
-                    text2: "Transgender Male",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Passions",
-                    text2: "Fashion, Instagram, Style, Art, Drawing, Poetry",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Profession",
-                    text2: "Fashion Critic",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Social media",
-                    text2: "Instagram",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.0045,
-                    left: width * 0.1,
-                    right: width * 0.02),
-                child: CustomContainer(
-                    fontSize: 0.04,
-                    text1: "Show my instagram photos",
-                    text2: "Yes",
-                    width: width,
-                    height: height),
-              ),
-              SizedBox(
-                height: height * 0.005,
-              ),
-              Container(
-                width: width * 1,
-                child: Divider(
-                  indent: 40,
-                  endIndent: 50,
-                  thickness: 1,
-                ),
-              ),
-              SizedBox(
-                height: height * 0.175,
-              ),
-              Container(
-                height: height * 0.09545,
-                width: width * 1.8,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(color: Colors.black87, blurRadius: 14.0)
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30.0),
-                    topRight: Radius.circular(30.0),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: height * 0.02),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.of(context)
-                              .pushNamed(AppRoutes.innerProfile);
-                        },
-                        child: Container(
-                          width: width * 0.25,
-                          height: height * 0.05,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(22.0),
-                              gradient: LinearGradient(
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft,
-                                  colors: [
-                                    Color(0xFF532253),
-                                    Color(0xFFD12BD1)
-                                  ])),
-                          child: Center(
-                            child: Text(
-                              "Done",
-                              style: TextStyle(
-                                  fontSize: width * 0.04,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

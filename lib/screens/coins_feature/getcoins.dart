@@ -37,7 +37,7 @@ class GetCoins extends StatelessWidget {
                       fontSize: height * 0.02, color: AppColors.greyColor),
                 ),
                 SizedBox(
-                  height: height * 0.05,
+                  height: height * 0.04,
                 ),
                 PriceTags(
                   size: size,
@@ -111,6 +111,8 @@ class GetCoins extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Image.asset(
                     Common.assetsImages + "bigcoin.png",
+                    height: height * 0.12,
+                    width: height * 0.2,
                   ),
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -187,7 +189,7 @@ class GetCoins extends StatelessWidget {
                     "Cookies Policy",
                     style: TextStyle(
                       color: AppColors.greyColor,
-                      fontSize: 11,
+                      fontSize: height * 0.014,
                     ),
                   ),
                 ]),
