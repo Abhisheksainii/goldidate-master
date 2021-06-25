@@ -308,37 +308,35 @@ class _ClassicviewState extends State<Classicview>
                                 left: width * 0.08,
                                 right: width * 0.08,
                                 bottom: height * 0.01),
-                            child: Expanded(
-                              child: Container(
-                                width: width * 0.85,
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Hobbies",
-                                              style: TextStyle(
-                                                  fontSize: height * 0.02,
-                                                  color: Colors.grey.shade700),
-                                            ),
-                                            SizedBox(
-                                              height: height * 0.01,
-                                            ),
-                                            Text(
-                                              "Computer Programming, Archery, Drawing, Chess, Poetry",
-                                              style: TextStyle(
-                                                  fontSize: height * 0.017,
-                                                  color: Colors.grey),
-                                            ),
-                                          ],
-                                        ),
+                            child: Container(
+                              width: width * 0.85,
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Hobbies",
+                                            style: TextStyle(
+                                                fontSize: height * 0.02,
+                                                color: Colors.grey.shade700),
+                                          ),
+                                          SizedBox(
+                                            height: height * 0.01,
+                                          ),
+                                          Text(
+                                            "Computer Programming, Archery, Drawing, Chess, Poetry",
+                                            style: TextStyle(
+                                                fontSize: height * 0.017,
+                                                color: Colors.grey),
+                                          ),
+                                        ],
                                       ),
-                                    ]),
-                              ),
+                                    ),
+                                  ]),
                             ),
                           ),
                           SizedBox(
