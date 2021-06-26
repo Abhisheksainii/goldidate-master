@@ -13,6 +13,8 @@ class GetStarted extends StatefulWidget {
 class _GetStartedState extends State<GetStarted> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
@@ -23,8 +25,8 @@ class _GetStartedState extends State<GetStarted> {
             right: 0,
             left: 0,
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              padding: EdgeInsets.symmetric(
+                  vertical: height * 0.025, horizontal: width * 0.03),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,21 +42,21 @@ class _GetStartedState extends State<GetStarted> {
                           Common.applicationName.toUpperCase(),
                           style: TextStyle(
                             color: AppColors.goldColor,
-                            fontSize: 20.0,
+                            fontSize: height * 0.03,
                             letterSpacing: 2.4,
                           ),
                         ),
-                        const SizedBox(height: 20.0),
+                        SizedBox(height: height * 0.03),
                         Text(
                           "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy\nand Cookies Policy.",
                           style: TextStyle(
                             color: AppColors.whiteColor,
-                            fontSize: 14.0,
+                            fontSize: height * 0.017,
                             fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 20.0),
+                        SizedBox(height: height * 0.03),
                         Row(
                           children: [
                             Expanded(
@@ -67,7 +69,7 @@ class _GetStartedState extends State<GetStarted> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 15.0),
+                        SizedBox(height: height * 0.027),
                         Row(
                           children: [
                             Expanded(
@@ -86,7 +88,7 @@ class _GetStartedState extends State<GetStarted> {
                     "Trouble Logging in?",
                     style: TextStyle(
                       color: AppColors.whiteColor,
-                      fontSize: 14.0,
+                      fontSize: height * 0.02,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
