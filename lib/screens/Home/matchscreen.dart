@@ -131,7 +131,7 @@ class MatchScreen extends StatelessWidget {
                 ),
                 Container(
                   width: width * 0.75,
-                  height: height * 0.1,
+                  height: height * 0.08,
                   decoration: BoxDecoration(
                     color: Color(0xffd19d43),
                     borderRadius: BorderRadius.circular(60.0),
