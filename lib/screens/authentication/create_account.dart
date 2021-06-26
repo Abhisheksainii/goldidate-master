@@ -33,8 +33,9 @@ class _CreateAccountState extends State<CreateAccount> {
             right: 5,
             left: 5,
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              padding: EdgeInsets.symmetric(
+                  vertical: size.height * 0.017,
+                  horizontal: size.width * 0.023),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -48,7 +49,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         Common.applicationName.toUpperCase(),
                         style: TextStyle(
                           color: AppColors.goldColor,
-                          fontSize: 20.0,
+                          fontSize: size.height * 0.03,
                           letterSpacing: 2.4,
                         ),
                       ),
@@ -57,7 +58,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
                         style: TextStyle(
                           color: AppColors.whiteColor,
-                          fontSize: 14.0,
+                          fontSize: size.height * 0.017,
                           fontWeight: FontWeight.bold,
                         ),
                         textAlign: TextAlign.center,

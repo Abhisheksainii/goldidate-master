@@ -16,6 +16,8 @@ class _LoginSocialState extends State<LoginSocial> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: [
@@ -32,8 +34,8 @@ class _LoginSocialState extends State<LoginSocial> {
             right: 5,
             left: 5,
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              padding: EdgeInsets.symmetric(
+                  vertical: height * 0.015, horizontal: width * 0.027),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -47,7 +49,7 @@ class _LoginSocialState extends State<LoginSocial> {
                         Common.applicationName.toUpperCase(),
                         style: TextStyle(
                           color: AppColors.goldColor,
-                          fontSize: 20.0,
+                          fontSize: height * 0.025,
                           letterSpacing: 2.4,
                         ),
                       ),
@@ -56,7 +58,7 @@ class _LoginSocialState extends State<LoginSocial> {
                         "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
                         style: TextStyle(
                           color: AppColors.whiteColor,
-                          fontSize: 14.0,
+                          fontSize: height * 0.017,
                           fontWeight: FontWeight.bold,
                         ),
                         textAlign: TextAlign.center,
@@ -120,7 +122,7 @@ class _LoginSocialState extends State<LoginSocial> {
                     "Trouble Logging in?",
                     style: TextStyle(
                       color: AppColors.whiteColor,
-                      fontSize: 14.0,
+                      fontSize: height * 0.018,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
