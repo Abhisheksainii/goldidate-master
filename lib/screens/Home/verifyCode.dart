@@ -51,6 +51,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                       Container(
                         width: width * 0.1,
                         child: TextField(
+                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
                             hintText: "2",
                             hintStyle: TextStyle(
@@ -64,19 +65,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                       Container(
                         width: width * 0.1,
                         child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "4",
-                            hintStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: width * 0.08,
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: width * 0.05),
-                      Container(
-                        width: width * 0.1,
-                        child: TextField(
+                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
                             hintText: "5",
                             hintStyle: TextStyle(
@@ -90,6 +79,21 @@ class _VerifyCodeState extends State<VerifyCode> {
                       Container(
                         width: width * 0.1,
                         child: TextField(
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                            hintText: "4",
+                            hintStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: width * 0.08,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * 0.05),
+                      Container(
+                        width: width * 0.1,
+                        child: TextField(
+                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
                             hintText: "6",
                             hintStyle: TextStyle(

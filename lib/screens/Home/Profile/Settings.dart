@@ -549,7 +549,7 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.42),
+                        SizedBox(width: width * 0.45),
                         CustomSwitch(
                           value: _enable4,
                           onChanged: (bool val) {
@@ -589,7 +589,7 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.41),
+                        SizedBox(width: width * 0.45),
                         CustomSwitch(
                           value: _enable5,
                           onChanged: (bool val) {
