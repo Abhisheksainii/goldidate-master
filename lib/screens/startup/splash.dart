@@ -33,7 +33,8 @@ class _SplashState extends State<Splash> {
   void _runSplash() async {
     //check if the notFirstTime is true otherwise make it true
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    bool notFirstTime = sharedPreferences.getBool("notFirstTime") ?? false;
+    //  bool notFirstTime = sharedPreferences.getBool("notFirstTime") ?? false;
+    bool notFirstTime = false;
     bool isUserLoggedIn;
     if (notFirstTime == false) {
       //store value to notFirstTime as true
