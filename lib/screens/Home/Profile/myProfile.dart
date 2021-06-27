@@ -39,9 +39,9 @@ class _MyProfileState extends State<MyProfile> {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                      EdgeInsets.only(top: height * 0.01, left: width * 0.32),
+                  padding: EdgeInsets.only(top: height * 0.01),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "Simon Carter,",
@@ -103,9 +103,11 @@ class _MyProfileState extends State<MyProfile> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: height * 0.005, left: width * 0.13),
+            padding: EdgeInsets.only(
+                top: height * 0.005, left: width * 0.1, right: width * 0.1),
             child: Container(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
@@ -140,9 +142,6 @@ class _MyProfileState extends State<MyProfile> {
                       )
                     ],
                   ),
-                  SizedBox(
-                    width: 40.0,
-                  ),
                   Column(
                     children: [
                       ElevatedButton(
@@ -175,9 +174,6 @@ class _MyProfileState extends State<MyProfile> {
                         ),
                       )
                     ],
-                  ),
-                  SizedBox(
-                    width: 40.0,
                   ),
                   Column(
                     children: [

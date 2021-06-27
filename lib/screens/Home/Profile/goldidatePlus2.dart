@@ -30,11 +30,20 @@ class _GoldidatePlus2State extends State<GoldidatePlus2> {
                     SizedBox(
                       height: height * 0.005,
                     ),
-                    Container(
-                      child: Text(
-                        "By tapping “Continue”, your payment will be charged to your Apple account, and your subscription will automatically renew for the same package length at the same price untill you cancel in settings in the App store. By tapping “Continue”, you agree to our Privacy Policy and Terms.",
-                        style: TextStyle(
-                            color: Colors.grey, fontSize: width * 0.035),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context)
+                            .pushNamed(AppRoutes.terms_condititons);
+                      },
+                      child: Container(
+                        child: Center(
+                          child: Text(
+                            "By tapping “Continue”, your payment will be charged to your Apple account, and your subscription will automatically renew for the same package length at the same price untill you cancel in settings in the App store. By tapping “Continue”, you agree to our Privacy Policy and Terms.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.grey, fontSize: width * 0.035),
+                          ),
+                        ),
                       ),
                     ),
                   ],
