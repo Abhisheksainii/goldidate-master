@@ -19,137 +19,144 @@ class _LoginSocialState extends State<LoginSocial> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Stack(
-        children: [
-          PrimaryBackgroundWithTopImage(),
-          Positioned(
-            top: 40,
-            left: 20,
-            child: PopButton(
-              iconColor: AppColors.goldColor,
-            ),
-          ),
-          Positioned.fill(
-            top: size.height * 0.36,
-            right: 5,
-            left: 5,
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  vertical: height * 0.015, horizontal: width * 0.027),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: SingleChildScrollView(
+        child: Container(
+          height: height * 1.08,
+          child: Stack(
+            children: [
+              PrimaryBackgroundWithTopImage(),
+              Positioned(
+                top: 40,
+                left: 20,
+                child: PopButton(
+                  iconColor: AppColors.goldColor,
+                ),
+              ),
+              Positioned.fill(
+                top: size.height * 0.36,
+                right: 5,
+                left: 5,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      vertical: height * 0.015, horizontal: width * 0.027),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Image.asset(
-                        Common.assetsIcons + "goldidate_heart.png",
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset(
+                            Common.assetsIcons + "goldidate_heart.png",
+                          ),
+                          Text(
+                            Common.applicationName.toUpperCase(),
+                            style: TextStyle(
+                              color: AppColors.goldColor,
+                              fontSize: height * 0.025,
+                              letterSpacing: 2.4,
+                            ),
+                          ),
+                          const SizedBox(height: 6.0),
+                          Text(
+                            "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
+                            style: TextStyle(
+                              color: AppColors.whiteColor,
+                              fontSize: height * 0.017,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 15.0),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: PrimaryOutlineButton(
+                                  onPressed: () => processFacebookLogin(),
+                                  leading: Image.asset(
+                                      Common.assetsIcons + "facebook_f.png"),
+                                  buttonText: "Sign In With Facebook",
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 15.0),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: PrimaryOutlineButton(
+                                  onPressed: () => processGoogleLogin(),
+                                  leading: Image.asset(
+                                      Common.assetsIcons + "google_g.png"),
+                                  buttonText: "Sign In With Google",
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 15.0),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: PrimaryOutlineButton(
+                                  leading: Image.asset(
+                                      Common.assetsIcons + "apple_a.png"),
+                                  buttonText: "Sign In With Apple",
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 15.0),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: PrimaryOutlineButton(
+                                  onPressed: () => Navigator.of(context)
+                                      .pushNamed(AppRoutes.signUpInAppRoute),
+                                  leading: Image.asset(
+                                      Common.assetsIcons + "phone.png"),
+                                  buttonText: "Sign In With Phone Number",
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      Text(
-                        Common.applicationName.toUpperCase(),
-                        style: TextStyle(
-                          color: AppColors.goldColor,
-                          fontSize: height * 0.025,
-                          letterSpacing: 2.4,
+                      Padding(
+                        padding: EdgeInsets.only(top: height * 0.03),
+                        child: Text(
+                          "Trouble Logging in?",
+                          style: TextStyle(
+                            color: AppColors.whiteColor,
+                            fontSize: height * 0.018,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                      ),
-                      const SizedBox(height: 6.0),
-                      Text(
-                        "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
-                        style: TextStyle(
-                          color: AppColors.whiteColor,
-                          fontSize: height * 0.017,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 15.0),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: PrimaryOutlineButton(
-                              onPressed: () => processFacebookLogin(),
-                              leading: Image.asset(
-                                  Common.assetsIcons + "facebook_f.png"),
-                              buttonText: "Sign In With Facebook",
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 15.0),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: PrimaryOutlineButton(
-                              onPressed: () => processGoogleLogin(),
-                              leading: Image.asset(
-                                  Common.assetsIcons + "google_g.png"),
-                              buttonText: "Sign In With Google",
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 15.0),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: PrimaryOutlineButton(
-                              leading: Image.asset(
-                                  Common.assetsIcons + "apple_a.png"),
-                              buttonText: "Sign In With Apple",
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 15.0),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: PrimaryOutlineButton(
-                              onPressed: () => Navigator.of(context)
-                                  .pushNamed(AppRoutes.signUpInAppRoute),
-                              leading:
-                                  Image.asset(Common.assetsIcons + "phone.png"),
-                              buttonText: "Sign In With Phone Number",
-                            ),
-                          ),
-                        ],
                       ),
                     ],
                   ),
-                  Spacer(),
-                  Text(
-                    "Trouble Logging in?",
-                    style: TextStyle(
-                      color: AppColors.whiteColor,
-                      fontSize: height * 0.018,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+                ),
               ),
-            ),
+              isLoading
+                  ? Positioned.fill(
+                      child: Container(
+                        color: AppColors.blackColor.withOpacity(0.25),
+                        height: size.height,
+                      ),
+                    )
+                  : const SizedBox.shrink(),
+              isLoading
+                  ? Positioned.fill(
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          valueColor: new AlwaysStoppedAnimation<Color>(
+                              AppColors.primaryColor),
+                        ),
+                      ),
+                    )
+                  : const SizedBox.shrink(),
+            ],
           ),
-          isLoading
-              ? Positioned.fill(
-                  child: Container(
-                    color: AppColors.blackColor.withOpacity(0.25),
-                    height: size.height,
-                  ),
-                )
-              : const SizedBox.shrink(),
-          isLoading
-              ? Positioned.fill(
-                  child: Center(
-                    child: CircularProgressIndicator(
-                      valueColor: new AlwaysStoppedAnimation<Color>(
-                          AppColors.primaryColor),
-                    ),
-                  ),
-                )
-              : const SizedBox.shrink(),
-        ],
+        ),
       ),
     );
   }

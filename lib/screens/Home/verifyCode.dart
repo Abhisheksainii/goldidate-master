@@ -44,7 +44,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: height * 0.02, left: width * 0.2),
+                padding: EdgeInsets.only(top: height * 0.03, left: width * 0.2),
                 child: Container(
                   child: Row(
                     children: [
@@ -53,6 +53,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(2.0),
                             hintText: "2",
                             hintStyle: TextStyle(
                               color: Colors.black,
@@ -67,6 +68,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(2.0),
                             hintText: "5",
                             hintStyle: TextStyle(
                               color: Colors.black,
@@ -81,6 +83,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(2.0),
                             hintText: "4",
                             hintStyle: TextStyle(
                               color: Colors.black,
@@ -95,6 +98,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                         child: TextField(
                           textAlign: TextAlign.center,
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(2.0),
                             hintText: "6",
                             hintStyle: TextStyle(
                               color: Colors.black,

@@ -118,8 +118,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.05),
+                    padding: EdgeInsets.only(
+                        left: width * 0.05, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Phone Number",
@@ -128,9 +130,6 @@ class _SettingsState extends State<Settings> {
                               color: Color(0xFF757575),
                               fontWeight: FontWeight.w400),
                         ),
-                        SizedBox(
-                          width: width * 0.14,
-                        ),
                         Text(
                           "+1 354 112 2376",
                           style: TextStyle(
@@ -138,9 +137,6 @@ class _SettingsState extends State<Settings> {
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF757575),
                           ),
-                        ),
-                        SizedBox(
-                          width: width * 0.028,
                         ),
                         InkWell(
                             child: Icon(
@@ -173,15 +169,10 @@ class _SettingsState extends State<Settings> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.of(context).pushNamed(AppRoutes.location);
-                          },
-                          child: Text(
-                            "Location",
-                            style: TextStyle(
-                                fontSize: 20.0, fontWeight: FontWeight.w600),
-                          ),
+                        Text(
+                          "Location",
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.w600),
                         ),
                         SizedBox(
                           height: height * 0.02,
@@ -215,12 +206,18 @@ class _SettingsState extends State<Settings> {
                         ),
                         Row(
                           children: [
-                            Text(
-                              "Add a new location",
-                              style: TextStyle(
-                                fontSize: width * 0.043,
-                                fontWeight: FontWeight.w700,
-                                color: Color(0xFFD12BD1),
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context)
+                                    .pushNamed(AppRoutes.location);
+                              },
+                              child: Text(
+                                "Add a new location",
+                                style: TextStyle(
+                                  fontSize: width * 0.043,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xFFD12BD1),
+                                ),
                               ),
                             ),
                           ],
@@ -236,7 +233,7 @@ class _SettingsState extends State<Settings> {
                     left: width * 0.05,
                     right: width * 0.05),
                 child: Container(
-                  height: height * 0.10,
+                  height: height * 0.11,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                       color: Color(0xfff5f5f5),
@@ -258,25 +255,26 @@ class _SettingsState extends State<Settings> {
                         SizedBox(
                           height: height * 0.015,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "Women",
-                              style: TextStyle(
-                                fontSize: width * 0.042,
-                                color: Color(0xFF757575),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Women",
+                                style: TextStyle(
+                                  fontSize: width * 0.042,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: width * 0.55,
-                            ),
-                            InkWell(
-                              child: Icon(
-                                Icons.navigate_next,
-                                color: Color(0xFF757575),
+                              InkWell(
+                                child: Icon(
+                                  Icons.navigate_next,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -366,8 +364,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Share my feed",
@@ -376,7 +376,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.42),
                         CustomSwitch(
                           value: _enable,
                           onChanged: (bool val) {
@@ -406,8 +405,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Recommended sort",
@@ -416,7 +417,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.31),
                         CustomSwitch(
                           value: _enable2,
                           onChanged: (bool val) {
@@ -458,25 +458,26 @@ class _SettingsState extends State<Settings> {
                         SizedBox(
                           height: height * 0.013,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "Autoplay videos",
-                              style: TextStyle(
-                                fontSize: width * 0.042,
-                                color: Color(0xFF757575),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Autoplay videos",
+                                style: TextStyle(
+                                  fontSize: width * 0.042,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: width * 0.4,
-                            ),
-                            InkWell(
-                              child: Icon(
-                                Icons.navigate_next,
-                                color: Color(0xFF757575),
+                              InkWell(
+                                child: Icon(
+                                  Icons.navigate_next,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -499,8 +500,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Show me in top picks",
@@ -509,7 +512,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.29),
                         CustomSwitch(
                           value: _enable3,
                           onChanged: (bool val) {
@@ -539,8 +541,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Swipe Surge",
@@ -549,7 +553,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.45),
                         CustomSwitch(
                           value: _enable4,
                           onChanged: (bool val) {
@@ -579,8 +582,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Active status",
@@ -589,7 +594,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.45),
                         CustomSwitch(
                           value: _enable5,
                           onChanged: (bool val) {
@@ -773,50 +777,52 @@ class _SettingsState extends State<Settings> {
                         SizedBox(
                           height: height * 0.023,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "Manage payment account",
-                              style: TextStyle(
-                                fontSize: width * 0.044,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF757575),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Manage payment account",
+                                style: TextStyle(
+                                  fontSize: width * 0.044,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: width * 0.22,
-                            ),
-                            InkWell(
-                              child: Icon(
-                                Icons.navigate_next,
-                                color: Color(0xFF757575),
+                              InkWell(
+                                child: Icon(
+                                  Icons.navigate_next,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: height * 0.015,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "Manage payment account",
-                              style: TextStyle(
-                                fontSize: width * 0.044,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF757575),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Manage payment account",
+                                style: TextStyle(
+                                  fontSize: width * 0.044,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: width * 0.22,
-                            ),
-                            InkWell(
-                              child: Icon(
-                                Icons.navigate_next,
-                                color: Color(0xFF757575),
+                              InkWell(
+                                child: Icon(
+                                  Icons.navigate_next,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -851,25 +857,26 @@ class _SettingsState extends State<Settings> {
                         SizedBox(
                           height: height * 0.012,
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "Help & Support",
-                              style: TextStyle(
-                                fontSize: width * 0.044,
-                                color: Color(0xFFD12BD1),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.02),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Help & Support",
+                                style: TextStyle(
+                                  fontSize: width * 0.044,
+                                  color: Color(0xFFD12BD1),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: width * 0.39,
-                            ),
-                            InkWell(
-                              child: Icon(
-                                Icons.navigate_next,
-                                color: Color(0xFF757575),
+                              InkWell(
+                                child: Icon(
+                                  Icons.navigate_next,
+                                  color: Color(0xFF757575),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -892,8 +899,10 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(left: width * 0.06),
+                    padding: EdgeInsets.only(
+                        left: width * 0.06, right: width * 0.02),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Share Dater",
@@ -902,7 +911,6 @@ class _SettingsState extends State<Settings> {
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF424242)),
                         ),
-                        SizedBox(width: width * 0.45),
                         InkWell(
                           child: Icon(
                             Icons.navigate_next,
@@ -1008,50 +1016,52 @@ class CustomCard extends StatelessWidget {
             SizedBox(
               height: height * 0.023,
             ),
-            Row(
-              children: [
-                Text(
-                  "Username",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF757575),
+            Padding(
+              padding: EdgeInsets.only(right: width * 0.02),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Username",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFF757575),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: width * 0.52,
-                ),
-                InkWell(
-                  child: Icon(
-                    Icons.navigate_next,
-                    color: Color(0xFF757575),
+                  InkWell(
+                    child: Icon(
+                      Icons.navigate_next,
+                      color: Color(0xFF757575),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: height * 0.013,
             ),
-            Row(
-              children: [
-                Text(
-                  "Email",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF757575),
+            Padding(
+              padding: EdgeInsets.only(right: width * 0.02),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Email",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFF757575),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: width * 0.6,
-                ),
-                InkWell(
-                  child: Icon(
-                    Icons.navigate_next,
-                    color: Color(0xFF757575),
+                  InkWell(
+                    child: Icon(
+                      Icons.navigate_next,
+                      color: Color(0xFF757575),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
