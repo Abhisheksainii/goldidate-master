@@ -82,10 +82,10 @@ class _ClassicviewState extends State<Classicview>
             height: height * 0.6,
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).canvasColor,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(10),
-                  topRight: const Radius.circular(10),
+                  topLeft: const Radius.circular(20),
+                  topRight: const Radius.circular(20),
                 ),
               ),
               child: Stack(
@@ -882,7 +882,7 @@ class _ClassicviewState extends State<Classicview>
                                     childAspectRatio: 0.8,
                                     crossAxisCount: 3,
                                     crossAxisSpacing: 6,
-                                    mainAxisSpacing: 1.0,
+                                    mainAxisSpacing: 11.0,
                                   ),
                                   itemBuilder:
                                       (BuildContext context, int index) {

@@ -68,7 +68,7 @@ class ChatScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: width * 0.17,
+                  width: width * 0.15,
                 ),
                 CircleAvatar(
                   backgroundImage: AssetImage(Common.assetsImages + "Man.png"),
@@ -206,7 +206,7 @@ class ChatScreen extends StatelessWidget {
                               ),
                               Padding(
                                 child: Text(
-                                  "12:15",
+                                  "12:15 PM",
                                   style: TextStyle(color: Colors.grey),
                                 ),
                                 padding: EdgeInsets.symmetric(

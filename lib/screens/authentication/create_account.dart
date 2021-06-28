@@ -63,7 +63,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 20.0),
+                      SizedBox(height: 20.0),
                       Column(
                         children: [
                           Row(

@@ -8,6 +8,13 @@ class AddPhotos extends StatefulWidget {
 }
 
 class _AddPhotosState extends State<AddPhotos> {
+  List<String> images = [
+    "https://placeimg.com/500/500/any",
+    "https://placeimg.com/500/500/any",
+    "https://placeimg.com/500/500/any",
+    "https://placeimg.com/500/500/any",
+    "https://placeimg.com/500/500/any"
+  ];
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -390,7 +397,7 @@ class _AddPhotosState extends State<AddPhotos> {
                         top: height * 0.11,
                         left: width * 0.22,
                         child: Opacity(
-                          opacity: 0,
+                          opacity: 0.8,
                           child: Image(
                             image: AssetImage(
                                 Common.assetsImages + "cross icon.png"),
