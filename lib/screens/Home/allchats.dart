@@ -56,35 +56,38 @@ class _AllChatsState extends State<AllChats> {
                   SizedBox(
                     width: width * 0.03,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Text(
-                        "${messsage[index].names}",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFF424242),
-                          fontWeight: messsage[index].isread
-                              ? FontWeight.w400
-                              : FontWeight.w600,
+                  Container(
+                    width: width * 0.38,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: height * 0.02,
                         ),
-                      ),
-                      Text(
-                        "Hey, how's life going?",
-                        style: TextStyle(
-                            fontSize: 14,
+                        Text(
+                          "${messsage[index].names}",
+                          style: TextStyle(
+                            fontSize: 16,
                             color: Color(0xFF424242),
                             fontWeight: messsage[index].isread
                                 ? FontWeight.w400
-                                : FontWeight.w600),
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                    ],
+                                : FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          "Hey, how's life going?",
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF424242),
+                              fontWeight: messsage[index].isread
+                                  ? FontWeight.w400
+                                  : FontWeight.w600),
+                        ),
+                        SizedBox(
+                          height: height * 0.02,
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     width: width * 0.25,
