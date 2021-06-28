@@ -2,22 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/common.dart';
 
+class MessageType {
+  String names;
+  bool isread;
+  MessageType({@required this.names, @required this.isread});
+}
+
 class AllChats extends StatefulWidget {
   @override
   _AllChatsState createState() => _AllChatsState();
 }
 
 class _AllChatsState extends State<AllChats> {
-  final List<String> names = <String>[
-    "Dennis Steele",
-    "Rosa Richards",
-    "Lora Barnett",
-    "Christopher Steven",
-    "Lora Barnett",
-    "Rosa Richards",
-    "Alice Morson",
-    "Jason Masdella",
-    "Bruce Molkins"
+  List<MessageType> messsage = [
+    MessageType(names: "Mossic", isread: false),
+    MessageType(names: "Johnson", isread: false),
+    MessageType(names: "Loki", isread: true),
+    MessageType(names: "Loki", isread: true),
+    MessageType(names: "Loki", isread: true),
+    MessageType(names: "Loki", isread: true),
+    MessageType(names: "Harry", isread: false),
   ];
 
   @override
@@ -30,7 +34,7 @@ class _AllChatsState extends State<AllChats> {
             top: height * 0.025,
             left: width * 0.05,
           ),
-          itemCount: names.length,
+          itemCount: messsage.length,
           itemBuilder: (context, int index) {
             return InkWell(
               onTap: () {
@@ -59,18 +63,23 @@ class _AllChatsState extends State<AllChats> {
                         height: height * 0.02,
                       ),
                       Text(
-                        "${names[index]}",
+                        "${messsage[index].names}",
                         style: TextStyle(
                           fontSize: 16,
                           color: Color(0xFF424242),
+                          fontWeight: messsage[index].isread
+                              ? FontWeight.w400
+                              : FontWeight.w600,
                         ),
                       ),
                       Text(
                         "Hey, how's life going?",
                         style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xFF424242),
-                        ),
+                            fontSize: 14,
+                            color: Color(0xFF424242),
+                            fontWeight: messsage[index].isread
+                                ? FontWeight.w400
+                                : FontWeight.w600),
                       ),
                       SizedBox(
                         height: height * 0.02,
@@ -80,12 +89,22 @@ class _AllChatsState extends State<AllChats> {
                   SizedBox(
                     width: width * 0.25,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(top: height * 0.02),
-                    child: Text(
-                      "9:27 AM",
-                      style: TextStyle(fontSize: 12, color: Color(0xFF9E9E9E)),
-                    ),
+                  Column(
+                    children: [
+                      Text(
+                        "9:27 AM",
+                        style:
+                            TextStyle(fontSize: 12, color: Color(0xFF9E9E9E)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: height * 0.02),
+                        child: Text(
+                          "9:27 AM",
+                          style:
+                              TextStyle(fontSize: 12, color: Color(0xFF9E9E9E)),
+                        ),
+                      ),
+                    ],
                   )
                 ],
               ),
