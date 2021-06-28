@@ -91,10 +91,11 @@ class _AllChatsState extends State<AllChats> {
                   ),
                   Column(
                     children: [
-                      Text(
-                        "9:27 AM",
-                        style:
-                            TextStyle(fontSize: 12, color: Color(0xFF9E9E9E)),
+                      Visibility(
+                        visible: messsage[index].isread,
+                        child: Image(
+                          image: AssetImage(Common.assetsImages + "chat.png"),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.02),
