@@ -69,8 +69,13 @@ class _AddPhotosState extends State<AddPhotos> {
                 child: Row(
                   children: [
                     InkWell(
-                      child: Image(
-                        image: AssetImage(Common.assetsImages + "img icon.png"),
+                      child: Container(
+                        height: height * 0.07,
+                        width: width * 0.07,
+                        child: Image(
+                          image: AssetImage(
+                              Common.assetsImages + "gallary icon.png"),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -121,11 +126,16 @@ class _AddPhotosState extends State<AddPhotos> {
                               image:
                                   AssetImage(Common.assetsImages + "AP1.png"))),
                       Positioned(
-                          top: height * 0.11,
-                          left: width * 0.22,
+                        top: height * 0.11,
+                        left: width * 0.22,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "check button.png")))
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
+                        ),
+                      ),
                     ],
                   ),
                   Stack(
@@ -137,11 +147,16 @@ class _AddPhotosState extends State<AddPhotos> {
                               image:
                                   AssetImage(Common.assetsImages + "AP2.png"))),
                       Positioned(
-                          top: height * 0.11,
-                          left: width * 0.22,
+                        top: height * 0.11,
+                        left: width * 0.22,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "check button.png")))
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
+                        ),
+                      ),
                     ],
                   ),
                   Stack(
@@ -153,11 +168,16 @@ class _AddPhotosState extends State<AddPhotos> {
                               image:
                                   AssetImage(Common.assetsImages + "AP3.png"))),
                       Positioned(
-                          top: height * 0.11,
-                          left: width * 0.22,
+                        top: height * 0.11,
+                        left: width * 0.22,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "check button.png")))
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
+                        ),
+                      ),
                     ],
                   ),
                   Stack(
@@ -171,11 +191,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "cross icon.png")),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -189,11 +210,16 @@ class _AddPhotosState extends State<AddPhotos> {
                               image:
                                   AssetImage(Common.assetsImages + "AP5.png"))),
                       Positioned(
-                          top: height * 0.112,
-                          left: width * 0.22,
+                        top: height * 0.11,
+                        left: width * 0.22,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "check button.png")))
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
+                        ),
+                      ),
                     ],
                   ),
                   Stack(
@@ -207,12 +233,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -228,12 +254,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -249,12 +275,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -270,12 +296,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -291,12 +317,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -312,12 +338,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -333,12 +359,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -354,12 +380,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -375,12 +401,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],
@@ -396,12 +422,12 @@ class _AddPhotosState extends State<AddPhotos> {
                       Positioned(
                         top: height * 0.11,
                         left: width * 0.22,
-                        child: Opacity(
-                          opacity: 0.8,
+                        child: Container(
+                          height: height * 0.04,
+                          width: width * 0.04,
                           child: Image(
-                            image: AssetImage(
-                                Common.assetsImages + "cross icon.png"),
-                          ),
+                              image:
+                                  AssetImage(Common.assetsImages + "tick.png")),
                         ),
                       ),
                     ],

@@ -154,7 +154,7 @@ class _SettingsState extends State<Settings> {
                     left: width * 0.05,
                     right: width * 0.05),
                 child: Container(
-                  height: height * 0.16,
+                  height: height * 0.17,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                     color: Color(0xfff5f5f5),
@@ -195,9 +195,13 @@ class _SettingsState extends State<Settings> {
                             SizedBox(
                               width: width * 0.34,
                             ),
-                            Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "check button.png"),
+                            Container(
+                              height: height * 0.04,
+                              width: width * 0.04,
+                              child: Image(
+                                image: AssetImage(
+                                    Common.assetsImages + "tick.png"),
+                              ),
                             ),
                           ],
                         ),

@@ -96,8 +96,12 @@ class _AllChatsState extends State<AllChats> {
                     children: [
                       Visibility(
                         visible: messsage[index].isread,
-                        child: Image(
-                          image: AssetImage(Common.assetsImages + "chat.png"),
+                        child: Container(
+                          height: height * 0.025,
+                          width: width * 0.025,
+                          child: Image(
+                            image: AssetImage(Common.assetsImages + "chat.png"),
+                          ),
                         ),
                       ),
                       Padding(

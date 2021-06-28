@@ -239,8 +239,13 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Image(
-                      image: AssetImage(Common.assetsImages + "Path 3072.png"),
+                    child: Container(
+                      child: Image(
+                        height: height * 0.05,
+                        width: width * 0.05,
+                        image:
+                            AssetImage(Common.assetsImages + "Path 3072.png"),
+                      ),
                     ),
                     style: ElevatedButton.styleFrom(
                         elevation: 4.0,

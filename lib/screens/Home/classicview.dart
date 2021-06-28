@@ -153,7 +153,7 @@ class _ClassicviewState extends State<Classicview>
                                 height1: height * 0.06,
                                 height: height * 0.12,
                                 width: width * 0.16,
-                                iconasset: Common.assetsImages + "tick.png",
+                                iconasset: Common.assetsImages + "Vector-2.png",
                                 onpressed: () {
                                   _matchEngine.currentItem.like();
                                 },
@@ -1005,7 +1005,7 @@ class _ClassicviewState extends State<Classicview>
                     height1: height * 0.06,
                     height: height * 0.12,
                     width: width * 0.16,
-                    iconasset: Common.assetsImages + "tick.png",
+                    iconasset: Common.assetsImages + "Vector-2.png",
                     onpressed: () {
                       _matchEngine.currentItem.like();
                     },
