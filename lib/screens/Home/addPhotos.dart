@@ -8,6 +8,7 @@ class AddPhotos extends StatefulWidget {
 }
 
 class _AddPhotosState extends State<AddPhotos> {
+  bool showTick = false;
   List<String> images = [
     "https://placeimg.com/500/500/any",
     "https://placeimg.com/500/500/any",
@@ -117,321 +118,21 @@ class _AddPhotosState extends State<AddPhotos> {
                 shrinkWrap: true,
                 crossAxisCount: 3,
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP1.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP2.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP3.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP4.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP5.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP6.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP7.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP8.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "AP9.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP10.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP11.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP12.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP13.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP14.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Container(
-                          height: height * 0.15,
-                          width: width * 0.3,
-                          child: Image(
-                              image: AssetImage(
-                                  Common.assetsImages + "AP15.png"))),
-                      Positioned(
-                        top: height * 0.11,
-                        left: width * 0.22,
-                        child: Container(
-                          height: height * 0.04,
-                          width: width * 0.04,
-                          child: Image(
-                              image:
-                                  AssetImage(Common.assetsImages + "tick.png")),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ImageContainer(height: height, width: width, path: "1"),
+                  ImageContainer(height: height, width: width, path: "2"),
+                  ImageContainer(height: height, width: width, path: "3"),
+                  ImageContainer(height: height, width: width, path: "4"),
+                  ImageContainer(height: height, width: width, path: "5"),
+                  ImageContainer(height: height, width: width, path: "6"),
+                  ImageContainer(height: height, width: width, path: "7"),
+                  ImageContainer(height: height, width: width, path: "8"),
+                  ImageContainer(height: height, width: width, path: "9"),
+                  ImageContainer(height: height, width: width, path: "10"),
+                  ImageContainer(height: height, width: width, path: "11"),
+                  ImageContainer(height: height, width: width, path: "12"),
+                  ImageContainer(height: height, width: width, path: "13"),
+                  ImageContainer(height: height, width: width, path: "14"),
+                  ImageContainer(height: height, width: width, path: "15"),
                 ],
               ),
             ),
@@ -485,6 +186,63 @@ class _AddPhotosState extends State<AddPhotos> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ImageContainer extends StatefulWidget {
+  const ImageContainer({
+    Key key,
+    @required this.height,
+    @required this.width,
+    @required this.path,
+  }) : super(key: key);
+
+  final double height;
+  final double width;
+  final String path;
+
+  @override
+  _ImageContainerState createState() => _ImageContainerState();
+}
+
+class _ImageContainerState extends State<ImageContainer> {
+  bool showTick = false;
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        InkWell(
+          onTap: () {
+            setState(() {
+              if (showTick) {
+                showTick = false;
+              } else {
+                showTick = true;
+              }
+            });
+          },
+          child: Container(
+            height: widget.height * 0.15,
+            width: widget.width * 0.3,
+            child: Image(
+              image: AssetImage(Common.assetsImages + "AP${widget.path}.png"),
+            ),
+          ),
+        ),
+        Positioned(
+          top: widget.height * 0.11,
+          left: widget.width * 0.22,
+          child: Visibility(
+            visible: showTick,
+            child: Container(
+              height: widget.height * 0.04,
+              width: widget.width * 0.04,
+              child: Image(image: AssetImage(Common.assetsImages + "tick.png")),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
