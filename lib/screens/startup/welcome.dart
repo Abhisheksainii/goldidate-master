@@ -60,31 +60,39 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 Container(
                   child: SizedBox(
-                    child: PageView.builder(
-                      controller: _pageController,
-                      itemCount: introSlides.length,
-                      onPageChanged: (index) {
-                        setState(() {
-                          currentPage = index;
-                        });
+                    child:
+                        NotificationListener<OverscrollIndicatorNotification>(
+                      onNotification: (overscroll) {
+                        overscroll.disallowGlow();
                       },
-                      itemBuilder: (context, index) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.7,
-                              child: introSlides[index],
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.22,
-                              child: Center(
-                                child: slidesDescription[index],
+                      child: PageView.builder(
+                        controller: _pageController,
+                        itemCount: introSlides.length,
+                        onPageChanged: (index) {
+                          setState(() {
+                            currentPage = index;
+                          });
+                        },
+                        itemBuilder: (context, index) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.7,
+                                child: introSlides[index],
                               ),
-                            ),
-                          ],
-                        );
-                      },
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.22,
+                                child: Center(
+                                  child: slidesDescription[index],
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),

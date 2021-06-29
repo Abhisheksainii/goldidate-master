@@ -144,23 +144,69 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                   Column(
                     children: [
-                      ElevatedButton(
-                        onPressed: () {
+                      InkWell(
+                        onTap: () {
                           Navigator.of(context).pushNamed(AppRoutes.addMedia);
                         },
                         child: Container(
-                          height: height * 0.12,
-                          width: width * 0.12,
-                          child: Image(
-                            image:
-                                AssetImage(Common.assetsImages + "Camera.png"),
-                          ),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                            elevation: 4.0,
-                            shape: CircleBorder(),
-                            primary: Color(0xFFD12BD1),
-                            onPrimary: Colors.white),
+                            height: height * 0.12,
+                            child: Align(
+                              alignment: Alignment.topCenter,
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                        color: Colors.purple,
+                                        shape: BoxShape.circle),
+                                    margin: EdgeInsets.only(top: 10),
+                                    height: MediaQuery.of(context).size.height *
+                                        0.20,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.4,
+                                    child: Image.asset(
+                                      Common.assetsImages + "Camera.png",
+                                      height: height * 0.054,
+                                    ),
+                                  ),
+                                  Positioned(
+                                    right: width * 0.07,
+                                    top: height * 0.07,
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      height: height * 0.06,
+                                      width: width * 0.06,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        shape: BoxShape.circle,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: AppColors.greyColor,
+                                            offset: const Offset(
+                                              4.0,
+                                              4.0,
+                                            ),
+                                            blurRadius: 5.0,
+                                            spreadRadius: 0.1,
+                                          ), //BoxShadow
+                                          BoxShadow(
+                                            color: Colors.white,
+                                            offset: const Offset(0.0, 0.0),
+                                            blurRadius: 0.0,
+                                            spreadRadius: 0.0,
+                                          ), //BoxShadow
+                                        ],
+                                      ),
+                                      child: Image.asset(
+                                        Common.assetsImages + "Path 3072.png",
+                                        height: height * 0.04,
+                                        width: width * 0.04,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )),
                       ),
                       SizedBox(
                         height: 10.0,

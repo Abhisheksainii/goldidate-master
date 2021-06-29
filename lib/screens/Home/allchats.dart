@@ -95,7 +95,7 @@ class _AllChatsState extends State<AllChats> {
                   Column(
                     children: [
                       Visibility(
-                        visible: messsage[index].isread,
+                        visible: !messsage[index].isread,
                         child: Container(
                           height: height * 0.025,
                           width: width * 0.025,
