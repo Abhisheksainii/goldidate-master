@@ -208,7 +208,7 @@ class _ClassicviewState extends State<Classicview>
                             ],
                           ),
                           SizedBox(
-                            height: height * 0.01,
+                            height: height * 0.011,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -222,6 +222,9 @@ class _ClassicviewState extends State<Classicview>
                                 ],
                               ),
                             ],
+                          ),
+                          SizedBox(
+                            height: height * 0.01,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -340,7 +343,7 @@ class _ClassicviewState extends State<Classicview>
                             ),
                           ),
                           SizedBox(
-                            height: height * 0.05,
+                            height: height * 0.036,
                           ),
                           Column(
                             children: [
@@ -720,8 +723,8 @@ class _ClassicviewState extends State<Classicview>
                                 InkWell(
                                   onTap: () => _onButtonPressed(context),
                                   child: Container(
-                                    width: width * 0.07,
-                                    height: height * 0.07,
+                                    width: width * 0.077,
+                                    height: height * 0.077,
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: AssetImage(
@@ -741,7 +744,7 @@ class _ClassicviewState extends State<Classicview>
                                 Text(
                                   "Art Manager",
                                   style: TextStyle(
-                                      color: AppColors.greyColor,
+                                      color: AppColors.whiteColor,
                                       fontSize: height * 0.019),
                                 ),
                                 Padding(
@@ -756,7 +759,7 @@ class _ClassicviewState extends State<Classicview>
                                 Text(
                                   "10 miles",
                                   style: TextStyle(
-                                      color: AppColors.greyColor,
+                                      color: AppColors.whiteColor,
                                       fontSize: height * 0.015),
                                 ),
                               ],
@@ -768,11 +771,11 @@ class _ClassicviewState extends State<Classicview>
                                   child: AutoSizeText(
                                     "description",
                                     style: TextStyle(
-                                        color: AppColors.greyColor,
+                                        color: AppColors.whiteColor,
                                         fontSize: height * 0.019),
                                     maxLines: 2,
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ],
