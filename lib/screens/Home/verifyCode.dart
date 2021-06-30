@@ -151,12 +151,14 @@ class _VerifyCodeState extends State<VerifyCode> {
                     padding:
                         EdgeInsets.only(top: height * 0.01, left: width * 0.06),
                     child: Container(
-                      child: Text(
-                        "Resend",
-                        style: TextStyle(
-                            color: Color(0xFFD12BD1),
-                            fontSize: width * 0.042,
-                            fontWeight: FontWeight.w600),
+                      child: Center(
+                        child: Text(
+                          "Resend",
+                          style: TextStyle(
+                              color: Color(0xFFD12BD1),
+                              fontSize: width * 0.042,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                   ),

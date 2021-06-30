@@ -283,6 +283,7 @@ class _MyProfileState extends State<MyProfile> {
                 ),
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
                     width: 8.0,
