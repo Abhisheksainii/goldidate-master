@@ -16,11 +16,13 @@ class _EditProfileState extends State<EditProfile> {
         child: SingleChildScrollView(
           child: Container(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
                   padding:
-                      EdgeInsets.only(top: height * 0.05, left: width * 0.06),
+                      EdgeInsets.only(top: height * 0.05, left: width * 0.05),
                   child: Container(
                     child: Row(
                       children: [
@@ -28,6 +30,7 @@ class _EditProfileState extends State<EditProfile> {
                           child: Icon(
                             Icons.arrow_back,
                             color: Color(0xFFD12BD1),
+                            size: width * 0.08,
                           ),
                         ),
                         SizedBox(
@@ -46,6 +49,7 @@ class _EditProfileState extends State<EditProfile> {
                           child: Icon(
                             Icons.more_horiz,
                             color: Color(0xFFD12BD1),
+                            size: width * 0.1,
                           ),
                         ),
                       ],
@@ -126,7 +130,7 @@ class _EditProfileState extends State<EditProfile> {
                   padding: EdgeInsets.only(
                       top: height * 0.0045,
                       left: width * 0.1,
-                      right: width * 0.02),
+                      right: width * 0.55),
                   child: CustomContainer(
                       fontSize: 0.04,
                       text1: "Gender",
@@ -172,7 +176,7 @@ class _EditProfileState extends State<EditProfile> {
                   padding: EdgeInsets.only(
                       top: height * 0.0045,
                       left: width * 0.1,
-                      right: width * 0.02),
+                      right: width * 0.63),
                   child: CustomContainer(
                       fontSize: 0.04,
                       text1: "Profession",
@@ -236,9 +240,6 @@ class _EditProfileState extends State<EditProfile> {
                     endIndent: 50,
                     thickness: 1,
                   ),
-                ),
-                SizedBox(
-                  height: height * 0.175,
                 ),
                 Container(
                   height: height * 0.09545,
@@ -322,6 +323,7 @@ class _CustomContainerState extends State<CustomContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: widget.width * 0.9,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

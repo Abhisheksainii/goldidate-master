@@ -45,9 +45,13 @@ class _InnerProfileState extends State<InnerProfile> {
                       SizedBox(
                         width: width * 0.65,
                       ),
-                      Image(
-                        image: AssetImage(
-                          Common.assetsImages + "Camera.png",
+                      Container(
+                        height: height * 0.08,
+                        width: width * 0.08,
+                        child: Image(
+                          image: AssetImage(
+                            Common.assetsImages + "Camera.png",
+                          ),
                         ),
                       ),
                     ],
@@ -55,7 +59,7 @@ class _InnerProfileState extends State<InnerProfile> {
                 ),
               ),
               SizedBox(
-                height: height * 0.55,
+                height: height * 0.53,
               ),
               Container(
                 height: height * 0.34,

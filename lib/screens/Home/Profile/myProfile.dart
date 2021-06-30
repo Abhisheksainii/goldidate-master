@@ -58,7 +58,12 @@ class _MyProfileState extends State<MyProfile> {
                 SizedBox(
                   height: height * 0.008,
                 ),
-                Text("Academic Center of Advanced Studies"),
+                Text(
+                  "Academic Center of Advanced Studies",
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                  ),
+                ),
                 SizedBox(
                   height: height * 0.01,
                 ),

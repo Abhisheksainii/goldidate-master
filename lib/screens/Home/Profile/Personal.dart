@@ -22,9 +22,7 @@ class _PersonalState extends State<Personal> {
   var selectedRange = RangeValues(0.2, 0.4);
   double value = 0.0;
   Gender _gender = Gender.Female;
-  Sexuality _sex = Sexuality.Straight;
-  ViewStyle _character = ViewStyle.classicView;
-  Interests _interest = Interests.dating;
+  Sexuality _sex = Sexuality.Gay;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -221,161 +219,173 @@ class _PersonalState extends State<Personal> {
                         ),
                         Column(
                           children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "Female",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Female",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.53,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.Female,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.Female,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Male",
-                                  style: TextStyle(
-                                    fontSize: width * 0.0475,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Male",
+                                    style: TextStyle(
+                                      fontSize: width * 0.0475,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.575,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.Male,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.Male,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Non-Binary",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Non-Binary",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.44,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.NonBinary,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.NonBinary,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Transgender Female",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Transgender Female",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.25,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.TransgenderFemale,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.TransgenderFemale,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Transgender Male",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Transgender Male",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.3,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.TransgendeMale,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.TransgendeMale,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Transgender",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Transgender",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.415,
-                                ),
-                                Radio<Gender>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Gender.Transgender,
-                                  groupValue: _gender,
-                                  onChanged: (Gender val) {
-                                    setState(
-                                      () {
-                                        _gender = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Gender>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Gender.Transgender,
+                                    groupValue: _gender,
+                                    onChanged: (Gender val) {
+                                      setState(
+                                        () {
+                                          _gender = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         )
@@ -423,161 +433,173 @@ class _PersonalState extends State<Personal> {
                         ),
                         Column(
                           children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "Straight",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Straight",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.515,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Straight,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Straight,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Gay",
-                                  style: TextStyle(
-                                    fontSize: width * 0.0475,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Gay",
+                                    style: TextStyle(
+                                      fontSize: width * 0.0475,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.6,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Gay,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Gay,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Lesbian",
-                                  style: TextStyle(
-                                    fontSize: width * 0.046,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Lesbian",
+                                    style: TextStyle(
+                                      fontSize: width * 0.046,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.52,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Lesbian,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Lesbian,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Bisexual",
-                                  style: TextStyle(
-                                    fontSize: width * 0.0457,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Bisexual",
+                                    style: TextStyle(
+                                      fontSize: width * 0.0457,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.51,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Bisexual,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Bisexual,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Pansexual",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Pansexual",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.476,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Pansexual,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Pansexual,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text(
-                                  "Transgender",
-                                  style: TextStyle(
-                                    fontSize: width * 0.045,
-                                    color: Color(0xFF757575),
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.027),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Transgender",
+                                    style: TextStyle(
+                                      fontSize: width * 0.045,
+                                      color: Color(0xFF757575),
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.425,
-                                ),
-                                Radio<Sexuality>(
-                                  activeColor: Color(0xFFD12BD1),
-                                  value: Sexuality.Transgender,
-                                  groupValue: _sex,
-                                  onChanged: (Sexuality val) {
-                                    setState(
-                                      () {
-                                        _sex = val;
-                                      },
-                                    );
-                                  },
-                                ),
-                              ],
+                                  Radio<Sexuality>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: Sexuality.Transgender,
+                                    groupValue: _sex,
+                                    onChanged: (Sexuality val) {
+                                      setState(
+                                        () {
+                                          _sex = val;
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         )

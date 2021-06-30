@@ -168,7 +168,7 @@ class ChatScreen extends StatelessWidget {
                                           color: messages[index].messageType ==
                                                   "receiver"
                                               ? Colors.white
-                                              : Colors.black54),
+                                              : Colors.grey[700]),
                                     ),
                                   ),
                                 ),
