@@ -147,18 +147,14 @@ class _VerifyCodeState extends State<VerifyCode> {
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(22.0),
                   ),
-                  child: Padding(
-                    padding:
-                        EdgeInsets.only(top: height * 0.01, left: width * 0.06),
+                  child: Center(
                     child: Container(
-                      child: Center(
-                        child: Text(
-                          "Resend",
-                          style: TextStyle(
-                              color: Color(0xFFD12BD1),
-                              fontSize: width * 0.042,
-                              fontWeight: FontWeight.w600),
-                        ),
+                      child: Text(
+                        "Resend",
+                        style: TextStyle(
+                            color: Color(0xFFD12BD1),
+                            fontSize: width * 0.042,
+                            fontWeight: FontWeight.w600),
                       ),
                     ),
                   ),
