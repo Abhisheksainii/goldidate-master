@@ -28,7 +28,7 @@ class _GalleryViewState extends State<GalleryView> {
           padding: EdgeInsets.all(width * 0.08),
           itemCount: images.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 0.88,
+              childAspectRatio: 0.8,
               crossAxisCount: 2,
               crossAxisSpacing: width * 0.06,
               mainAxisSpacing: height * 0.03),
@@ -80,7 +80,7 @@ class _GalleryViewState extends State<GalleryView> {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(width * 0.05),
                     topLeft: Radius.circular(width * 0.05))),
-            height: height * 0.15,
+            height: height * 0.1599,
           ),
           Container(
             decoration: BoxDecoration(

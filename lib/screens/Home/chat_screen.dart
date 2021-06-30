@@ -179,8 +179,8 @@ class ChatScreen extends StatelessWidget {
                                               begin: Alignment.topCenter,
                                               end: Alignment.bottomCenter,
                                               colors: [
-                                                  Colors.black.withOpacity(0.6),
-                                                  Color(0xFFD12BD1),
+                                                  Color(0xFF532253),
+                                                  Color(0xFFD12BD1)
                                                 ])
                                           : LinearGradient(
                                               begin: Alignment.topCenter,

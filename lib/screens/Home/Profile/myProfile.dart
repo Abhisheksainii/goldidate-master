@@ -162,7 +162,14 @@ class _MyProfileState extends State<MyProfile> {
                                   Container(
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
-                                        color: Colors.purple,
+                                        gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Color(0xFF532253)
+                                                  .withOpacity(0.9),
+                                              Color(0xFFD12BD1)
+                                            ]),
                                         shape: BoxShape.circle),
                                     margin: EdgeInsets.only(top: 10),
                                     height: MediaQuery.of(context).size.height *
