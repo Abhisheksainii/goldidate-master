@@ -119,7 +119,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.05, right: width * 0.02),
+                        left: width * 0.05, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -139,10 +139,11 @@ class _SettingsState extends State<Settings> {
                           ),
                         ),
                         InkWell(
-                            child: Icon(
-                          Icons.navigate_next,
-                          color: Color(0xFF757575),
-                        )),
+                          child: Icon(
+                            Icons.navigate_next,
+                            color: Color(0xFF757575),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -177,33 +178,37 @@ class _SettingsState extends State<Settings> {
                         SizedBox(
                           height: height * 0.02,
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.location_on,
-                              color: Color(0xFFBDBDBD),
-                            ),
-                            SizedBox(
-                              width: width * 0.01,
-                            ),
-                            Text(
-                              "Current Location",
-                              style: TextStyle(
-                                  fontSize: width * 0.04,
-                                  color: Color(0xFF757575)),
-                            ),
-                            SizedBox(
-                              width: width * 0.34,
-                            ),
-                            Container(
-                              height: height * 0.04,
-                              width: width * 0.04,
-                              child: Image(
-                                image: AssetImage(
-                                    Common.assetsImages + "tick.png"),
+                        Padding(
+                          padding: EdgeInsets.only(right: width * 0.04),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(
+                                Icons.location_on,
+                                color: Color(0xFFBDBDBD),
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                width: width * 0.01,
+                              ),
+                              Text(
+                                "Current Location",
+                                style: TextStyle(
+                                    fontSize: width * 0.04,
+                                    color: Color(0xFF757575)),
+                              ),
+                              SizedBox(
+                                width: width * 0.34,
+                              ),
+                              Container(
+                                height: height * 0.04,
+                                width: width * 0.04,
+                                child: Image(
+                                  image: AssetImage(
+                                      Common.assetsImages + "tick.png"),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: height * 0.015,
@@ -260,7 +265,7 @@ class _SettingsState extends State<Settings> {
                           height: height * 0.015,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: width * 0.02),
+                          padding: EdgeInsets.only(right: width * 0.04),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -313,7 +318,7 @@ class _SettingsState extends State<Settings> {
                                   color: Color(0xFF424242)),
                             ),
                             SizedBox(
-                              width: width * 0.3,
+                              width: width * 0.28,
                             ),
                             Text(
                               "30mi",
@@ -369,7 +374,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -410,7 +415,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -463,7 +468,7 @@ class _SettingsState extends State<Settings> {
                           height: height * 0.013,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: width * 0.02),
+                          padding: EdgeInsets.only(right: width * 0.04),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -505,7 +510,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -546,7 +551,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -587,7 +592,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -640,44 +645,58 @@ class _SettingsState extends State<Settings> {
                         ),
                         Column(
                           children: [
-                            ListTile(
-                              title: Text(
-                                "Km.",
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              trailing: Radio<distance>(
-                                activeColor: Color(0xFFD12BD1),
-                                value: distance.Km,
-                                groupValue: _dist,
-                                onChanged: (distance value) {
-                                  setState(() {
-                                    _dist = value;
-                                  });
-                                },
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.04),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Km.",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xFF757575),
+                                    ),
+                                  ),
+                                  Radio<distance>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: distance.Km,
+                                    groupValue: _dist,
+                                    onChanged: (distance value) {
+                                      setState(() {
+                                        _dist = value;
+                                      });
+                                    },
+                                  ),
+                                ],
                               ),
                             ),
-                            ListTile(
-                              title: Text(
-                                "Mi.",
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              trailing: Radio<distance>(
-                                activeColor: Color(0xFFD12BD1),
-                                value: distance.Km,
-                                groupValue: _dist,
-                                onChanged: (distance value) {
-                                  setState(() {
-                                    _dist = value;
-                                  });
-                                },
+                            Padding(
+                              padding: EdgeInsets.only(right: width * 0.04),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Mi.",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xFF757575),
+                                    ),
+                                  ),
+                                  Radio<distance>(
+                                    activeColor: Color(0xFFD12BD1),
+                                    value: distance.Km,
+                                    groupValue: _dist,
+                                    onChanged: (distance value) {
+                                      setState(() {
+                                        _dist = value;
+                                      });
+                                    },
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -782,7 +801,7 @@ class _SettingsState extends State<Settings> {
                           height: height * 0.023,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: width * 0.02),
+                          padding: EdgeInsets.only(right: width * 0.04),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -807,7 +826,7 @@ class _SettingsState extends State<Settings> {
                           height: height * 0.015,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: width * 0.02),
+                          padding: EdgeInsets.only(right: width * 0.04),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -862,7 +881,7 @@ class _SettingsState extends State<Settings> {
                           height: height * 0.012,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: width * 0.02),
+                          padding: EdgeInsets.only(right: width * 0.04),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -904,7 +923,7 @@ class _SettingsState extends State<Settings> {
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.02),
+                        left: width * 0.06, right: width * 0.04),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -1021,7 +1040,7 @@ class CustomCard extends StatelessWidget {
               height: height * 0.023,
             ),
             Padding(
-              padding: EdgeInsets.only(right: width * 0.02),
+              padding: EdgeInsets.only(right: width * 0.04),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -1046,7 +1065,7 @@ class CustomCard extends StatelessWidget {
               height: height * 0.013,
             ),
             Padding(
-              padding: EdgeInsets.only(right: width * 0.02),
+              padding: EdgeInsets.only(right: width * 0.04),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -1118,8 +1137,8 @@ class _CustomSwitchState extends State<CustomSwitch>
                 : widget.onChanged(false);
           },
           child: Container(
-            width: 45.0,
-            height: 28.0,
+            width: 43.0,
+            height: 22.0,
             decoration: BoxDecoration(
               border: Border.all(
                   color: _circleAnimation.value == Alignment.centerLeft

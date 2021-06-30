@@ -220,7 +220,10 @@ class _PersonalState extends State<Personal> {
                         Column(
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -248,7 +251,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -276,7 +282,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -304,7 +313,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -332,7 +344,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -360,7 +375,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -434,7 +452,10 @@ class _PersonalState extends State<Personal> {
                         Column(
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -462,7 +483,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -490,7 +514,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -518,7 +545,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -546,7 +576,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -574,7 +607,10 @@ class _PersonalState extends State<Personal> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(right: width * 0.027),
+                              padding: EdgeInsets.only(
+                                right: width * 0.055,
+                                left: width * 0.015,
+                              ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -624,9 +660,6 @@ class _PersonalState extends State<Personal> {
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [Colors.black, Color(0xFFD12BD1)]),
-                      border: Border.all(
-                        color: Color(0xFFE0E0E0),
-                      ),
                       borderRadius: BorderRadius.circular(60.0),
                     ),
                     child: Center(
