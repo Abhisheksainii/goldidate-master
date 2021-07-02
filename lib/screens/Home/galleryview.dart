@@ -28,7 +28,7 @@ class _GalleryViewState extends State<GalleryView> {
           padding: EdgeInsets.all(width * 0.08),
           itemCount: images.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 0.866,
+              childAspectRatio: 0.88,
               crossAxisCount: 2,
               crossAxisSpacing: width * 0.06,
               mainAxisSpacing: height * 0.03),
@@ -70,55 +70,57 @@ class _GalleryViewState extends State<GalleryView> {
       child: Column(
         children: [
           Container(
+            alignment: Alignment.topCenter,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    alignment: Alignment.centerLeft,
                     image: AssetImage(
                       Common.assetsImages + "swipeimage.png",
                     ),
-                    fit: BoxFit.fitWidth),
+                    fit: BoxFit.cover),
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(width * 0.05),
                     topLeft: Radius.circular(width * 0.05))),
-            height: height * 0.142,
+            height: height * 0.15,
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(width * 0.05),
-                  bottomRight: Radius.circular(width * 0.05)),
-              color: selectedd ? Color(0xffD12BD1) : Colors.white,
-            ),
-            height: height * 0.072,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Eliza William",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: selectedd ? Colors.white : Colors.black),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      Common.assetsImages + "location.png",
-                      height: height * 0.02,
-                      width: width * 0.02,
-                      color: selectedd ? Colors.white : Colors.purple,
-                    ),
-                    SizedBox(
-                      width: 3,
-                    ),
-                    Text(
-                      "10 miles",
-                      style: TextStyle(
-                          color: selectedd ? Colors.white : Colors.black),
-                    ),
-                  ],
-                )
-              ],
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(width * 0.05),
+                    bottomRight: Radius.circular(width * 0.05)),
+                color: selectedd ? Color(0xffD12BD1) : Colors.white,
+              ),
+              height: height * 0.072,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Eliza William",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: selectedd ? Colors.white : Colors.black),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        Common.assetsImages + "location.png",
+                        height: height * 0.02,
+                        width: width * 0.02,
+                        color: selectedd ? Colors.white : Colors.purple,
+                      ),
+                      SizedBox(
+                        width: 3,
+                      ),
+                      Text(
+                        "10 miles",
+                        style: TextStyle(
+                            color: selectedd ? Colors.white : Colors.black),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ],

@@ -69,7 +69,7 @@ class _GetStartedState extends State<GetStarted> {
                             ),
                           ],
                         ),
-                        SizedBox(height: height * 0.027),
+                        SizedBox(height: height * 0.017),
                         Row(
                           children: [
                             Expanded(
