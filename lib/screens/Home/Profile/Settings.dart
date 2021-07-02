@@ -63,13 +63,14 @@ class _SettingsState extends State<Settings> {
                   onTap: () =>
                       Navigator.of(context).pushNamed(AppRoutes.goldidatePlus),
                   child: Container(
-                    height: height * 0.10,
+                    height: height * 0.115,
                     width: width * 1.5,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18.0),
                         color: Color(0xFFD12BD1)),
                     child: Padding(
-                      padding: EdgeInsets.only(top: height * 0.02),
+                      padding: EdgeInsets.only(
+                          top: height * 0.02, bottom: height * 0.02),
                       child: Column(
                         children: [
                           Text(
@@ -620,7 +621,7 @@ class _SettingsState extends State<Settings> {
                 padding: EdgeInsets.only(
                     top: height * 0.03,
                     left: width * 0.05,
-                    right: width * 0.05),
+                    right: width * 0.016),
                 child: Container(
                   height: height * 0.2,
                   width: width * 1.5,
