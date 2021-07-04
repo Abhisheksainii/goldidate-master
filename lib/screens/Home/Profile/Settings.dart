@@ -16,6 +16,7 @@ class _SettingsState extends State<Settings> {
   double value = 0.0;
   bool _enable = true;
   bool _enable2 = true;
+
   bool _enable3 = true;
   bool _enable4 = true;
   bool _enable5 = true;

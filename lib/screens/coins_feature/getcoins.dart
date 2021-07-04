@@ -62,7 +62,7 @@ class GetCoins extends StatelessWidget {
                   ),
                   PriceTags(
                     size: size,
-                    Gcamount: "500",
+                    Gcamount: "5000",
                     Cost: " 34.99",
                     conversion: "Gcc = Goldcoin currency = 0.0069",
                   ),
@@ -118,7 +118,7 @@ class GetCoins extends StatelessWidget {
                   ]),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                     Text(
-                      "Only 500,000 ",
+                      "Only 49,999,995,000 ",
                       style: TextStyle(
                           fontSize: height * 0.037, color: AppColors.greyColor),
                     )

@@ -499,11 +499,14 @@ class _ClassicviewState extends State<Classicview>
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  "Is this person bothering you? Tell us",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
+                                                Expanded(
+                                                  child: Text(
+                                                    "Is this person bothering you? Tell us",
+                                                    style: TextStyle(
+                                                        fontSize: height * 0.02,
+                                                        color: Colors
+                                                            .grey.shade600),
+                                                  ),
                                                 )
                                               ],
                                             ),
@@ -517,6 +520,7 @@ class _ClassicviewState extends State<Classicview>
                                                   Text(
                                                     "what they did",
                                                     style: TextStyle(
+                                                        fontSize: height * 0.02,
                                                         color: Colors
                                                             .grey.shade600),
                                                   )
