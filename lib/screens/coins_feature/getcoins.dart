@@ -22,7 +22,7 @@ class GetCoins extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(
                   size.width * 0.08, height * 0.04, size.width * 0.08, 0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     "Get more coins",

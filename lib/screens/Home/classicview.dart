@@ -23,12 +23,12 @@ class _ClassicviewState extends State<Classicview>
     Common.assetsImages + "primary_background.png"
   ];
   List<String> lovegifts = [
+    Common.assetsImages + "Layer 16.png",
     Common.assetsImages + "heartballon.png",
     Common.assetsImages + "ross.png",
     Common.assetsImages + "Bunny.png",
     Common.assetsImages + "rozes.png",
     Common.assetsImages + "teddybear.png",
-    Common.assetsImages + "Layer 16.png",
     Common.assetsImages + "heart flowers.png",
     Common.assetsImages + "shose.png",
     Common.assetsImages + "dress.png",
@@ -38,12 +38,12 @@ class _ClassicviewState extends State<Classicview>
   ];
 
   List<String> lovegiftsname = [
+    "Chocolate Box",
     "Heart Ballon",
     "Red Rose",
     "Pink Bunny",
     "Rose Bouquet",
     "Teddy bear",
-    "Chocolate Box",
     "Heart Rose",
     "Rose Bouquet",
     "Red dress",
@@ -53,12 +53,12 @@ class _ClassicviewState extends State<Classicview>
   ];
 
   List<String> lovegiftsprice = [
+    "50",
     "60",
     "75",
     "80",
     "100",
     "125",
-    "50",
     "150",
     "250",
     "350",
@@ -339,602 +339,608 @@ class _ClassicviewState extends State<Classicview>
     double width = MediaQuery.of(context).size.width;
 
     showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
         context: context,
         builder: (context) {
           return Container(
-            color: Color(0xFF737373),
             height: height * 0.6,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(20),
-                  topRight: const Radius.circular(20),
-                ),
-              ),
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    bottom: height * 0.5,
-                    left: width * 0.8,
-                    child: RoundButton(
-                      width1: width * 0.08,
-                      height1: height * 0.06,
-                      height: height * 0.12,
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                  bottom: height * 0.5,
+                  left: width * 0.8,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
                       width: width * 0.12,
-                      iconasset: Common.assetsIcons + "downarrow.png",
-                      onpressed: () => Navigator.of(context).pop(),
+                      height: height * 0.12,
+                      child: Image.asset(
+                        Common.assetsIcons + "downarrow.png",
+                        fit: BoxFit.fitWidth,
+                        height: height * 0.06,
+                        width: width * 0.08,
+                      ),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              RoundButton(
-                                width1: width * 0.08,
-                                height1: height * 0.06,
+                ),
+                SingleChildScrollView(
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundButton(
+                              width1: width * 0.08,
+                              height1: height * 0.06,
+                              height: height * 0.12,
+                              width: width * 0.16,
+                              iconasset:
+                                  Common.assetsImages + "dislike icon.png",
+                              onpressed: () {
+                                _matchEngine.currentItem.nope();
+                              },
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Container(
+                                margin: EdgeInsets.symmetric(
+                                    horizontal: width * 0.04),
+                                alignment: Alignment.center,
+                                width: width * 0.12,
                                 height: height * 0.12,
-                                width: width * 0.16,
-                                iconasset:
-                                    Common.assetsImages + "dislike icon.png",
-                                onpressed: () {
-                                  _matchEngine.currentItem.nope();
-                                },
+                                child: Image.asset(
+                                  Common.assetsImages + "gift.png",
+                                  fit: BoxFit.fitWidth,
+                                  height: height * 0.05,
+                                  width: width * 0.05,
+                                ),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.goldColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey,
+                                      offset: Offset(0.0, 1.0), //(x,y)
+                                      blurRadius: 6.0,
+                                    ),
+                                  ],
+                                ),
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  margin: EdgeInsets.symmetric(
-                                      horizontal: width * 0.04),
-                                  alignment: Alignment.center,
-                                  width: width * 0.12,
-                                  height: height * 0.12,
-                                  child: Image.asset(
-                                    Common.assetsImages + "gift.png",
-                                    fit: BoxFit.fitWidth,
-                                    height: height * 0.05,
-                                    width: width * 0.05,
+                            ),
+                            RoundButton(
+                              width1: width * 0.08,
+                              height1: height * 0.06,
+                              height: height * 0.12,
+                              width: width * 0.16,
+                              iconasset: Common.assetsImages + "Vector-2.png",
+                              onpressed: () {
+                                _matchEngine.currentItem.like();
+                              },
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Eliza Williams",
+                              style: TextStyle(
+                                  fontSize: height * 0.03,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              ",23",
+                              style: TextStyle(
+                                fontSize: height * 0.03,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Art Manager",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.019),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(
+                                  width * 0.04, 0, width * 0.01, 0),
+                              child: Image.asset(
+                                Common.assetsImages + "location.png",
+                                height: height * 0.03,
+                                width: width * 0.03,
+                                color: AppColors.goldColor,
+                              ),
+                            ),
+                            Text(
+                              "10 miles",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.015),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.011,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  "Feminists.Cats.Other stuff",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  top: height * 0.01,
+                                  left: width * 0.05,
+                                  right: width * 0.05,
+                                  bottom: height * 0.01),
+                              child: Container(
+                                height: height * 0.1,
+                                width: width * 0.85,
+                                decoration: BoxDecoration(
+                                  color: Color(0xfff5f5f5),
+                                  border: Border.all(
+                                    color: Color(0xFFE0E0E0),
                                   ),
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: AppColors.goldColor,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey,
-                                        offset: Offset(0.0, 1.0), //(x,y)
-                                        blurRadius: 6.0,
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: width * 0.05),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          "I'm a photographer,yoga enthusiast, love to relax but very adventures and lover of superheros movives",
+                                          style: TextStyle(
+                                              fontSize: width * 0.035,
+                                              color: Color(0xFF757575),
+                                              fontWeight: FontWeight.w400),
+                                        ),
                                       ),
                                     ],
                                   ),
                                 ),
                               ),
-                              RoundButton(
-                                width1: width * 0.08,
-                                height1: height * 0.06,
-                                height: height * 0.12,
-                                width: width * 0.16,
-                                iconasset: Common.assetsImages + "Vector-2.png",
-                                onpressed: () {
-                                  _matchEngine.currentItem.like();
-                                },
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Eliza Williams",
-                                style: TextStyle(
-                                    fontSize: height * 0.03,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              Text(
-                                ",23",
-                                style: TextStyle(
-                                  fontSize: height * 0.03,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: height * 0.01,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Art Manager",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: height * 0.019),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(
-                                    width * 0.04, 0, width * 0.01, 0),
-                                child: Image.asset(
-                                  Common.assetsImages + "location.png",
-                                  height: height * 0.03,
-                                  width: width * 0.03,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Gender:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Female",
+                              style: TextStyle(
                                   color: AppColors.goldColor,
-                                ),
-                              ),
-                              Text(
-                                "10 miles",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: height * 0.015),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: height * 0.011,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Instagram:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " @Eliza-williams",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: height * 0.015,
+                              left: width * 0.08,
+                              right: width * 0.08,
+                              bottom: height * 0.01),
+                          child: Container(
+                            width: width * 0.85,
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "Feminists.Cats.Other stuff",
-                                    style: TextStyle(color: Colors.grey),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: height * 0.01,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(
-                                    top: height * 0.01,
-                                    left: width * 0.05,
-                                    right: width * 0.05,
-                                    bottom: height * 0.01),
-                                child: Container(
-                                  height: height * 0.1,
-                                  width: width * 0.85,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xfff5f5f5),
-                                    border: Border.all(
-                                      color: Color(0xFFE0E0E0),
-                                    ),
-                                    borderRadius: BorderRadius.circular(18.0),
-                                  ),
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.only(left: width * 0.05),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Expanded(
-                                          child: Text(
-                                            "I'm a photographer,yoga enthusiast, love to relax but very adventures and lover of superheros movives",
-                                            style: TextStyle(
-                                                fontSize: width * 0.035,
-                                                color: Color(0xFF757575),
-                                                fontWeight: FontWeight.w400),
-                                          ),
+                                        Text(
+                                          "Hobbies",
+                                          style: TextStyle(
+                                              fontSize: height * 0.02,
+                                              color: Colors.grey.shade700),
+                                        ),
+                                        SizedBox(
+                                          height: height * 0.01,
+                                        ),
+                                        Text(
+                                          "Computer Programming, Archery, Drawing, Chess, Poetry",
+                                          style: TextStyle(
+                                              fontSize: height * 0.017,
+                                              color: Colors.grey),
                                         ),
                                       ],
                                     ),
                                   ),
-                                ),
-                              ),
-                            ],
+                                ]),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Gender:",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: height * 0.018),
-                              ),
-                              Text(
-                                " Female",
-                                style: TextStyle(
-                                    color: AppColors.goldColor,
-                                    fontSize: height * 0.018),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: height * 0.005,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Instagram:",
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: height * 0.018),
-                              ),
-                              Text(
-                                " @Eliza-williams",
-                                style: TextStyle(
-                                    color: AppColors.goldColor,
-                                    fontSize: height * 0.018),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                                top: height * 0.015,
-                                left: width * 0.08,
-                                right: width * 0.08,
-                                bottom: height * 0.01),
-                            child: Container(
-                              width: width * 0.85,
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                        ),
+                        SizedBox(
+                          height: height * 0.036,
+                        ),
+                        Column(
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (ctx) => AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20.0))),
+                                    title: Center(
+                                        child: Text(
+                                      "Share",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    )),
+                                    content: Container(
+                                      child: Stack(
                                         children: [
-                                          Text(
-                                            "Hobbies",
-                                            style: TextStyle(
-                                                fontSize: height * 0.02,
-                                                color: Colors.grey.shade700),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Tap an icon below to share your",
+                                                style: TextStyle(
+                                                    color:
+                                                        Colors.grey.shade600),
+                                              )
+                                            ],
                                           ),
-                                          SizedBox(
-                                            height: height * 0.01,
-                                          ),
-                                          Text(
-                                            "Computer Programming, Archery, Drawing, Chess, Poetry",
-                                            style: TextStyle(
-                                                fontSize: height * 0.017,
-                                                color: Colors.grey),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ]),
-                            ),
-                          ),
-                          SizedBox(
-                            height: height * 0.036,
-                          ),
-                          Column(
-                            children: [
-                              InkWell(
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (ctx) => AlertDialog(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20.0))),
-                                      title: Center(
-                                          child: Text(
-                                        "Share",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600),
-                                      )),
-                                      content: Container(
-                                        child: Stack(
-                                          children: [
-                                            Row(
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.026),
+                                            child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  "Tap an icon below to share your",
+                                                  "content directly",
                                                   style: TextStyle(
                                                       color:
                                                           Colors.grey.shade600),
                                                 )
                                               ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.026),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "content directly",
-                                                    style: TextStyle(
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.06),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                    Common.assetsIcons +
-                                                        "instagram logo.png",
-                                                    height: height * 0.08,
-                                                    width: width * 0.08,
-                                                  ),
-                                                  SizedBox(
-                                                    width: width * 0.05,
-                                                  ),
-                                                  Image.asset(
-                                                    Common.assetsIcons +
-                                                        "facebook logo.png",
-                                                    height: height * 0.04,
-                                                    width: width * 0.05,
-                                                  ),
-                                                  SizedBox(
-                                                    width: width * 0.05,
-                                                  ),
-                                                  Image.asset(
-                                                    Common.assetsIcons +
-                                                        "whatsapp logo.png",
-                                                    height: height * 0.08,
-                                                    width: width * 0.08,
-                                                  ),
-                                                  SizedBox(
-                                                    width: width * 0.05,
-                                                  ),
-                                                  Image.asset(
-                                                    Common.assetsIcons +
-                                                        "snapchat logo.png",
-                                                    height: height * 0.08,
-                                                    width: width * 0.08,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: AppColors.greyColor,
-                                          offset: const Offset(
-                                            5.0,
-                                            5.0,
                                           ),
-                                          blurRadius: 10.0,
-                                          spreadRadius: 1.0,
-                                        ), //BoxShadow
-                                        BoxShadow(
-                                          color: Colors.white,
-                                          offset: const Offset(0.0, 0.0),
-                                          blurRadius: 0.0,
-                                          spreadRadius: 0.0,
-                                        ), //BoxShadow
-                                      ],
-                                      borderRadius: BorderRadius.only(
-                                          topRight:
-                                              Radius.circular(width * 0.05),
-                                          topLeft:
-                                              Radius.circular(width * 0.05))),
-                                  height: height * 0.044,
-                                  width: width * 0.3,
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Share",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w600),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: height * 0.0009,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (ctx) => AlertDialog(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20.0))),
-                                      title: Center(
-                                          child: Text(
-                                        "Report User",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600),
-                                      )),
-                                      content: Container(
-                                        child: Stack(
-                                          children: [
-                                            Row(
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.06),
+                                            child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
-                                                Expanded(
-                                                  child: Text(
-                                                    "Is this person bothering you? Tell us",
-                                                    style: TextStyle(
-                                                        fontSize: height * 0.02,
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  ),
+                                                Image.asset(
+                                                  Common.assetsIcons +
+                                                      "instagram logo.png",
+                                                  height: height * 0.08,
+                                                  width: width * 0.08,
+                                                ),
+                                                SizedBox(
+                                                  width: width * 0.05,
+                                                ),
+                                                Image.asset(
+                                                  Common.assetsIcons +
+                                                      "facebook logo.png",
+                                                  height: height * 0.04,
+                                                  width: width * 0.05,
+                                                ),
+                                                SizedBox(
+                                                  width: width * 0.05,
+                                                ),
+                                                Image.asset(
+                                                  Common.assetsIcons +
+                                                      "whatsapp logo.png",
+                                                  height: height * 0.08,
+                                                  width: width * 0.08,
+                                                ),
+                                                SizedBox(
+                                                  width: width * 0.05,
+                                                ),
+                                                Image.asset(
+                                                  Common.assetsIcons +
+                                                      "snapchat logo.png",
+                                                  height: height * 0.08,
+                                                  width: width * 0.08,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.greyColor,
+                                        offset: const Offset(
+                                          5.0,
+                                          5.0,
+                                        ),
+                                        blurRadius: 10.0,
+                                        spreadRadius: 1.0,
+                                      ), //BoxShadow
+                                      BoxShadow(
+                                        color: Colors.white,
+                                        offset: const Offset(0.0, 0.0),
+                                        blurRadius: 0.0,
+                                        spreadRadius: 0.0,
+                                      ), //BoxShadow
+                                    ],
+                                    borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(width * 0.05),
+                                        topLeft:
+                                            Radius.circular(width * 0.05))),
+                                height: height * 0.044,
+                                width: width * 0.3,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Share",
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: height * 0.0009,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (ctx) => AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20.0))),
+                                    title: Center(
+                                        child: Text(
+                                      "Report User",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    )),
+                                    content: Container(
+                                      child: Stack(
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Expanded(
+                                                child: Text(
+                                                  "Is this person bothering you? Tell us",
+                                                  style: TextStyle(
+                                                      fontSize: height * 0.02,
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.026),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "what they did",
+                                                  style: TextStyle(
+                                                      fontSize: height * 0.02,
+                                                      color:
+                                                          Colors.grey.shade600),
                                                 )
                                               ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.026),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "what they did",
-                                                    style: TextStyle(
-                                                        fontSize: height * 0.02,
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  )
-                                                ],
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.08),
+                                            child: Divider(
+                                              thickness: 1,
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.08),
-                                              child: Divider(
-                                                thickness: 1,
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.12),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Inappropriate Photos",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                ),
+                                              ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.12),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "Inappropriate Photos",
-                                                    style: TextStyle(
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  ),
-                                                ],
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.159),
+                                            child: Divider(
+                                              thickness: 1,
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.159),
-                                              child: Divider(
-                                                thickness: 1,
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.19),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Feels Like Spam",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                ),
+                                              ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.19),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "Feels Like Spam",
-                                                    style: TextStyle(
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  ),
-                                                ],
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.229),
+                                            child: Divider(
+                                              thickness: 1,
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.229),
-                                              child: Divider(
-                                                thickness: 1,
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.26),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "User is underage",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                ),
+                                              ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.26),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "User is underage",
-                                                    style: TextStyle(
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  ),
-                                                ],
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.299),
+                                            child: Divider(
+                                              thickness: 1,
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.299),
-                                              child: Divider(
-                                                thickness: 1,
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.33,
+                                                bottom: height * 0.02),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  "Other",
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade600),
+                                                ),
+                                              ],
                                             ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.33,
-                                                  bottom: height * 0.02),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "Other",
-                                                    style: TextStyle(
-                                                        color: Colors
-                                                            .grey.shade600),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  );
-                                },
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: AppColors.greyColor,
-                                          offset: const Offset(
-                                            5.0,
-                                            5.0,
-                                          ),
-                                          blurRadius: 10.0,
-                                          spreadRadius: 1.0,
-                                        ), //BoxShadow
-                                        BoxShadow(
-                                          color: Colors.white,
-                                          offset: const Offset(0.0, 0.0),
-                                          blurRadius: 0.0,
-                                          spreadRadius: 0.0,
-                                        ), //BoxShadow
-                                      ],
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight:
-                                              Radius.circular(width * 0.05),
-                                          bottomLeft:
-                                              Radius.circular(width * 0.05))),
-                                  height: height * 0.044,
-                                  width: width * 0.3,
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Report",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w600),
                                   ),
+                                );
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: AppColors.greyColor,
+                                        offset: const Offset(
+                                          5.0,
+                                          5.0,
+                                        ),
+                                        blurRadius: 10.0,
+                                        spreadRadius: 1.0,
+                                      ), //BoxShadow
+                                      BoxShadow(
+                                        color: Colors.white,
+                                        offset: const Offset(0.0, 0.0),
+                                        blurRadius: 0.0,
+                                        spreadRadius: 0.0,
+                                      ), //BoxShadow
+                                    ],
+                                    borderRadius: BorderRadius.only(
+                                        bottomRight:
+                                            Radius.circular(width * 0.05),
+                                        bottomLeft:
+                                            Radius.circular(width * 0.05))),
+                                height: height * 0.044,
+                                width: width * 0.3,
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Report",
+                                  style: TextStyle(fontWeight: FontWeight.w600),
                                 ),
                               ),
-                              SizedBox(
-                                height: height * 0.05,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                            SizedBox(
+                              height: height * 0.05,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           );
         });
@@ -1083,7 +1089,6 @@ class _ClassicviewState extends State<Classicview>
                         backgroundColor: Colors.transparent.withOpacity(0.7),
                         builder: (context) => SingleChildScrollView(
                           child: Container(
-                            height: height * 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(50.0),
@@ -1132,116 +1137,47 @@ class _ClassicviewState extends State<Classicview>
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                  padding:
-                                      EdgeInsets.only(left: width * 0.00001),
-                                  child: Text(
-                                    "Love gifts",
-                                    style:
-                                        TextStyle(color: AppColors.whiteColor),
-                                  ),
+                                GiftCategory(
+                                  width: width,
+                                  lovegifts: lovegifts,
+                                  lovegiftsname: lovegiftsname,
+                                  lovegiftsprice: lovegiftsprice,
+                                  animation: animation,
+                                  height: height,
+                                  heading: "Love gifts",
                                 ),
-                                Divider(
-                                  color: Colors.white,
-                                  thickness: 2,
-                                ),
-                                GridView.builder(
-                                  shrinkWrap: true,
-                                  itemCount: lovegifts.length,
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    childAspectRatio: 0.8,
-                                    crossAxisCount: 3,
-                                    crossAxisSpacing: 6,
-                                    mainAxisSpacing: 11.0,
-                                  ),
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    return InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => MatchScreen(
-                                                imageUrl: lovegifts[index],
-                                                giftname: lovegiftsname[index],
-                                                giftpricecoin:
-                                                    lovegiftsprice[index],
-                                              ),
-                                            ));
-                                      },
-                                      child: Container(
-                                        child: Column(
-                                          children: [
-                                            Hero(
-                                              tag: 'logo',
-                                              child: Container(
-                                                child: Image.asset(
-                                                    lovegifts[index]),
-                                                height: animation.value * 100,
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsets.only(
-                                                  top: height * 0.01),
-                                              child: Text(
-                                                lovegiftsname[index],
-                                                style: TextStyle(
-                                                    color:
-                                                        AppColors.whiteColor),
-                                              ),
-                                            ),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  Common.assetsImages +
-                                                      "smallcoin.png",
-                                                  height: height * 0.04,
-                                                  width: width * 0.04,
-                                                ),
-                                                SizedBox(
-                                                  width: width * 0.01,
-                                                ),
-                                                RichText(
-                                                  text: TextSpan(
-                                                    text: lovegiftsprice[index],
-                                                    style: TextStyle(
-                                                        fontSize:
-                                                            height * 0.015,
-                                                        color: AppColors
-                                                            .whiteColor),
-                                                    children: [
-                                                      TextSpan(
-                                                        text: ' G',
-                                                        style: TextStyle(
-                                                          color: AppColors
-                                                              .whiteColor,
-                                                          fontSize:
-                                                              height * 0.011,
-                                                        ),
-                                                      ),
-                                                      TextSpan(
-                                                        text: 'c ',
-                                                        style: TextStyle(
-                                                          color: AppColors
-                                                              .whiteColor,
-                                                          fontSize:
-                                                              height * 0.008,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
+                                GiftCategory(
+                                    width: width,
+                                    lovegifts: Animals,
+                                    lovegiftsname: Animalsname,
+                                    lovegiftsprice: Animalsprice,
+                                    animation: animation,
+                                    height: height,
+                                    heading: "Animals"),
+                                GiftCategory(
+                                    width: width,
+                                    lovegifts: DrinksandFood,
+                                    lovegiftsname: DrinksandFoodname,
+                                    lovegiftsprice: DrinksandFoodprice,
+                                    animation: animation,
+                                    height: height,
+                                    heading: "Drinks & Food"),
+                                GiftCategory(
+                                    width: width,
+                                    lovegifts: Travel1,
+                                    lovegiftsname: Travel1name,
+                                    lovegiftsprice: Travel1price,
+                                    animation: animation,
+                                    height: height,
+                                    heading: "Travel"),
+                                GiftCategory(
+                                    width: width,
+                                    lovegifts: Travel2,
+                                    lovegiftsname: Travel2name,
+                                    lovegiftsprice: Travel2price,
+                                    animation: animation,
+                                    height: height,
+                                    heading: "Travel"),
                               ]),
                             ),
                           ),
@@ -1293,6 +1229,131 @@ class _ClassicviewState extends State<Classicview>
                 ],
               )
             ])));
+  }
+}
+
+class GiftCategory extends StatelessWidget {
+  const GiftCategory({
+    Key key,
+    @required this.heading,
+    @required this.width,
+    @required this.lovegifts,
+    @required this.lovegiftsname,
+    @required this.lovegiftsprice,
+    @required this.animation,
+    @required this.height,
+  }) : super(key: key);
+  final String heading;
+  final double width;
+  final List<String> lovegifts;
+  final List<String> lovegiftsname;
+  final List<String> lovegiftsprice;
+  final Animation animation;
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: width * 0.00001),
+          child: Text(
+            heading,
+            style: TextStyle(color: AppColors.whiteColor),
+          ),
+        ),
+        Divider(
+          color: Colors.white,
+          thickness: 2,
+        ),
+        GridView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: lovegifts.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 0.8,
+            crossAxisCount: 3,
+            crossAxisSpacing: 6,
+            mainAxisSpacing: 11.0,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MatchScreen(
+                        imageUrl: lovegifts[index],
+                        giftname: lovegiftsname[index],
+                        giftpricecoin: lovegiftsprice[index],
+                      ),
+                    ));
+              },
+              child: Container(
+                child: Column(
+                  children: [
+                    Hero(
+                      tag: 'logo',
+                      child: Container(
+                        child: Image.asset(lovegifts[index]),
+                        height: animation.value * 100,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: height * 0.01),
+                      child: Text(
+                        lovegiftsname[index],
+                        style: TextStyle(color: AppColors.whiteColor),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          Common.assetsImages + "smallcoin.png",
+                          height: height * 0.04,
+                          width: width * 0.04,
+                        ),
+                        SizedBox(
+                          width: width * 0.01,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            text: lovegiftsprice[index],
+                            style: TextStyle(
+                                fontSize: height * 0.015,
+                                color: AppColors.whiteColor),
+                            children: [
+                              TextSpan(
+                                text: ' G',
+                                style: TextStyle(
+                                  color: AppColors.whiteColor,
+                                  fontSize: height * 0.011,
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'c ',
+                                style: TextStyle(
+                                  color: AppColors.whiteColor,
+                                  fontSize: height * 0.008,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
+        SizedBox(
+          height: height * 0.02,
+        ),
+      ],
+    );
   }
 }
 

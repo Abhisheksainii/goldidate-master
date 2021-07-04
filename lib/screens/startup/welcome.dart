@@ -5,6 +5,8 @@ import 'package:goldidate/screens/screens_exporter.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/widgets/widgets_exporter.dart';
 
+import '../../utils/common.dart';
+
 class Welcome extends StatefulWidget {
   const Welcome({Key key}) : super(key: key);
 
@@ -22,7 +24,7 @@ class _WelcomeState extends State<Welcome> {
       headerText: 'Discover People',
     ),
     WelcomeSlide(
-      centerImage: 'second_welcome_center_image.png',
+      centerImage: "Group 514.png",
       headerText: 'Match with them',
     ),
     WelcomeSlide(
