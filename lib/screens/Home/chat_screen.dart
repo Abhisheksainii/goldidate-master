@@ -5,12 +5,19 @@ import 'package:flutter/cupertino.dart';
 class ChatMessage {
   String messageContent;
   String messageType;
-  ChatMessage({@required this.messageContent, @required this.messageType});
+  String messageCategory;
+  ChatMessage(
+      {@required this.messageContent,
+      @required this.messageType,
+      this.messageCategory});
 }
 
 class ChatScreen extends StatelessWidget {
   List<ChatMessage> messages = [
-    ChatMessage(messageContent: "Hello, Will", messageType: "sender"),
+    ChatMessage(
+      messageContent: "Hello, Will",
+      messageType: "sender",
+    ),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
@@ -21,7 +28,10 @@ class ChatScreen extends StatelessWidget {
     ChatMessage(
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
         messageType: "sender"),
-    ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
+    ChatMessage(
+        messageContent: Common.assetsImages + "ross.png",
+        messageType: "receiver",
+        messageCategory: "image"),
     ChatMessage(messageContent: "Hello, Will", messageType: "sender"),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
@@ -161,33 +171,101 @@ class ChatScreen extends StatelessWidget {
                                                     "receiver"
                                                 ? width * 0.05
                                                 : width * 0.019),
-                                    child: Text(
-                                      messages[index].messageContent,
-                                      style: TextStyle(
-                                          fontSize: 15.0,
-                                          color: messages[index].messageType ==
-                                                  "receiver"
-                                              ? Colors.white
-                                              : Colors.grey[700]),
-                                    ),
+                                    child: messages[index].messageCategory ==
+                                            "image"
+                                        ? Container(
+                                            child: Column(
+                                              children: [
+                                                Container(
+                                                  child: Image.asset(
+                                                      messages[index]
+                                                          .messageContent),
+                                                  height: height * 0.15,
+                                                ),
+                                                Text(
+                                                  "Red Rose",
+                                                  style: TextStyle(
+                                                      color: Colors.black54,
+                                                      fontSize: height * 0.032),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Image.asset(
+                                                      Common.assetsImages +
+                                                          "smallcoin.png",
+                                                      height: height * 0.05,
+                                                      width: width * 0.05,
+                                                    ),
+                                                    SizedBox(
+                                                      width: width * 0.01,
+                                                    ),
+                                                    RichText(
+                                                      text: TextSpan(
+                                                        text: "75",
+                                                        style: TextStyle(
+                                                            fontSize:
+                                                                height * 0.024,
+                                                            color:
+                                                                Colors.black54),
+                                                        children: [
+                                                          TextSpan(
+                                                            text: ' G',
+                                                            style: TextStyle(
+                                                              color: Colors
+                                                                  .black54,
+                                                              fontSize: height *
+                                                                  0.015,
+                                                            ),
+                                                          ),
+                                                          TextSpan(
+                                                            text: 'c ',
+                                                            style: TextStyle(
+                                                              color: Colors
+                                                                  .black54,
+                                                              fontSize:
+                                                                  height * 0.01,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        : Text(
+                                            messages[index].messageContent,
+                                            style: TextStyle(
+                                                fontSize: 15.0,
+                                                color: messages[index]
+                                                            .messageType ==
+                                                        "receiver"
+                                                    ? Colors.white
+                                                    : Colors.grey[700]),
+                                          ),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
                                   gradient:
-                                      messages[index].messageType == "receiver"
+                                      messages[index].messageType == "sender" ||
+                                              messages[index].messageCategory ==
+                                                  "image"
                                           ? LinearGradient(
                                               begin: Alignment.topCenter,
                                               end: Alignment.bottomCenter,
                                               colors: [
-                                                  Color(0xFF532253),
-                                                  Color(0xFFD12BD1)
+                                                  Colors.transparent,
+                                                  Colors.transparent,
                                                 ])
                                           : LinearGradient(
                                               begin: Alignment.topCenter,
                                               end: Alignment.bottomCenter,
                                               colors: [
-                                                  Colors.transparent,
-                                                  Colors.transparent,
+                                                  Color(0xFF532253),
+                                                  Color(0xFFD12BD1)
                                                 ]),
                                   borderRadius:
                                       messages[index].messageType == "receiver"
