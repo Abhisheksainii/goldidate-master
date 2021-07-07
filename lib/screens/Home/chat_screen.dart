@@ -13,12 +13,26 @@ class ChatMessage {
 }
 
 class ChatScreen extends StatelessWidget {
+  final String imageUrl;
+  final String giftname;
+  final String giftpricecoin;
+
+  ChatScreen(
+      {Key key,
+      @required this.imageUrl,
+      @required this.giftname,
+      @required this.giftpricecoin})
+      : super(key: key);
+
   List<ChatMessage> messages = [
     ChatMessage(
       messageContent: "Hello, Will",
       messageType: "sender",
     ),
-    ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
+    ChatMessage(
+        messageContent: "How have you been?",
+        messageType: "receiver",
+        messageCategory: "image"),
     ChatMessage(
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
         messageType: "sender"),
@@ -29,9 +43,9 @@ class ChatScreen extends StatelessWidget {
         messageContent: "Hey Kriss, I am doing fine dude. wbu?",
         messageType: "sender"),
     ChatMessage(
-        messageContent: Common.assetsImages + "ross.png",
-        messageType: "receiver",
-        messageCategory: "image"),
+      messageContent: "GG",
+      messageType: "receiver",
+    ),
     ChatMessage(messageContent: "Hello, Will", messageType: "sender"),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
@@ -177,13 +191,18 @@ class ChatScreen extends StatelessWidget {
                                             child: Column(
                                               children: [
                                                 Container(
-                                                  child: Image.asset(
-                                                      messages[index]
-                                                          .messageContent),
-                                                  height: height * 0.15,
+                                                  height: height * 0.22,
+                                                  width: width * 0.44,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      image:
+                                                          AssetImage(imageUrl),
+                                                      fit: BoxFit.contain,
+                                                    ),
+                                                  ),
                                                 ),
                                                 Text(
-                                                  "Red Rose",
+                                                  giftname,
                                                   style: TextStyle(
                                                       color: Colors.black54,
                                                       fontSize: height * 0.032),
@@ -203,7 +222,7 @@ class ChatScreen extends StatelessWidget {
                                                     ),
                                                     RichText(
                                                       text: TextSpan(
-                                                        text: "75",
+                                                        text: giftpricecoin,
                                                         style: TextStyle(
                                                             fontSize:
                                                                 height * 0.024,

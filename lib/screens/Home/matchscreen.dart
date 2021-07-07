@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/screens/Home/chat_screen.dart';
 import 'package:goldidate/utils/app_colors.dart';
 import 'package:goldidate/utils/common.dart';
 import 'package:goldidate/routes/app_routes.dart';
@@ -137,8 +138,17 @@ class MatchScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60.0),
                   ),
                   child: TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).pushNamed(AppRoutes.chatscreen),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChatScreen(
+                              imageUrl: imageUrl,
+                              giftname: giftname,
+                              giftpricecoin: giftpricecoin,
+                            ),
+                          ));
+                    },
                     child: Text(
                       "Write to Marlene",
                       style: TextStyle(
