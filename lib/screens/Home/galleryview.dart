@@ -38,7 +38,8 @@ class _GalleryViewState extends State<GalleryView> {
               child: _buildwidget(height, width, index),
             );
           },
-        )),
+        ),
+        ),
       ),
     );
   }
