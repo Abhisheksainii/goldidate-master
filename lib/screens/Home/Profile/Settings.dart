@@ -13,1079 +13,792 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   var selectedRange = RangeValues(0.2, 0.4);
+  bool switchValue = true;
+  bool switchValue1 = true;
   double value = 0.0;
-  bool _enable = true;
-  bool _enable2 = true;
-
-  bool _enable3 = true;
-  bool _enable4 = true;
-  bool _enable5 = true;
   distance _dist = distance.Km;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Color(0xFFF5F6FA),
+      appBar: AppBar(
+        leading: InkWell(
+          child: Icon(
+            Icons.arrow_back,
+            color: Color(0xFFD19D43),
+            size: width * 0.08,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          "Settings",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(
+              right: width * 0.03,
+              top: height * 0.02,
+            ),
+            child: Text(
+              "Done",
+              style: TextStyle(
+                fontSize: width * 0.045,
+                color: Color(0xFFD19D43),
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              Padding(
-                padding:
-                    EdgeInsets.only(top: height * 0.05, left: width * 0.06),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              child: Container(
+                height: height * 0.1,
+                width: width * 1.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(9.0),
+                  color: AppColors.goldColor,
+                ),
                 child: Row(
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.of(context).pushNamed(AppRoutes.Tabview);
-                      },
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Color(0xFFD12BD1),
-                      ),
-                    ),
                     SizedBox(
-                      width: width * 0.26,
+                      width: width * 0.02,
+                    ),
+                    Image.asset(Common.assetsImages + "logo.png"),
+                    SizedBox(
+                      width: width * 0.09,
                     ),
                     Text(
-                      "Settings",
+                      "Get the best Deal",
                       style: TextStyle(
-                          fontSize: 24.0, fontWeight: FontWeight.w700),
+                          color: Colors.white,
+                          fontSize: width * 0.046,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: width * 0.07,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              child: Container(
+                height: height * 0.085,
+                width: width * 1.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(9.0),
+                  color: AppColors.goldColor,
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: width * 0.04,
+                    ),
+                    Image.asset(
+                      Common.assetsImages + "gifts.png",
+                      width: width * 0.09,
+                    ),
+                    SizedBox(
+                      width: width * 0.2,
+                    ),
+                    Text(
+                      "Send more Gifts",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: width * 0.04,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: width * 0.07,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              child: Container(
+                height: height * 0.085,
+                width: width * 1.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(9.0),
+                  color: AppColors.goldColor,
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: width * 0.04,
+                    ),
+                    Image.asset(
+                      Common.assetsImages + "bigcoin.png",
+                      width: width * 0.09,
+                    ),
+                    SizedBox(
+                      width: width * 0.15,
+                    ),
+                    Text(
+                      "Get more Goldcoins",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: width * 0.042,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: width * 0.07,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "ACCOUNT SETTINGS",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "Phone Number",
+              haveExtraDetail: true,
+              extradetailName: "+1 354 112 2376",
+              colorExtra: AppColors.goldColor,
+              colorName: Color(0xFF616161),
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
+            Divider(
+              height: height * 0.001,
+            ),
+            Details(
+              detailValue: "Email",
+              haveExtraDetail: true,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Color(0xFF616161),
+              colorIcon: AppColors.goldColor,
+              isBold: true,
+            ),
+            Container(
+              height: height * 0.06,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Text(
+                    "Verify an Email to help secure your account.",
+                    style: TextStyle(
+                      color: AppColors.goldColor,
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.058,
+              width: double.infinity,
+              color: Color(0xFFFFFFFF),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, right: width * 0.03),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Coin's",
+                      style: TextStyle(
+                        fontSize: width * 0.03,
+                        color: Color(0xFF616161),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: width * 0.35),
+                      child: Container(
+                        child: Row(
+                          children: [
+                            Image.asset(Common.assetsImages + "bigcoin.png",
+                                width: width * 0.05),
+                            Container(
+                              height: height * 0.05,
+                              width: width * 0.35,
+                              color: Colors.white,
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: width * 0.04, top: height * 0.014),
+                                child: Text(
+                                  "5,000 gc",
+                                  style: TextStyle(
+                                    color: AppColors.goldColor,
+                                    fontSize: width * 0.03,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: width * 0.045,
+                      color: AppColors.goldColor,
                     )
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: InkWell(
-                  onTap: () =>
-                      Navigator.of(context).pushNamed(AppRoutes.goldidatePlus),
-                  child: Container(
-                    height: height * 0.115,
-                    width: width * 1.5,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18.0),
-                        color: Color(0xFFD12BD1)),
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                          top: height * 0.02, bottom: height * 0.02),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Goldidate Plus",
-                            style: TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700),
-                          ),
-                          SizedBox(
-                            height: height * 0.015,
-                          ),
-                          Text(
-                            "Unlimited likes & more!",
-                            style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: CustomCard(height: height, width: width),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.07,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.05, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Phone Number",
-                          style: TextStyle(
-                              fontSize: width * 0.04,
-                              color: Color(0xFF757575),
-                              fontWeight: FontWeight.w400),
-                        ),
-                        Text(
-                          "+1 354 112 2376",
-                          style: TextStyle(
-                            fontSize: width * 0.038,
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xFF757575),
-                          ),
-                        ),
-                        InkWell(
-                          child: Icon(
-                            Icons.navigate_next,
-                            color: Color(0xFF757575),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.17,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Location",
-                          style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          height: height * 0.02,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.location_on,
-                                color: Color(0xFFBDBDBD),
-                              ),
-                              SizedBox(
-                                width: width * 0.01,
-                              ),
-                              Text(
-                                "Current Location",
-                                style: TextStyle(
-                                    fontSize: width * 0.04,
-                                    color: Color(0xFF757575)),
-                              ),
-                              SizedBox(
-                                width: width * 0.34,
-                              ),
-                              Container(
-                                height: height * 0.04,
-                                width: width * 0.04,
-                                child: Image(
-                                  image: AssetImage(
-                                      Common.assetsImages + "tick.png"),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: height * 0.015,
-                        ),
-                        Row(
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                Navigator.of(context)
-                                    .pushNamed(AppRoutes.location);
-                              },
-                              child: Text(
-                                "Add a new location",
-                                style: TextStyle(
-                                  fontSize: width * 0.043,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color(0xFFD12BD1),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.11,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff5f5f5),
-                      borderRadius: BorderRadius.circular(18.0),
-                      border: Border.all(color: Color(0xFFE0E0E0))),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Show Me",
-                          style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        SizedBox(
-                          height: height * 0.015,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Women",
-                                style: TextStyle(
-                                  fontSize: width * 0.042,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.12,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff5f5f5),
-                      borderRadius: BorderRadius.circular(18.0),
-                      border: Border.all(color: Color(0xFFE0E0E0))),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Maximum distance",
-                              style: TextStyle(
-                                  fontSize: width * 0.046,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xFF424242)),
-                            ),
-                            SizedBox(
-                              width: width * 0.28,
-                            ),
-                            Text(
-                              "30mi",
-                              style: TextStyle(
-                                  fontSize: width * 0.04,
-                                  color: Color(0xFF757575),
-                                  fontWeight: FontWeight.w600),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: height * 0.01,
-                        ),
-                        SliderTheme(
-                          data: SliderTheme.of(context).copyWith(
-                            thumbColor: Colors.white,
-                            thumbShape:
-                                RoundSliderThumbShape(enabledThumbRadius: 9.0),
-                            activeTrackColor: Color(0xFFD12BD1),
-                          ),
-                          child: Container(
-                            child: Slider(
-                                // activeColor: Color(0xFFD12BD1),
-                                min: 0.0,
-                                max: 100.0,
-                                value: value.toDouble(),
-                                onChanged: (double newValue) {
-                                  setState(() {
-                                    value = newValue;
-                                  });
-                                }),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Share my feed",
-                          style: TextStyle(
-                              fontSize: width * 0.044,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        CustomSwitch(
-                          value: _enable,
-                          onChanged: (bool val) {
-                            setState(() {
-                              _enable = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Recommended sort",
-                          style: TextStyle(
-                              fontSize: width * 0.045,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        CustomSwitch(
-                          value: _enable2,
-                          onChanged: (bool val) {
-                            setState(() {
-                              _enable2 = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.10,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff5f5f5),
-                      borderRadius: BorderRadius.circular(18.0),
-                      border: Border.all(color: Color(0xFFE0E0E0))),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Data Usage",
-                          style: TextStyle(
-                              fontSize: width * 0.044,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        SizedBox(
-                          height: height * 0.013,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Autoplay videos",
-                                style: TextStyle(
-                                  fontSize: width * 0.042,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Show me in top picks",
-                          style: TextStyle(
-                              fontSize: width * 0.044,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        CustomSwitch(
-                          value: _enable3,
-                          onChanged: (bool val) {
-                            setState(() {
-                              _enable3 = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Swipe Surge",
-                          style: TextStyle(
-                              fontSize: width * 0.044,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        CustomSwitch(
-                          value: _enable4,
-                          onChanged: (bool val) {
-                            setState(() {
-                              _enable4 = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Active status",
-                          style: TextStyle(
-                              fontSize: width * 0.044,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        CustomSwitch(
-                          value: _enable5,
-                          onChanged: (bool val) {
-                            setState(() {
-                              _enable5 = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.016),
-                child: Container(
-                  height: height * 0.2,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.016, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Show distance in",
-                          style: TextStyle(
-                              fontSize: width * 0.045,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: width * 0.04),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "Km.",
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF757575),
-                                    ),
-                                  ),
-                                  Radio<distance>(
-                                    activeColor: Color(0xFFD12BD1),
-                                    value: distance.Km,
-                                    groupValue: _dist,
-                                    onChanged: (distance value) {
-                                      setState(() {
-                                        _dist = value;
-                                      });
-                                    },
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(right: width * 0.04),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "Mi.",
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color(0xFF757575),
-                                    ),
-                                  ),
-                                  Radio<distance>(
-                                    activeColor: Color(0xFFD12BD1),
-                                    value: distance.Km,
-                                    groupValue: _dist,
-                                    onChanged: (distance value) {
-                                      setState(() {
-                                        _dist = value;
-                                      });
-                                    },
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.12,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff5f5f5),
-                      borderRadius: BorderRadius.circular(18.0),
-                      border: Border.all(color: Color(0xFFE0E0E0))),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Age",
-                              style: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xFF424242)),
-                            ),
-                            SizedBox(
-                              width: width * 0.58,
-                            ),
-                            Text(
-                              "20-26",
-                              style: TextStyle(
-                                  fontSize: 17.0,
-                                  color: Color(0xFF757575),
-                                  fontWeight: FontWeight.w600),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: height * 0.01,
-                        ),
-                        SliderTheme(
-                          data: SliderTheme.of(context).copyWith(
-                            thumbColor: Colors.white,
-                            thumbShape:
-                                RoundSliderThumbShape(enabledThumbRadius: 9.0),
-                            activeTrackColor: Color(0xFFD12BD1),
-                          ),
-                          child: Container(
-                            child: RangeSlider(
-                              values: selectedRange,
-                              onChanged: (RangeValues newRange) {
-                                setState(() {
-                                  selectedRange = newRange;
-                                });
-                              },
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.18,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.016, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Payment account",
-                          style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          height: height * 0.023,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Manage payment account",
-                                style: TextStyle(
-                                  fontSize: width * 0.044,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: height * 0.015,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Manage payment account",
-                                style: TextStyle(
-                                  fontSize: width * 0.044,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.10,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                      color: Color(0xfff5f5f5),
-                      borderRadius: BorderRadius.circular(18.0),
-                      border: Border.all(color: Color(0xFFE0E0E0))),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        top: height * 0.015, left: width * 0.06),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Contact Us",
-                          style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        SizedBox(
-                          height: height * 0.012,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width * 0.04),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Help & Support",
-                                style: TextStyle(
-                                  fontSize: width * 0.044,
-                                  color: Color(0xFFD12BD1),
-                                ),
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Color(0xFF757575),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.03,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: Container(
-                  height: height * 0.08,
-                  width: width * 1.5,
-                  decoration: BoxDecoration(
-                    color: Color(0xfff5f5f5),
-                    border: Border.all(
-                      color: Color(0xFFE0E0E0),
-                    ),
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width * 0.06, right: width * 0.04),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Share Dater",
-                          style: TextStyle(
-                              fontSize: width * 0.045,
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF424242)),
-                        ),
-                        InkWell(
-                          child: Icon(
-                            Icons.navigate_next,
-                            color: Color(0xFF757575),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: height * 0.05,
-                    left: width * 0.05,
-                    right: width * 0.05),
-                child: InkWell(
-                  onTap: () {
-                    return showDialog(
-                      context: context,
-                      builder: (BuildContext context) => CupertinoAlertDialog(
-                        title: Text("Logout?"),
-                        content: Text("Are you sure you want to log out?"),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(context, 'Cancel'),
-                            child: const Text('Cancel'),
-                          ),
-                          TextButton(
-                            onPressed: () => Navigator.pop(context, 'Logout'),
-                            child: const Text('OK'),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                  child: Container(
-                      height: height * 0.07,
-                      width: width * 1.0,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [Colors.black, Color(0xFFD12BD1)]),
-                        border: Border.all(
-                          color: Color(0xFFE0E0E0),
-                        ),
-                        borderRadius: BorderRadius.circular(60.0),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Logout",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      )),
-                ),
-              ),
-              SizedBox(
-                height: height * 0.05,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CustomCard extends StatelessWidget {
-  const CustomCard({
-    Key key,
-    @required this.height,
-    @required this.width,
-  }) : super(key: key);
-
-  final double height;
-  final double width;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height * 0.16,
-      width: width * 1.5,
-      decoration: BoxDecoration(
-        color: Color(0xfff5f5f5),
-        border: Border.all(
-          color: Color(0xFFE0E0E0),
-        ),
-        borderRadius: BorderRadius.circular(18.0),
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(top: height * 0.016, left: width * 0.06),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Personal Info",
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600),
-            ),
-            SizedBox(
-              height: height * 0.023,
             ),
             Padding(
-              padding: EdgeInsets.only(right: width * 0.04),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Username",
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "LIVING IN",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xFF757575),
                     ),
                   ),
-                  InkWell(
-                    child: Icon(
-                      Icons.navigate_next,
-                      color: Color(0xFF757575),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "Tel Aviv, Israel",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
+            Padding(
+              padding:
+                  EdgeInsets.only(top: height * 0.02, bottom: height * 0.01),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      left: width * 0.04,
+                      top: height * 0.02,
+                      right: width * 0.04),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "SEARCH  DISTANCE",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: width * 0.03,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Text(
+                        "30 mi.",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: width * 0.03,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.058,
+              width: double.infinity,
+              color: Color(0xFFFFFFFF),
+              child: SliderTheme(
+                data: SliderThemeData(
+                  thumbColor: Color(0xFFD19D43),
+                  activeTrackColor: Color(0xFFD19D43),
+                  trackHeight: 1,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8),
+                ),
+                child: Slider(
+                    value: value,
+                    onChanged: (value1) {
+                      setState(() {
+                        value = value1;
+                      });
+                    }),
+              ),
+            ),
+            Divider(
+              height: height * 0.001,
+            ),
+            Details(
+              detailValue: "Change Location",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "SHOW ME",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "WOMEN",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
+            Container(
+              height: height * 0.06,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Text(
+                  "AGE RANGE",
+                  style: TextStyle(
+                    color: Colors.grey[800],
+                    fontSize: width * 0.03,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.058,
+              width: double.infinity,
+              color: Color(0xFFFFFFFF),
+              child: SliderTheme(
+                data: SliderThemeData(
+                  thumbColor: Color(0xFFD19D43),
+                  activeTrackColor: Color(0xFFD19D43),
+                  trackHeight: 1,
+                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4),
+                ),
+                child: RangeSlider(
+                    values: selectedRange,
+                    onChanged: (value1) {
+                      setState(() {
+                        selectedRange = value1;
+                      });
+                    }),
+              ),
+            ),
+            Divider(
+              height: height * 0.0005,
+            ),
+            Container(
+              height: height * 0.058,
+              width: double.infinity,
+              color: Color(0xFFFFFFFF),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, right: width * 0.03),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Go global",
+                      style: TextStyle(
+                        fontSize: width * 0.03,
+                        color: AppColors.goldColor,
+                      ),
+                    ),
+                    CustomSwitch(
+                        value: switchValue,
+                        onChanged: (value) {
+                          setState(() {
+                            switchValue = value;
+                          });
+                        })
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.06,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Container(
+                    width: width * 0.65,
+                    child: Text(
+                      "Go Global will allow you to see people nearby and from all over the world",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.goldColor,
+                        fontSize: width * 0.03,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.058,
+                width: double.infinity,
+                color: Color(0xFFFFFFFF),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    left: width * 0.04,
+                    right: width * 0.03,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Show me on Goldidate",
+                        style: TextStyle(
+                          fontSize: width * 0.03,
+                          color: AppColors.goldColor,
+                        ),
+                      ),
+                      CustomSwitch(
+                          value: switchValue1,
+                          onChanged: (value) {
+                            setState(() {
+                              switchValue1 = value;
+                            });
+                          })
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.06,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Container(
+                    width: width * 0.65,
+                    child: Text(
+                      "By turning off, you will not be shown in the card stack People you have already liked may still see your profile and match with you. You can still see and chat with your match and send gifts.  ",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.goldColor,
+                        fontSize: width * 0.03,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.07,
+                width: width,
+                color: Color(0xFFFFFFFF),
+                child: Center(
+                  child: Text(
+                    "Submit Promotion Code",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.goldColor,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.055,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Container(
+                    width: width * 0.65,
+                    child: Text(""),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: width,
+                color: Color(0xFFFFFFFF),
+                child: Center(
+                  child: Text(
+                    "Share Goldidate",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.goldColor,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "CONTACT US",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "Help & Support",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Colors.black,
+              colorIcon: Colors.black,
+              isBold: false,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "COMMUNITY",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "Safety Tips",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Colors.black,
+              colorIcon: Colors.black,
+              isBold: false,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: double.infinity,
+                color: Color(0xFFF5F6FA),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                  child: Text(
+                    "Legal",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Details(
+              detailValue: "Privacy",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Colors.black,
+              colorIcon: Colors.black,
+              isBold: false,
+            ),
+            Details(
+              detailValue: "Terms of Services",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Colors.black,
+              colorIcon: Colors.black,
+              isBold: false,
+            ),
+            Details(
+              detailValue: "Licenses",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: Colors.black,
+              colorIcon: Colors.black,
+              isBold: false,
+            ),
+            Container(
+              height: height * 0.055,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Container(
+                    width: width * 0.65,
+                    child: Text(""),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: width,
+                color: Color(0xFFFFFFFF),
+                child: Center(
+                  child: Text(
+                    "Logout",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF939393),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.32,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    Common.assetsImages + "logo.png",
+                    width: width * 0.45,
+                  ),
+                  Container(
+                    width: width * 0.65,
+                    child: Center(
+                      child: Text(
+                        "Version V.5",
+                        style: TextStyle(
+                          fontSize: width * 0.04,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              height: height * 0.013,
-            ),
             Padding(
-              padding: EdgeInsets.only(right: width * 0.04),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Email",
+              padding: EdgeInsets.only(top: height * 0.02),
+              child: Container(
+                height: height * 0.06,
+                width: width,
+                color: Color(0xFFFFFFFF),
+                child: Center(
+                  child: Text(
+                    "Delete Account",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF757575),
+                      fontSize: width * 0.045,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF939393),
                     ),
                   ),
-                  InkWell(
-                    child: Icon(
-                      Icons.navigate_next,
-                      color: Color(0xFF757575),
-                    ),
+                ),
+              ),
+            ),
+            Container(
+              height: height * 0.03,
+              width: double.infinity,
+              color: Color(0xFFF5F6FA),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
+                child: Center(
+                  child: Container(
+                    width: width * 0.65,
+                    child: Text(""),
                   ),
-                ],
+                ),
               ),
             ),
           ],
@@ -1139,38 +852,113 @@ class _CustomSwitchState extends State<CustomSwitch>
                 : widget.onChanged(false);
           },
           child: Container(
-            width: 43.0,
-            height: 22.0,
+            width: 30.5,
+            height: 15.5,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(24.0),
               border: Border.all(
                   color: _circleAnimation.value == Alignment.centerLeft
                       ? Colors.grey[400]
-                      : Color(0xFFD12BD1)),
-              borderRadius: BorderRadius.circular(24.0),
+                      : Color(0xFFD19D43)),
               color: _circleAnimation.value == Alignment.centerLeft
                   ? Colors.white
                   : Colors.white,
             ),
             child: Padding(
               padding: const EdgeInsets.only(
-                  top: 2.0, bottom: 2.0, right: 2.0, left: 2.0),
+                top: 2.0,
+                bottom: 2.0,
+                left: 2.0,
+              ),
               child: Container(
                 alignment:
                     widget.value ? Alignment.centerRight : Alignment.centerLeft,
                 child: Container(
-                  width: 20.0,
-                  height: 20.0,
+                  width: 13.5,
+                  height: 13.5,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: _circleAnimation.value == Alignment.centerLeft
                           ? Colors.grey[400]
-                          : Color(0xFFD12BD1)),
+                          : Color(0xFFD19D43)),
                 ),
               ),
             ),
           ),
         );
       },
+    );
+  }
+}
+
+class Details extends StatelessWidget {
+  Details(
+      {this.detailValue,
+      this.haveExtraDetail,
+      this.isBold,
+      this.colorName,
+      this.colorExtra,
+      this.colorIcon,
+      this.extradetailName});
+  bool haveExtraDetail = false;
+  bool isBold = false;
+  String detailName;
+  String detailValue;
+  String extradetailName;
+  Color colorName;
+  Color colorExtra;
+  Color colorIcon;
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Container(
+      height: height * 0.058,
+      width: double.infinity,
+      color: Color(0xFFFFFFFF),
+      child: Padding(
+        padding: EdgeInsets.only(left: width * 0.04, right: width * 0.03),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              detailValue,
+              style: TextStyle(
+                fontSize: width * 0.03,
+                color: colorName,
+              ),
+            ),
+            haveExtraDetail
+                ? Padding(
+                    padding: EdgeInsets.only(left: width * 0.2),
+                    child: Container(
+                      height: height * 0.05,
+                      width: width * 0.35,
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            left: width * 0.04, top: height * 0.014),
+                        child: Text(
+                          extradetailName,
+                          style: TextStyle(
+                            color: colorExtra,
+                            fontSize: width * 0.03,
+                            fontWeight:
+                                isBold ? FontWeight.bold : FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                : Text(""),
+            Icon(
+              Icons.arrow_forward_ios,
+              size: width * 0.045,
+              color: colorIcon,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
