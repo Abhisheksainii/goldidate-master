@@ -516,13 +516,7 @@ class _ClassicviewState extends State<Classicview>
                               child: Container(
                                 height: height * 0.1,
                                 width: width * 0.85,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfff5f5f5),
-                                  border: Border.all(
-                                    color: Color(0xFFE0E0E0),
-                                  ),
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
+
                                 child: Padding(
                                   padding: EdgeInsets.only(left: width * 0.05),
                                   child: Row(
@@ -544,16 +538,64 @@ class _ClassicviewState extends State<Classicview>
                             ),
                           ],
                         ),
+                        Padding(
+                          padding:  EdgeInsets.only(left: width*0.04,bottom: height*0.03),
+                          child: Row(
+
+                            children: [
+                              Text("PASSIONS",style: TextStyle(color: Color(0xFF757575),  fontSize: width * 0.03, ),),
+                            ],
+                          ),
+                        ),
+                        Container(
+
+
+                          child: Wrap(
+                            children: [
+                              chip(text: "Yoga"),
+                              chip(text: "Rock climbing",),
+                              chip(text: "Learning new skill",),
+                              chip(text: "Online courses",),
+                              chip(text: "Crafting",),
+                              chip(text: "Coaching",),
+                              chip(text: "Playing an instrument",),
+                            ],
+                          )
+                          ,
+                        ),
+                        Padding(
+                          padding:  EdgeInsets.only(left: width*0.04,bottom: height*0.03,top: height*0.03),
+                          child: Row(
+
+                            children: [
+                              Text("EDUCATION",style: TextStyle(color: Color(0xFF757575),  fontSize: width * 0.03, ),),
+                            ],
+                          ),
+                        ),
+                        Container(
+
+
+                          child: Wrap(
+                            children: [
+                              chip(text: "Rupping technological college of engineer"),
+                              chip(text: "Apple seed academy",),
+                              chip(text: "Qa experts college",),
+
+                            ],
+                          )
+                          ,
+                        ),
+                        SizedBox(height: height*0.06,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Gender:",
+                              "Level of education:",
                               style: TextStyle(
                                   color: Colors.grey, fontSize: height * 0.018),
                             ),
                             Text(
-                              " Female",
+                              " Engineer",
                               style: TextStyle(
                                   color: AppColors.goldColor,
                                   fontSize: height * 0.018),
@@ -567,57 +609,116 @@ class _ClassicviewState extends State<Classicview>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Instagram:",
+                              "Gender:",
                               style: TextStyle(
                                   color: Colors.grey, fontSize: height * 0.018),
                             ),
                             Text(
-                              " @Eliza-williams",
+                              " Male",
                               style: TextStyle(
                                   color: AppColors.goldColor,
                                   fontSize: height * 0.018),
                             ),
                           ],
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: height * 0.015,
-                              left: width * 0.08,
-                              right: width * 0.08,
-                              bottom: height * 0.01),
-                          child: Container(
-                            width: width * 0.85,
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Hobbies",
-                                          style: TextStyle(
-                                              fontSize: height * 0.02,
-                                              color: Colors.grey.shade700),
-                                        ),
-                                        SizedBox(
-                                          height: height * 0.01,
-                                        ),
-                                        Text(
-                                          "Computer Programming, Archery, Drawing, Chess, Poetry",
-                                          style: TextStyle(
-                                              fontSize: height * 0.017,
-                                              color: Colors.grey),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ]),
-                          ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Searching:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Serious relationship",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
                         ),
                         SizedBox(
-                          height: height * 0.036,
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sexuality:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Straight",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Religious:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Atheist",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Favourite:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Pizza",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Favourite Animal:",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: height * 0.018),
+                            ),
+                            Text(
+                              " Wolfs",
+                              style: TextStyle(
+                                  color: AppColors.goldColor,
+                                  fontSize: height * 0.018),
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(
+                          height: height * 0.07,
                         ),
                         Column(
                           children: [
@@ -1229,6 +1330,29 @@ class _ClassicviewState extends State<Classicview>
                 ],
               )
             ])));
+  }
+}
+
+class chip extends StatelessWidget {
+  chip({
+    this.text
+});
+ final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+      decoration: BoxDecoration(
+        color: Color(0xffD19D43),
+        borderRadius: BorderRadius.all(
+           Radius.circular(20),
+
+        ),
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 6,vertical: 2 ),
+      margin: EdgeInsets.only(right: 6,bottom: 6),
+      child:Text(text,style: TextStyle(color: Colors.white),),
+    );
   }
 }
 
