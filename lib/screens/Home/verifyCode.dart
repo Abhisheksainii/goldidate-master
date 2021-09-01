@@ -25,7 +25,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                       InkWell(
                         child: Icon(
                           Icons.arrow_back,
-                          color: Color(0xFFD12BD1),
+                          color: Color(0xFFD19D43),
                           size: width * 0.08,
                         ),
                       ),
@@ -152,7 +152,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                       child: Text(
                         "Resend",
                         style: TextStyle(
-                            color: Color(0xFFD12BD1),
+                            color: Color(0xFFD19D43),
                             fontSize: width * 0.042,
                             fontWeight: FontWeight.w600),
                       ),
@@ -353,10 +353,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                     height: height * 0.07,
                     width: width * 1.0,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Colors.black, Color(0xFFD12BD1)]),
+                      color: Color(0xFFD19D43),
                       border: Border.all(
                         color: Color(0xFFE0E0E0),
                       ),

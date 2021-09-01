@@ -34,7 +34,7 @@ class _MyProfileState extends State<MyProfile> {
             ),
           ),
           Container(
-            height: height * 0.15,
+            height: height * 0.18,
             width: width * 1.0,
             child: Column(
               children: [
@@ -61,42 +61,41 @@ class _MyProfileState extends State<MyProfile> {
                 Text(
                   "Academic Center of Advanced Studies",
                   style: TextStyle(
-                    color: Colors.grey[600],
+                    fontSize: width * 0.03,
+                    color: Colors.grey[800],
                   ),
                 ),
                 SizedBox(
-                  height: height * 0.01,
+                  height: height * 0.001,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: width * 0.33),
-                  child: Row(
-                    children: [
-                      Text("Instagram: "),
-                      Text(
-                        "@Simon-Carter",
-                        style: TextStyle(color: Colors.orange),
-                      ),
-                    ],
+                Text(
+                  "Art director, Microsoft",
+                  style: TextStyle(
+                    color: Color(0xFFD19D43),
+                    fontSize: width * 0.03,
                   ),
                 ),
                 Padding(
                   padding:
-                      EdgeInsets.only(left: width * 0.4, top: height * 0.003),
+                      EdgeInsets.only(left: width * 0.3, top: height * 0.01),
                   child: Row(
                     children: [
                       Opacity(
                         opacity: 0.5,
                         child: Text(
-                          r"coins number: $5000",
+                          r"Coins available: $5000",
                           style: TextStyle(
-                            fontSize: 10.0,
+                            fontSize: width * 0.037,
                           ),
                         ),
                       ),
+                      SizedBox(
+                        width: width * 0.01,
+                      ),
                       Image.asset(
                         Common.assetsImages + "smallcoin.png",
-                        width: 10,
-                        height: 10,
+                        width: width * 0.05,
+                        height: height * 0.05,
                       ),
                       SizedBox(
                         width: width * 0.02,
@@ -112,7 +111,7 @@ class _MyProfileState extends State<MyProfile> {
                 top: height * 0.005, left: width * 0.1, right: width * 0.1),
             child: Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children: [
@@ -139,92 +138,6 @@ class _MyProfileState extends State<MyProfile> {
                       ),
                       Text(
                         "SETTINGS",
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFFC9C8C8),
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed(AppRoutes.addMedia);
-                        },
-                        child: Container(
-                            height: height * 0.12,
-                            child: Align(
-                              alignment: Alignment.topCenter,
-                              child: Stack(
-                                children: <Widget>[
-                                  Container(
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                            begin: Alignment.topRight,
-                                            end: Alignment.bottomLeft,
-                                            colors: [
-                                              Color(0xFF532253)
-                                                  .withOpacity(0.9),
-                                              Color(0xFFD12BD1)
-                                            ]),
-                                        shape: BoxShape.circle),
-                                    margin: EdgeInsets.only(top: 10),
-                                    height: MediaQuery.of(context).size.height *
-                                        0.20,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.4,
-                                    child: Image.asset(
-                                      Common.assetsImages + "Camera.png",
-                                      height: height * 0.054,
-                                    ),
-                                  ),
-                                  Positioned(
-                                    right: width * 0.07,
-                                    top: height * 0.07,
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      height: height * 0.06,
-                                      width: width * 0.06,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        shape: BoxShape.circle,
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: AppColors.greyColor,
-                                            offset: const Offset(
-                                              4.0,
-                                              4.0,
-                                            ),
-                                            blurRadius: 5.0,
-                                            spreadRadius: 0.1,
-                                          ), //BoxShadow
-                                          BoxShadow(
-                                            color: Colors.white,
-                                            offset: const Offset(0.0, 0.0),
-                                            blurRadius: 0.0,
-                                            spreadRadius: 0.0,
-                                          ), //BoxShadow
-                                        ],
-                                      ),
-                                      child: Image.asset(
-                                        Common.assetsImages + "Path 3072.png",
-                                        height: height * 0.04,
-                                        width: width * 0.04,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )),
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "ADD MEDIA",
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w700,
@@ -271,6 +184,9 @@ class _MyProfileState extends State<MyProfile> {
               ),
             ),
           ),
+          SizedBox(
+            height: height * 0.025,
+          ),
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Container(
@@ -279,7 +195,7 @@ class _MyProfileState extends State<MyProfile> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(9.0),
                 gradient: LinearGradient(
-                  colors: [Color(0xFFD12BD1), Colors.black87],
+                  colors: [Color(0xFFD9B372), Color(0xFFD9B372)],
                 ),
               ),
               child: Row(
@@ -328,7 +244,7 @@ class _MyProfileState extends State<MyProfile> {
                 child: Column(
                   children: [
                     Text(
-                      "Get matches faster",
+                      "Get more Gift coins",
                       style: TextStyle(
                           fontSize: 24.0, fontWeight: FontWeight.w500),
                     ),
@@ -345,9 +261,13 @@ class _MyProfileState extends State<MyProfile> {
                     SizedBox(
                       height: height * 0.03,
                     ),
-                    Image(
-                      image:
-                          AssetImage(Common.assetsImages + "text slider.png"),
+                    Container(
+                      height: height * 0.02,
+                      width: width * 0.08,
+                      child: Image(
+                        image:
+                            AssetImage(Common.assetsImages + "text slider.png"),
+                      ),
                     ),
                     SizedBox(
                       height: height * 0.02,
@@ -357,8 +277,8 @@ class _MyProfileState extends State<MyProfile> {
                       height: height * 0.06,
                       child: ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.white),
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Color(0xFFD9B372)),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -370,12 +290,28 @@ class _MyProfileState extends State<MyProfile> {
                             Navigator.of(context)
                                 .pushNamed(AppRoutes.goldidatePlus);
                           },
-                          child: Text(
-                            "Goldidate Plus",
-                            style: TextStyle(
-                                fontSize: 16, color: Color(0xFFD12BD1)),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: height * 0.08,
+                                width: width * 0.08,
+                                child: Image(
+                                  image: AssetImage(
+                                    Common.assetsImages + "gifts.png",
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: width * 0.14,
+                              ),
+                              Text(
+                                "Send more Gifts",
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.white),
+                              ),
+                            ],
                           )),
-                    )
+                    ),
                   ],
                 ),
               ),

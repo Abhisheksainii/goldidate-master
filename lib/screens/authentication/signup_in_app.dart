@@ -114,7 +114,7 @@ class _SignUpInAppState extends State<SignUpInApp> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         PopButton(
-          iconColor: AppColors.lightPrimaryColor,
+          iconColor: Color(0xFFD19D43),
         ),
         Text(
           _APPBAR_TITLE,
@@ -330,6 +330,8 @@ class _SignUpInAppState extends State<SignUpInApp> {
           ),
           const SizedBox(height: 70.0),
           PrimaryBackgroundButton(
+            buttonText: "Submit",
+            backgroundColor: Color(0xFFD19D43),
             onPressed: () =>
                 Navigator.of(context).pushNamed(AppRoutes.verifyCode),
           ),
