@@ -7,7 +7,7 @@ import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:goldidate/screens/Home/matchscreen.dart';
 import 'package:flutter/services.dart';
-
+import 'package:goldidate/utils/dialogs/alldialogs.dart';
 class Classicview extends StatefulWidget {
   @override
   _ClassicviewState createState() => _ClassicviewState();
@@ -724,97 +724,7 @@ class _ClassicviewState extends State<Classicview>
                           children: [
                             InkWell(
                               onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (ctx) => AlertDialog(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(20.0))),
-                                    title: Center(
-                                        child: Text(
-                                      "Share",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w600),
-                                    )),
-                                    content: Container(
-                                      child: Stack(
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                "Tap an icon below to share your",
-                                                style: TextStyle(
-                                                    color:
-                                                        Colors.grey.shade600),
-                                              )
-                                            ],
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                top: height * 0.026),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  "content directly",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                                top: height * 0.06),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  Common.assetsIcons +
-                                                      "instagram logo.png",
-                                                  height: height * 0.08,
-                                                  width: width * 0.08,
-                                                ),
-                                                SizedBox(
-                                                  width: width * 0.05,
-                                                ),
-                                                Image.asset(
-                                                  Common.assetsIcons +
-                                                      "facebook logo.png",
-                                                  height: height * 0.04,
-                                                  width: width * 0.05,
-                                                ),
-                                                SizedBox(
-                                                  width: width * 0.05,
-                                                ),
-                                                Image.asset(
-                                                  Common.assetsIcons +
-                                                      "whatsapp logo.png",
-                                                  height: height * 0.08,
-                                                  width: width * 0.08,
-                                                ),
-                                                SizedBox(
-                                                  width: width * 0.05,
-                                                ),
-                                                Image.asset(
-                                                  Common.assetsIcons +
-                                                      "snapchat logo.png",
-                                                  height: height * 0.08,
-                                                  width: width * 0.08,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                );
+                               share_dialog(context, height, width);
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -910,17 +820,22 @@ class _ClassicviewState extends State<Classicview>
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 top: height * 0.12),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  "Inappropriate Photos",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
-                                                ),
-                                              ],
+                                            child: InkWell(
+                                              onTap: (){
+                                                report_submit(context, height, width);
+                                              },
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Inappropriate Photos",
+                                                    style: TextStyle(
+                                                        color:
+                                                            Colors.grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           Padding(
@@ -933,17 +848,22 @@ class _ClassicviewState extends State<Classicview>
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 top: height * 0.19),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  "Feels Like Spam",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
-                                                ),
-                                              ],
+                                            child: InkWell(
+                                              onTap: (){
+                                                submit_promotion_code(context, height, width);
+                                              },
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Feels Like Spam",
+                                                    style: TextStyle(
+                                                        color:
+                                                            Colors.grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           Padding(
@@ -956,17 +876,22 @@ class _ClassicviewState extends State<Classicview>
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 top: height * 0.26),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  "User is underage",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
-                                                ),
-                                              ],
+                                            child: InkWell(
+                                              onTap: (){
+                                                report_submit(context,height,width);
+                                              },
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "User is underage",
+                                                    style: TextStyle(
+                                                        color:
+                                                            Colors.grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           Padding(
@@ -980,17 +905,22 @@ class _ClassicviewState extends State<Classicview>
                                             padding: EdgeInsets.only(
                                                 top: height * 0.33,
                                                 bottom: height * 0.02),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  "Other",
-                                                  style: TextStyle(
-                                                      color:
-                                                          Colors.grey.shade600),
-                                                ),
-                                              ],
+                                            child: InkWell(
+                                              onTap: (){
+                                                custom_report(context,height,width);
+                                              },
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    "Other",
+                                                    style: TextStyle(
+                                                        color:
+                                                            Colors.grey.shade600),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],

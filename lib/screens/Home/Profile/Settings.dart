@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
-
+import 'package:goldidate/utils/dialogs/alldialogs.dart';
 enum distance { Km, Mi }
 
 class Settings extends StatefulWidget {
@@ -723,18 +723,23 @@ class _SettingsState extends State<Settings> {
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
-              child: Container(
-                height: height * 0.06,
-                width: width,
-                color: Color(0xFFFFFFFF),
-                child: Center(
-                  child: Text(
-                    "Logout",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: width * 0.045,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF939393),
+              child: InkWell(
+                onTap: (){
+                  logout_account(context, height, width);
+                },
+                child: Container(
+                  height: height * 0.06,
+                  width: width,
+                  color: Color(0xFFFFFFFF),
+                  child: Center(
+                    child: Text(
+                      "Logout",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: width * 0.045,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF939393),
+                      ),
                     ),
                   ),
                 ),
@@ -769,18 +774,23 @@ class _SettingsState extends State<Settings> {
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
-              child: Container(
-                height: height * 0.06,
-                width: width,
-                color: Color(0xFFFFFFFF),
-                child: Center(
-                  child: Text(
-                    "Delete Account",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: width * 0.045,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF939393),
+              child: InkWell(
+                onTap: (){
+                  delete_account(context,height,width);
+                },
+                child: Container(
+                  height: height * 0.06,
+                  width: width,
+                  color: Color(0xFFFFFFFF),
+                  child: Center(
+                    child: Text(
+                      "Delete Account",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: width * 0.045,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF939393),
+                      ),
                     ),
                   ),
                 ),
