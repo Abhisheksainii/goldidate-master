@@ -25,4 +25,5 @@ class AppRoutes {
   static final String verifyCode = "/verifyCode";
   static final String terms_condititons = "/terms";
   static final String classicView = "/classicview";
+  static final String passion = "/passion";
 }

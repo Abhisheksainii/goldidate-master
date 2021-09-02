@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.settings,
+      initialRoute: AppRoutes.passion,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -68,6 +68,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.verifyCode: (context) => VerifyCode(),
         AppRoutes.terms_condititons: (context) => Terms_Conditions(),
         AppRoutes.classicView: (context) => Classicview(),
+        AppRoutes.passion:(context)=> Passions(),
       },
     );
   }
