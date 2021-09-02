@@ -7,6 +7,18 @@ import 'package:goldidate/screens/Home/Profile/editProfile.dart';
 import 'package:goldidate/screens/Home/Profile/goldidatePlus.dart';
 import 'package:goldidate/screens/Home/Profile/goldidatePlus2.dart';
 import 'package:goldidate/screens/Home/Profile/myProfile.dart';
+import 'package:goldidate/screens/Home/Update/Bio.dart';
+import 'package:goldidate/screens/Home/Update/Coins.dart';
+import 'package:goldidate/screens/Home/Update/Education.dart';
+import 'package:goldidate/screens/Home/Update/Email.dart';
+import 'package:goldidate/screens/Home/Update/Gender.dart';
+import 'package:goldidate/screens/Home/Update/LevelofEducation.dart';
+import 'package:goldidate/screens/Home/Update/Religious.dart';
+import 'package:goldidate/screens/Home/Update/ShowMe.dart';
+// import 'package:goldidate/screens/Home/Update/MyGender.dart';
+import 'package:goldidate/screens/Home/Update/phoneNumber.dart';
+import 'package:goldidate/screens/Home/Update/searching.dart';
+import 'package:goldidate/screens/Home/Update/sexuality.dart';
 import 'package:goldidate/screens/Home/addPhotos.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
 import 'package:goldidate/screens/Home/chat_screen.dart';
@@ -37,7 +49,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.passion,
+      initialRoute: AppRoutes.religious,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -68,7 +80,18 @@ class MyApp extends StatelessWidget {
         AppRoutes.verifyCode: (context) => VerifyCode(),
         AppRoutes.terms_condititons: (context) => Terms_Conditions(),
         AppRoutes.classicView: (context) => Classicview(),
-        AppRoutes.passion:(context)=> Passions(),
+        AppRoutes.passion: (context) => Passions(),
+        AppRoutes.bio: (context) => Bio(),
+        AppRoutes.levelofEducation: (context) => LevelofEducation(),
+        AppRoutes.phoneNumber: (context) => PhoneNumber(),
+        AppRoutes.email: (context) => Email(),
+        AppRoutes.coins: (context) => Coins(),
+        AppRoutes.education: (context) => Education(),
+        AppRoutes.gender: (context) => MyGender(),
+        AppRoutes.showme: (context) => ShowMe(),
+        AppRoutes.searching: (context) => Searching(),
+        AppRoutes.sexuality: (context) => Sexuality2(),
+        AppRoutes.religious: (context) => Religious(),
       },
     );
   }

@@ -8,6 +8,7 @@ class AppRoutes {
   static final String tempHomeRoute = "/temp-home";
   static final String createAccountInAppRoute = "/create-account";
   static final String getcoins = "/getcoins";
+  // ignore: non_constant_identifier_names
   static final String Tabview = "/tabview";
   static final String myprofile = "/myProfile";
   static final String allchats = "/allchats";
@@ -23,7 +24,19 @@ class AppRoutes {
   static final String personal = "/Personal";
   static final String chatscreen = "/chat_screen";
   static final String verifyCode = "/verifyCode";
+  // ignore: non_constant_identifier_names
   static final String terms_condititons = "/terms";
   static final String classicView = "/classicview";
   static final String passion = "/passion";
+  static final String bio = "/Bio";
+  static final String levelofEducation = "/LevelofEducation";
+  static final String phoneNumber = "/PhoneNumber";
+  static final String email = "/Email";
+  static final String coins = "/Coins";
+  static final String education = "/Education";
+  static final String gender = "/Gender";
+  static final String showme = "ShowME";
+  static final String searching = "Searching";
+  static final String sexuality = "sexuality";
+  static final String religious = "Religious";
 }
