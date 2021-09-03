@@ -40,4 +40,7 @@ class AppRoutes {
   static final String sexuality = "sexuality";
   static final String religious = "Religious";
   static final String mydirection = "mydirection";
+  static final String paymentMethods = "payment";
+  static final String paypal = "Paypal";
+  static final String visa = "Visa";
 }

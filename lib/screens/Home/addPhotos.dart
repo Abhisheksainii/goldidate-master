@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
+import 'package:goldidate/utils/app_colors.dart';
 import 'package:goldidate/utils/common.dart';
 
 class AddPhotos extends StatefulWidget {
@@ -37,7 +38,7 @@ class _AddPhotosState extends State<AddPhotos> {
                     },
                     child: Icon(
                       Icons.arrow_back,
-                      color: Color(0xFFD12BD1),
+                      color: AppColors.goldColor,
                     ),
                   ),
                   SizedBox(
@@ -74,6 +75,7 @@ class _AddPhotosState extends State<AddPhotos> {
                         height: height * 0.07,
                         width: width * 0.07,
                         child: Image(
+                          color: AppColors.goldColor,
                           image: AssetImage(
                               Common.assetsImages + "gallary icon.png"),
                         ),
@@ -161,13 +163,7 @@ class _AddPhotosState extends State<AddPhotos> {
                         height: height * 0.05,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(22.0),
-                            gradient: LinearGradient(
-                                begin: Alignment.topRight,
-                                end: Alignment.bottomLeft,
-                                colors: [
-                                  Color(0xFF532253),
-                                  Color(0xFFD12BD1)
-                                ])),
+                            color: AppColors.goldColor),
                         child: Center(
                           child: Text(
                             "Done",
@@ -231,14 +227,15 @@ class _ImageContainerState extends State<ImageContainer> {
           ),
         ),
         Positioned(
-          top: widget.height * 0.11,
-          left: widget.width * 0.22,
+          top: widget.height * 0.105,
+          left: widget.width * 0.21,
           child: Visibility(
             visible: showTick,
             child: Container(
               height: widget.height * 0.04,
               width: widget.width * 0.04,
-              child: Image(image: AssetImage(Common.assetsImages + "tick.png")),
+              child: Image(
+                  image: AssetImage(Common.assetsImages + "check button.png")),
             ),
           ),
         ),
