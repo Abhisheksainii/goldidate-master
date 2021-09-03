@@ -4,6 +4,7 @@ import 'package:goldidate/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/dialogs/alldialogs.dart';
+
 enum distance { Km, Mi }
 
 class Settings extends StatefulWidget {
@@ -40,17 +41,22 @@ class _SettingsState extends State<Settings> {
           ),
         ),
         actions: [
-          Padding(
-            padding: EdgeInsets.only(
-              right: width * 0.03,
-              top: height * 0.02,
-            ),
-            child: Text(
-              "Done",
-              style: TextStyle(
-                fontSize: width * 0.045,
-                color: Color(0xFFD19D43),
-                fontWeight: FontWeight.w500,
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: width * 0.03,
+                top: height * 0.02,
+              ),
+              child: Text(
+                "Done",
+                style: TextStyle(
+                  fontSize: width * 0.045,
+                  color: Color(0xFFD19D43),
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ),
@@ -181,26 +187,36 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "Phone Number",
-              haveExtraDetail: true,
-              extradetailName: "+1 354 112 2376",
-              colorExtra: AppColors.goldColor,
-              colorName: Color(0xFF616161),
-              colorIcon: AppColors.goldColor,
-              isBold: false,
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.phoneNumber);
+              },
+              child: Details(
+                detailValue: "Phone Number",
+                haveExtraDetail: true,
+                extradetailName: "+1 354 112 2376",
+                colorExtra: AppColors.goldColor,
+                colorName: Color(0xFF616161),
+                colorIcon: AppColors.goldColor,
+                isBold: false,
+              ),
             ),
             Divider(
               height: height * 0.001,
             ),
-            Details(
-              detailValue: "Email",
-              haveExtraDetail: true,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Color(0xFF616161),
-              colorIcon: AppColors.goldColor,
-              isBold: true,
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.email);
+              },
+              child: Details(
+                detailValue: "Email",
+                haveExtraDetail: true,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Color(0xFF616161),
+                colorIcon: AppColors.goldColor,
+                isBold: true,
+              ),
             ),
             Container(
               height: height * 0.06,
@@ -221,57 +237,62 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Container(
-              height: height * 0.058,
-              width: double.infinity,
-              color: Color(0xFFFFFFFF),
-              child: Padding(
-                padding:
-                    EdgeInsets.only(left: width * 0.04, right: width * 0.03),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Coin's",
-                      style: TextStyle(
-                        fontSize: width * 0.03,
-                        color: Color(0xFF616161),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.coins);
+              },
+              child: Container(
+                height: height * 0.058,
+                width: double.infinity,
+                color: Color(0xFFFFFFFF),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.04, right: width * 0.03),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Coin's",
+                        style: TextStyle(
+                          fontSize: width * 0.03,
+                          color: Color(0xFF616161),
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: width * 0.35),
-                      child: Container(
-                        child: Row(
-                          children: [
-                            Image.asset(Common.assetsImages + "bigcoin.png",
-                                width: width * 0.05),
-                            Container(
-                              height: height * 0.05,
-                              width: width * 0.35,
-                              color: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: width * 0.04, top: height * 0.014),
-                                child: Text(
-                                  "5,000 gc",
-                                  style: TextStyle(
-                                    color: AppColors.goldColor,
-                                    fontSize: width * 0.03,
-                                    fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: EdgeInsets.only(left: width * 0.35),
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Image.asset(Common.assetsImages + "bigcoin.png",
+                                  width: width * 0.05),
+                              Container(
+                                height: height * 0.05,
+                                width: width * 0.35,
+                                color: Colors.white,
+                                child: Padding(
+                                  padding: EdgeInsets.only(
+                                      left: width * 0.04, top: height * 0.014),
+                                  child: Text(
+                                    "5,000 gc",
+                                    style: TextStyle(
+                                      color: AppColors.goldColor,
+                                      fontSize: width * 0.03,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      size: width * 0.045,
-                      color: AppColors.goldColor,
-                    )
-                  ],
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        size: width * 0.045,
+                        color: AppColors.goldColor,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -295,14 +316,19 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "Tel Aviv, Israel",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: AppColors.goldColor,
-              colorIcon: AppColors.goldColor,
-              isBold: false,
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.mydirection);
+              },
+              child: Details(
+                detailValue: "Tel Aviv, Israel",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: AppColors.goldColor,
+                colorIcon: AppColors.goldColor,
+                isBold: false,
+              ),
             ),
             Padding(
               padding:
@@ -363,14 +389,19 @@ class _SettingsState extends State<Settings> {
             Divider(
               height: height * 0.001,
             ),
-            Details(
-              detailValue: "Change Location",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: AppColors.goldColor,
-              colorIcon: AppColors.goldColor,
-              isBold: false,
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.mydirection);
+              },
+              child: Details(
+                detailValue: "Change Location",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: AppColors.goldColor,
+                colorIcon: AppColors.goldColor,
+                isBold: false,
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
@@ -392,14 +423,19 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "WOMEN",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: AppColors.goldColor,
-              colorIcon: AppColors.goldColor,
-              isBold: false,
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.gender);
+              },
+              child: Details(
+                detailValue: "WOMEN",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: AppColors.goldColor,
+                colorIcon: AppColors.goldColor,
+                isBold: false,
+              ),
             ),
             Container(
               height: height * 0.06,
@@ -724,7 +760,7 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
               child: InkWell(
-                onTap: (){
+                onTap: () {
                   logout_account(context, height, width);
                 },
                 child: Container(
@@ -775,8 +811,8 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
               child: InkWell(
-                onTap: (){
-                  delete_account(context,height,width);
+                onTap: () {
+                  delete_account(context, height, width);
                 },
                 child: Container(
                   height: height * 0.06,

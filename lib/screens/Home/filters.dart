@@ -84,15 +84,25 @@ class _FiltersState extends State<Filters> {
                   detailValue: "08/01/1989",
                   haveIcon: false,
                 ),
-                Details(
-                  detailName: "LOCATION",
-                  detailValue: "Tel Aviv, Israel",
-                  haveIcon: true,
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRoutes.mydirection);
+                  },
+                  child: Details(
+                    detailName: "LOCATION",
+                    detailValue: "Tel Aviv, Israel",
+                    haveIcon: true,
+                  ),
                 ),
-                Details(
-                  detailName: "GENDER",
-                  detailValue: "Male",
-                  haveIcon: true,
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(AppRoutes.gender);
+                  },
+                  child: Details(
+                    detailName: "GENDER",
+                    detailValue: "Male",
+                    haveIcon: true,
+                  ),
                 ),
                 Container(
                   height: height * 0.06,

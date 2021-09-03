@@ -19,9 +19,14 @@ class _PaymentMethodsState extends State<PaymentMethods> {
             children: [
               Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.black,
+                    ),
                   )
                 ],
               ),

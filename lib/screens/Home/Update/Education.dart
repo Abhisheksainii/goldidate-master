@@ -23,17 +23,22 @@ class _EducationState extends State<Education> {
           ),
         ),
         actions: [
-          Padding(
-            padding: EdgeInsets.only(
-              right: width * 0.03,
-              top: height * 0.02,
-            ),
-            child: Text(
-              "Done",
-              style: TextStyle(
-                fontSize: width * 0.045,
-                color: Color(0xFFD19D43),
-                fontWeight: FontWeight.w500,
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: width * 0.03,
+                top: height * 0.02,
+              ),
+              child: Text(
+                "Done",
+                style: TextStyle(
+                  fontSize: width * 0.045,
+                  color: Color(0xFFD19D43),
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ),

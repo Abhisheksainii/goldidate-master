@@ -150,8 +150,7 @@ class _MyProfileState extends State<MyProfile> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context)
-                              .pushNamed(AppRoutes.editProfile);
+                          Navigator.of(context).pushNamed(AppRoutes.addMedia);
                         },
                         child: Container(
                           height: height * 0.08,

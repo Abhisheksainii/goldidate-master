@@ -20,9 +20,14 @@ class _PaypalState extends State<Paypal> {
               children: [
                 Row(
                   children: [
-                    Icon(
-                      Icons.arrow_back,
-                      color: Colors.black,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                      ),
                     )
                   ],
                 ),

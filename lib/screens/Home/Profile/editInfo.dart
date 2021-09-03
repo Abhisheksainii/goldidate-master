@@ -55,17 +55,22 @@ class _AddMediaState extends State<AddMedia> {
             ),
           ),
           actions: [
-            Padding(
-              padding: EdgeInsets.only(
-                right: width * 0.03,
-                top: height * 0.02,
-              ),
-              child: Text(
-                "Done",
-                style: TextStyle(
-                  fontSize: width * 0.045,
-                  color: Color(0xFFD19D43),
-                  fontWeight: FontWeight.w500,
+            InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Padding(
+                padding: EdgeInsets.only(
+                  right: width * 0.03,
+                  top: height * 0.02,
+                ),
+                child: Text(
+                  "Done",
+                  style: TextStyle(
+                    fontSize: width * 0.045,
+                    color: Color(0xFFD19D43),
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),
@@ -306,14 +311,19 @@ class _ImagesGridState extends State<ImagesGrid> {
               ),
             ),
           ),
-          Details1(
-            detailValue: "Tel Aviv, Israel",
-            haveExtraDetail: false,
-            extradetailName: "Info@goldidate.com",
-            colorExtra: AppColors.goldColor,
-            colorName: AppColors.goldColor,
-            colorIcon: AppColors.goldColor,
-            isBold: false,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.mydirection);
+            },
+            child: Details1(
+              detailValue: "Tel Aviv, Israel",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(top: height * 0.02),
@@ -335,14 +345,19 @@ class _ImagesGridState extends State<ImagesGrid> {
               ),
             ),
           ),
-          Details1(
-            detailValue: "Male",
-            haveExtraDetail: false,
-            extradetailName: "Info@goldidate.com",
-            colorExtra: AppColors.goldColor,
-            colorName: AppColors.goldColor,
-            colorIcon: AppColors.goldColor,
-            isBold: false,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.gender);
+            },
+            child: Details1(
+              detailValue: "Male",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
           ),
           Container(
             height: height * 0.05,
@@ -394,14 +409,19 @@ class _ImagesGridState extends State<ImagesGrid> {
           Divider(
             height: 0.5,
           ),
-          Details1(
-            detailValue: "Edit Bio",
-            haveExtraDetail: false,
-            extradetailName: "Info@goldidate.com",
-            colorExtra: AppColors.goldColor,
-            colorName: AppColors.goldColor,
-            colorIcon: AppColors.goldColor,
-            isBold: false,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.bio);
+            },
+            child: Details1(
+              detailValue: "Edit Bio",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
           ),
           Container(
             height: height * 0.05,
@@ -450,14 +470,19 @@ class _ImagesGridState extends State<ImagesGrid> {
           Divider(
             height: 0.5,
           ),
-          Details1(
-            detailValue: "Add Passions",
-            haveExtraDetail: false,
-            extradetailName: "Info@goldidate.com",
-            colorExtra: AppColors.goldColor,
-            colorName: AppColors.goldColor,
-            colorIcon: AppColors.goldColor,
-            isBold: false,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.passion);
+            },
+            child: Details1(
+              detailValue: "Add Passions",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
           ),
           Details(
             detailName: "OCCUPATION",
@@ -510,19 +535,29 @@ class _ImagesGridState extends State<ImagesGrid> {
           Divider(
             height: 0.5,
           ),
-          Details1(
-            detailValue: "Add Education",
-            haveExtraDetail: false,
-            extradetailName: "Info@goldidate.com",
-            colorExtra: AppColors.goldColor,
-            colorName: AppColors.goldColor,
-            colorIcon: AppColors.goldColor,
-            isBold: false,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.education);
+            },
+            child: Details1(
+              detailValue: "Add Education",
+              haveExtraDetail: false,
+              extradetailName: "Info@goldidate.com",
+              colorExtra: AppColors.goldColor,
+              colorName: AppColors.goldColor,
+              colorIcon: AppColors.goldColor,
+              isBold: false,
+            ),
           ),
-          Details(
-            detailName: "LEVEL OF EDUCATION",
-            detailValue: "Engineer",
-            haveIcon: true,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.levelofEducation);
+            },
+            child: Details(
+              detailName: "LEVEL OF EDUCATION",
+              detailValue: "Engineer",
+              haveIcon: true,
+            ),
           ),
           Details(
             detailName: "FAVORITE ANIMAL",
@@ -534,20 +569,35 @@ class _ImagesGridState extends State<ImagesGrid> {
             detailValue: "Pizza",
             haveIcon: true,
           ),
-          Details(
-            detailName: "RELIGIOUS",
-            detailValue: "Atheist ",
-            haveIcon: true,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.religious);
+            },
+            child: Details(
+              detailName: "RELIGIOUS",
+              detailValue: "Atheist ",
+              haveIcon: true,
+            ),
           ),
-          Details(
-            detailName: "SEXUAL ORIENTATION",
-            detailValue: "Straight",
-            haveIcon: true,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.sexuality);
+            },
+            child: Details(
+              detailName: "SEXUAL ORIENTATION",
+              detailValue: "Straight",
+              haveIcon: true,
+            ),
           ),
-          Details(
-            detailName: "SEARCHING FOR",
-            detailValue: "Friendship ",
-            haveIcon: true,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(AppRoutes.searching);
+            },
+            child: Details(
+              detailName: "SEARCHING FOR",
+              detailValue: "Friendship ",
+              haveIcon: true,
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(top: height * 0.03, bottom: height * 0.06),
