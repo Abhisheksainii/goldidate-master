@@ -39,4 +39,5 @@ class AppRoutes {
   static final String searching = "Searching";
   static final String sexuality = "sexuality";
   static final String religious = "Religious";
+  static final String mydirection = "mydirection";
 }

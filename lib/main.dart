@@ -15,6 +15,7 @@ import 'package:goldidate/screens/Home/Update/Gender.dart';
 import 'package:goldidate/screens/Home/Update/LevelofEducation.dart';
 import 'package:goldidate/screens/Home/Update/Religious.dart';
 import 'package:goldidate/screens/Home/Update/ShowMe.dart';
+import 'package:goldidate/screens/Home/Update/mydirection.dart';
 // import 'package:goldidate/screens/Home/Update/MyGender.dart';
 import 'package:goldidate/screens/Home/Update/phoneNumber.dart';
 import 'package:goldidate/screens/Home/Update/searching.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.Tabview,
+      initialRoute: AppRoutes.mydirection,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -92,6 +93,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.searching: (context) => Searching(),
         AppRoutes.sexuality: (context) => Sexuality2(),
         AppRoutes.religious: (context) => Religious(),
+        AppRoutes.mydirection: (context) => MyDirection(),
       },
     );
   }

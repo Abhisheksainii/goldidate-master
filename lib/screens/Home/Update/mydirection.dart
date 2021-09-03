@@ -1,55 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 
-class Location extends StatefulWidget {
+class MyDirection extends StatefulWidget {
   @override
-  _LocationState createState() => _LocationState();
+  _MyDirectionState createState() => _MyDirectionState();
 }
 
-class _LocationState extends State<Location> {
+class _MyDirectionState extends State<MyDirection> {
   @override
   Widget build(BuildContext context) {
-    final List<String> states = <String>[
-      "Los Angeles",
-      "Melbourne",
-      "New York",
-      "London",
-      "Amsterdam",
-      "Los Angeles",
-      "Sydney",
-      "Tel Aviv-Yafo",
-      "Dubai",
-      "Los Angeles",
-      "Melbourne",
-      "New York",
-      "London",
-      "Amsterdam",
-      "Los Angeles",
-      "Sydney",
-      "Tel Aviv-Yafo",
-      "Dubai"
-    ];
-    final List<String> cities = <String>[
-      "Los Angeles",
-      "Melbourne",
-      "New York",
-      "London",
-      "Amsterdam",
-      "Los Angeles",
-      "Sydney",
-      "Tel Aviv-Yafo",
-      "Dubai"
-          "Los Angeles",
-      "Melbourne",
-      "New York",
-      "London",
-      "Amsterdam",
-      "Los Angeles",
-      "Sydney",
-      "Tel Aviv-Yafo",
-      "Dubai"
-    ];
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -139,57 +98,26 @@ class _LocationState extends State<Location> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: height * 0.03),
-                child: Container(
-                  height: height * 2,
-                  color: Colors.white,
-                  child: ListView.separated(
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: states.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: EdgeInsets.only(
-                            top: height * 0.02, left: width * 0.08),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(bottom: height * 0.02),
-                                child: Image.asset(
-                                  Common.assetsImages + "location icon.png",
-                                  width: width * 0.055,
-                                ),
-                              ),
-                              SizedBox(
-                                width: width * 0.028,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    states[index],
-                                    style: TextStyle(
-                                        fontSize: width * 0.044,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Text(
-                                    cities[index],
-                                    style: TextStyle(
-                                        color: Color(0xFF757575),
-                                        fontSize: width * 0.044,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Divider()
-                                ],
-                              ),
-                            ],
-                          ),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: height,
+                      width: width,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(Common.assetsImages + "map.png"),
                         ),
-                      );
-                    },
-                    separatorBuilder: (context, index) {
-                      return Divider();
-                    },
-                  ),
+                      ),
+                    ),
+                    Positioned(
+                        top: height * 0.27,
+                        left: width * 0.20,
+                        child: Image.asset(
+                          Common.assetsImages + "location icon.png",
+                          width: width * 0.055,
+                        )),
+                  ],
                 ),
               ),
             ],
