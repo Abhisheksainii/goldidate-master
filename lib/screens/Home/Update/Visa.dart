@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 
 class Visa extends StatefulWidget {
@@ -300,28 +301,34 @@ class _VisaState extends State<Visa> {
                                 ],
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  top: height * 0.02,
-                                  left: width * 0.05,
-                                  right: width * 0.05),
-                              child: Container(
-                                height: height * 0.07,
-                                width: width * 1.0,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFFD19D43),
-                                  border: Border.all(
-                                    color: Color(0xFFE0E0E0),
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context)
+                                    .pushNamed(AppRoutes.filters);
+                              },
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    top: height * 0.02,
+                                    left: width * 0.05,
+                                    right: width * 0.05),
+                                child: Container(
+                                  height: height * 0.07,
+                                  width: width * 1.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFD19D43),
+                                    border: Border.all(
+                                      color: Color(0xFFE0E0E0),
+                                    ),
+                                    borderRadius: BorderRadius.circular(60.0),
                                   ),
-                                  borderRadius: BorderRadius.circular(60.0),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "Next Step",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.w700),
+                                  child: Center(
+                                    child: Text(
+                                      "Next Step",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700),
+                                    ),
                                   ),
                                 ),
                               ),

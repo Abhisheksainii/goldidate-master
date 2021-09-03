@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/common.dart';
 
 class PaymentMethods extends StatefulWidget {
@@ -36,15 +37,25 @@ class _PaymentMethodsState extends State<PaymentMethods> {
                   style: TextStyle(color: Colors.black),
                 ),
               ),
-              PaymentCard(
-                pathName: "Paypal.png",
-                text1: "myself@me.com",
-                text2: "Added on 15/02/2017",
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(AppRoutes.paypal);
+                },
+                child: PaymentCard(
+                  pathName: "Paypal.png",
+                  text1: "myself@me.com",
+                  text2: "Added on 15/02/2017",
+                ),
               ),
-              PaymentCard(
-                pathName: "Visa.png",
-                text1: "****  ****  **** 0817",
-                text2: "Expiry Date 10/19",
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(AppRoutes.visa);
+                },
+                child: PaymentCard(
+                  pathName: "Visa.png",
+                  text1: "****  ****  **** 0817",
+                  text2: "Expiry Date 10/19",
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(
