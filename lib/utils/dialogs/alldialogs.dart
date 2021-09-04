@@ -401,20 +401,13 @@ void logout_account(BuildContext context, double height, double width) {
         style: TextStyle(fontWeight: FontWeight.w600),
       )),
       content: Container(
-        height: height * 0.04,
-        child: Stack(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Are you sure you want to logout?",
-                  style: TextStyle(
-                      color: Colors.grey.shade600, fontSize: width * 0.035),
-                ),
-              ],
-            ),
-          ],
+        height: height * 0.03,
+        child: Center(
+          child: Text(
+            "Are you sure you want to logout?",
+            style:
+                TextStyle(color: Colors.grey.shade600, fontSize: width * 0.035),
+          ),
         ),
       ),
     ),
