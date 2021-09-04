@@ -96,7 +96,7 @@ class _chippState extends State<chipp> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: widget.width * 0.015),
+          padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
             style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
@@ -104,7 +104,7 @@ class _chippState extends State<chipp> {
         ),
         SizedBox(height: widget.height*0.02,),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.04 ,right: widget.width*0.04),
+          padding:  EdgeInsets.only(left: widget.width*0.06,right: widget.width*0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
@@ -250,7 +250,7 @@ class _chipp1State extends State<chipp1> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: widget.width * 0.015),
+          padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
             style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
@@ -258,7 +258,7 @@ class _chipp1State extends State<chipp1> {
         ),
         SizedBox(height: widget.height*0.02,),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.04 ,right: widget.width*0.04),
+          padding:  EdgeInsets.only(left: widget.width*0.06 ,right: widget.width*0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
@@ -331,7 +331,7 @@ class _chipp2State extends State<chipp2> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: widget.width * 0.015),
+          padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
             style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
@@ -339,7 +339,7 @@ class _chipp2State extends State<chipp2> {
         ),
         SizedBox(height: widget.height*0.02,),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.04 ,right: widget.width*0.08),
+          padding:  EdgeInsets.only(left: widget.width*0.06 ,right: widget.width*0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
@@ -405,7 +405,7 @@ class _chipp3State extends State<chipp3> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: widget.width * 0.015),
+          padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
             style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
@@ -413,7 +413,7 @@ class _chipp3State extends State<chipp3> {
         ),
         SizedBox(height: widget.height*0.02,),
         Padding(
-          padding:  EdgeInsets.only(left:  widget.width*0.04 ,right: widget.width*0.03),
+          padding:  EdgeInsets.only(left:  widget.width*0.06 ,right: widget.width*0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
@@ -544,7 +544,7 @@ class _CHIPState extends State<CHIP> {
       },
       child: Container(
 
-        padding: EdgeInsets.symmetric(horizontal: 4,vertical: 1),
+        padding: EdgeInsets.symmetric(horizontal: 5,vertical: 1),
         decoration: BoxDecoration(
           color: _isselcted ?Color(0xffD19D43) :Colors.white,
           borderRadius: BorderRadius.all(

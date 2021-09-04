@@ -25,6 +25,8 @@ class _TabBarViewState extends State<TabBarViewPage>
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -63,14 +65,34 @@ class _TabBarViewState extends State<TabBarViewPage>
                       ),
                     ),
                     Tab(
-                      icon: ImageIcon(
-                        AssetImage(Common.assetsImages + "message icon.png"),
+                      child:
+                      Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                      ImageIcon(
+                AssetImage(Common.assetsImages + "message icon.png"),
                         color: _tabController.index == 2
                             ? AppColors.goldColor
                             : Colors.grey,
                         size: height * 0.11,
-                      ),
+    ),
+                    Padding(
+                      padding:  EdgeInsets.only(left: width*0.11,bottom: height*0.01),
+                      child: Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+    color: Colors.red,
+                        ),
+                       child: Text("3",style: TextStyle(color: Colors.white),),width: width*0.04,),
                     ),
+                      ],),
+
+
+
+
+                      ),
+
                     Tab(
                       icon: ImageIcon(
                         AssetImage(Common.assetsImages + "user icon.png"),

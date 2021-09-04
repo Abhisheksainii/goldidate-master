@@ -6,7 +6,8 @@ import 'package:goldidate/screens/Home/chat_screen.dart';
 class MessageType {
   String names;
   bool isread;
-  MessageType({@required this.names, @required this.isread});
+  bool admin;
+  MessageType({@required this.names, @required this.isread,this.admin});
 }
 
 class AllChats extends StatefulWidget {
@@ -16,13 +17,13 @@ class AllChats extends StatefulWidget {
 
 class _AllChatsState extends State<AllChats> {
   List<MessageType> messsage = [
-    MessageType(names: "Mossic", isread: false),
-    MessageType(names: "Johnson", isread: false),
-    MessageType(names: "Loki", isread: true),
-    MessageType(names: "Loki", isread: true),
-    MessageType(names: "Loki", isread: true),
-    MessageType(names: "Loki", isread: true),
-    MessageType(names: "Harry", isread: false),
+    MessageType(names: "Goldidate client service", isread: false,admin: true),
+    MessageType(names: "Johnson", isread: false,admin: false),
+    MessageType(names: "Loki", isread: true,admin: false),
+    MessageType(names: "Loki", isread: true,admin: false),
+    MessageType(names: "Loki", isread: true,admin: false),
+    MessageType(names: "Loki", isread: true,admin: false),
+    MessageType(names: "Harry", isread: false,admin:false),
   ];
 
   @override
@@ -111,10 +112,12 @@ padding: EdgeInsets.only(
                           ),
                           SizedBox(width: 6,),
                           Container(
-                            height: height * 0.1,
+                            height: height * 0.07,
                             width: width * 0.12,
                             decoration: BoxDecoration(
-                              shape: BoxShape.circle,
+                              color: Color(0xff000000),
+                              borderRadius: messsage[index].admin?BorderRadius.all(Radius.circular(8)):BorderRadius.all(Radius.circular(30)),
+
                               image: DecorationImage(
                                 image:
                                     AssetImage(Common.assetsImages + "Chat$index.png"),
@@ -146,7 +149,7 @@ padding: EdgeInsets.only(
                                       ),
                                     ),
                                     Padding(
-                                      padding:  EdgeInsets.only(right: width*0.02),
+                                      padding:  EdgeInsets.only(right: width*0.01),
                                       child: Text(
                                         "9:27 AM",
                                         style:

@@ -45,7 +45,7 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
               const SizedBox(height: 15.0),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20.0,
+                  horizontal: 40.0,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -71,17 +71,17 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
                     const SizedBox(height: 15.0),
                     Row(
                       children: [
-                        Expanded(child: LabelGuideCard()),
+                        Expanded(child: LabelGuideCard(head: "Be yourself.",description: "Upload only your own photos, age and bio that's yours",)),
                         const SizedBox(width: 15.0),
-                        Expanded(child: LabelGuideCard()),
+                        Expanded(child: LabelGuideCard(head: "Be generous.",description: "Treat others with dignity and respect, Send Gifts To shoe you really care",)),
                       ],
                     ),
                     const SizedBox(height: 15.0),
                     Row(
                       children: [
-                        Expanded(child: LabelGuideCard()),
+                        Expanded(child: LabelGuideCard(head: "Be safe.",description: "Don't give out personal info too quickly. Guage, analyse and date safely",)),
                         const SizedBox(width: 15.0),
-                        Expanded(child: LabelGuideCard()),
+                        Expanded(child: LabelGuideCard(head: "Be active",description: "Report others rude or bad behaviour actively so we can keep it safe",)),
                       ],
                     ),
                     const SizedBox(height: 20.0),
@@ -91,13 +91,14 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
                               AppRoutes.getStartedRoute, (route) => false),
                       buttonText: "I Understand",
                     ),
-                    const SizedBox(height: 25.0),
+                    const SizedBox(height: 40.0),
                     InkWell(
                       onTap: () => Navigator.of(context)
                           .pushNamed(AppRoutes.terms_condititons),
                       child: Text(
                         "Terms of Use and Privacy Policy",
                         textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.grey.shade600),
                       ),
                     ),
                     const SizedBox(height: 20.0),

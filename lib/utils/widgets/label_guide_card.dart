@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 
 class LabelGuideCard extends StatelessWidget {
-  const LabelGuideCard({Key key}) : super(key: key);
+
+  LabelGuideCard({this.head,this.description});
+  final String head;
+  final String description;
+
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +16,11 @@ class LabelGuideCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Text(
-            "Be yourself.",
+            head,
             style: TextStyle(
               color: AppColors.blackColor,
-              fontSize: 18.0,
-              fontWeight: FontWeight.w500,
+              fontSize: 16.0,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),
@@ -30,14 +34,15 @@ class LabelGuideCard extends StatelessWidget {
             ),
           ),
           padding: const EdgeInsets.symmetric(
-            horizontal: 15.0,
-            vertical: 15.0,
+            horizontal: 8.0,
+            vertical: 8.0,
           ),
           child: Text(
-            "Upload only your own photos, age and bio that’s yours",
+            description,
             style: TextStyle(
               height: 1.5,
-              fontSize: 15.0,
+              fontSize: 12.0,
+              color: Colors.grey.shade600
             ),
           ),
         ),
