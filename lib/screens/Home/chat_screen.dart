@@ -73,7 +73,13 @@ class ChatScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.arrow_back,size: width*0.07,color: AppColors.goldColor,),
+                    InkWell(
+
+                        child: Icon(Icons.arrow_back,size: width*0.07,color: AppColors.goldColor,),
+                    onTap: (){
+                          Navigator.pop(context);
+                    },
+                    ),
                     Padding(
                       padding:  EdgeInsets.only(top: height*0.02),
                       child: Text("Eliza Williams",style: TextStyle(fontWeight: FontWeight.bold,fontSize: width*0.048),),

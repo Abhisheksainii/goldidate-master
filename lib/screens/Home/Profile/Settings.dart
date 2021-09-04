@@ -26,6 +26,9 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Color(0xFFF5F6FA),
       appBar: AppBar(
         leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
           child: Icon(
             Icons.arrow_back,
             color: Color(0xFFD19D43),

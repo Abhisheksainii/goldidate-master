@@ -34,7 +34,7 @@ class _PaymentMethodsState extends State<PaymentMethods> {
               Container(
                 child: Text(
                   "Payment Methods",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               ),
               InkWell(
