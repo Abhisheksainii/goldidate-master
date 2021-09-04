@@ -1209,6 +1209,21 @@ class _ClassicviewState extends State<Classicview>
                                     animation: animation,
                                     height: height,
                                     heading: "Travel"),
+                                Container(
+                                  alignment: Alignment.center,
+                                  width: width*0.7,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: AppColors.goldColor),
+                                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                                  ),
+                                    child: Text("Buy more Goldicoins",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+
+                                    ),
+                                ),
+                                SizedBox(
+                                  height: height*0.02,
+                                ),
                               ]),
                             ),
                           ),

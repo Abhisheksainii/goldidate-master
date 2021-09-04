@@ -89,7 +89,7 @@ class _GalleryViewState extends State<GalleryView> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(width * 0.05),
                     bottomRight: Radius.circular(width * 0.05)),
-                color: selectedd ? Color(0xffD12BD1) : Colors.white,
+                color: selectedd ? AppColors.goldColor : Colors.white,
               ),
               height: height * 0.072,
               child: Column(
@@ -108,7 +108,7 @@ class _GalleryViewState extends State<GalleryView> {
                         Common.assetsImages + "location.png",
                         height: height * 0.02,
                         width: width * 0.02,
-                        color: selectedd ? Colors.white : Colors.purple,
+                        color: selectedd ? Colors.white :  AppColors.goldColor,
                       ),
                       SizedBox(
                         width: 3,

@@ -309,7 +309,7 @@ void submit_promotion_code(BuildContext context,double height,double width){
                   InkWell(
                     onTap: (){
                       Navigator.pop(context);
-                      report_submit(context, height, width);
+
                     },
                     child: Container(
 
@@ -350,22 +350,33 @@ void delete_account(BuildContext context,double height,double width){
 
     builder: (ctx) => AlertDialog(
       actions: [
-        Container(
-          child: Text(
-              "Cancel"
-          ),
-          alignment: Alignment.center,
-          width: width*0.372,
-          height: height*0.06,
-        ),
-        Container(
+        InkWell(
+          onTap: (){
+            Navigator.pop(context);
 
-          child: Text(
-              "Delete",style: TextStyle(color: AppColors.goldColor),
+          },
+          child: Container(
+            child: Text(
+                "Cancel"
+            ),
+            alignment: Alignment.center,
+            width: width*0.372,
+            height: height*0.06,
           ),
-          alignment: Alignment.center,
-          width: width*0.372,
-          height: height*0.06,
+        ),
+        InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+
+            child: Text(
+                "Delete",style: TextStyle(color: AppColors.goldColor),
+            ),
+            alignment: Alignment.center,
+            width: width*0.372,
+            height: height*0.06,
+          ),
         ),
       ],
       shape: RoundedRectangleBorder(
@@ -381,11 +392,16 @@ void delete_account(BuildContext context,double height,double width){
         height: height*0.04,
         child: Stack(
           children: [
-            Text(
-              "Are you sure you want to delete account?",
-              style: TextStyle(
-                  color:
-                  Colors.grey.shade600,fontSize: width*0.035),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Are you sure you want to delete account?",
+                  style: TextStyle(
+                      color:
+                      Colors.grey.shade600,fontSize: width*0.035),
+                ),
+              ],
             ),
 
 
@@ -403,22 +419,32 @@ void logout_account(BuildContext context,double height,double width){
 
     builder: (ctx) => AlertDialog(
       actions: [
-        Container(
-          child: Text(
-              "Cancel"
+        InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Container(
+            child: Text(
+                "Cancel"
+            ),
+            alignment: Alignment.center,
+            width: width*0.372,
+            height: height*0.06,
           ),
-          alignment: Alignment.center,
-          width: width*0.372,
-          height: height*0.06,
         ),
-        Container(
+        InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Container(
 
-          child: Text(
-            "Logout",style: TextStyle(color: AppColors.goldColor),
+            child: Text(
+              "Logout",style: TextStyle(color: AppColors.goldColor),
+            ),
+            alignment: Alignment.center,
+            width: width*0.372,
+            height: height*0.06,
           ),
-          alignment: Alignment.center,
-          width: width*0.372,
-          height: height*0.06,
         ),
       ],
       shape: RoundedRectangleBorder(
@@ -434,11 +460,16 @@ void logout_account(BuildContext context,double height,double width){
         height: height*0.04,
         child: Stack(
           children: [
-            Text(
-              "Are you sure you want to logout?",
-              style: TextStyle(
-                  color:
-                  Colors.grey.shade600,fontSize: width*0.035),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Are you sure you want to logout?",
+                  style: TextStyle(
+                      color:
+                      Colors.grey.shade600,fontSize: width*0.035),
+                ),
+              ],
             ),
 
 

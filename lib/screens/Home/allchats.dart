@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/app_colors.dart';
 import 'package:goldidate/utils/common.dart';
-
+import 'package:goldidate/screens/Home/chat_screen.dart';
 class MessageType {
   String names;
   bool isread;
@@ -71,8 +71,8 @@ class _AllChatsState extends State<AllChats> {
                 separatorBuilder: (context, index) => Padding(
                   padding:  EdgeInsets.only(left:width*0.08),
                   child: Divider(
-
-                    color: Colors.grey.shade600,
+                      height: 2,
+                    color: Colors.grey.shade500,
                   ),
                 ),
               shrinkWrap: true,
@@ -84,7 +84,15 @@ padding: EdgeInsets.only(
                 itemBuilder: (context, int index) {
                   return InkWell(
                     onTap: () {
-                      Navigator.of(context).pushNamed(AppRoutes.chatscreen);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChatScreen(
+                              imageUrl:Common.assetsImages + "Layer 16.png",
+                              giftname: "Chocolate Box",
+                              giftpricecoin: "50",
+                            ),
+                          ));
                     },
                     child: Padding(
                       padding: EdgeInsets.only(
@@ -104,7 +112,7 @@ padding: EdgeInsets.only(
                           SizedBox(width: 6,),
                           Container(
                             height: height * 0.1,
-                            width: width * 0.11,
+                            width: width * 0.12,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
@@ -130,27 +138,31 @@ padding: EdgeInsets.only(
                                     Text(
                                       "${messsage[index].names}",
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: width *0.045,
                                         color: Color(0xFF424242),
                                         fontWeight:
 
                                              FontWeight.w500,
                                       ),
                                     ),
-                                    Text(
-                                      "9:27 AM",
-                                      style:
-                                      TextStyle(fontSize: 12, color: Color(0xFF9E9E9E)),
+                                    Padding(
+                                      padding:  EdgeInsets.only(right: width*0.02),
+                                      child: Text(
+                                        "9:27 AM",
+                                        style:
+                                        TextStyle(fontSize: width*0.04, color:Colors.grey.shade600),
+                                      ),
                                     ),
+
                                   ],
                                 ),
                                 Text(
                                   "Hey, how's life going? Nice i dont now what is happening",
                                   style: TextStyle(
-                                      fontSize: 14,
-                                      color: Color(0xff3C3C43),
+                                      fontSize: width*0.04,
+                                      color: Colors.grey.shade600,
                                       fontWeight:
-                                           FontWeight.w300
+                                           FontWeight.w400
                                           ),
                                   maxLines: 2,
                                 ),

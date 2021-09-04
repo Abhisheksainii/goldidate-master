@@ -586,18 +586,23 @@ class _SettingsState extends State<Settings> {
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
-              child: Container(
-                height: height * 0.07,
-                width: width,
-                color: Color(0xFFFFFFFF),
-                child: Center(
-                  child: Text(
-                    "Submit Promotion Code",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: width * 0.045,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.goldColor,
+              child: InkWell(
+                onTap: (){
+                  submit_promotion_code(context, height, width);
+                },
+                child: Container(
+                  height: height * 0.07,
+                  width: width,
+                  color: Color(0xFFFFFFFF),
+                  child: Center(
+                    child: Text(
+                      "Submit Promotion Code",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: width * 0.045,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.goldColor,
+                      ),
                     ),
                   ),
                 ),
