@@ -35,7 +35,7 @@ class _PaypalState extends State<Paypal> {
                 Container(
                   child: Text(
                     "Payment Methods",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(

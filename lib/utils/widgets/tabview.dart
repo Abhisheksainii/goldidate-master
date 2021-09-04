@@ -57,7 +57,7 @@ class _TabBarViewState extends State<TabBarViewPage>
                       icon: ImageIcon(
                         AssetImage(Common.assetsImages + "Group.png"),
                         color: _tabController.index == 1
-                            ? Colors.red
+                            ? AppColors.goldColor
                             : Colors.grey,
                         size: height * 0.11,
                       ),
@@ -66,7 +66,7 @@ class _TabBarViewState extends State<TabBarViewPage>
                       icon: ImageIcon(
                         AssetImage(Common.assetsImages + "message icon.png"),
                         color: _tabController.index == 2
-                            ? Colors.blue
+                            ? AppColors.goldColor
                             : Colors.grey,
                         size: height * 0.11,
                       ),
@@ -75,7 +75,7 @@ class _TabBarViewState extends State<TabBarViewPage>
                       icon: ImageIcon(
                         AssetImage(Common.assetsImages + "user icon.png"),
                         color: _tabController.index == 3
-                            ? Colors.green
+                            ? AppColors.goldColor
                             : Colors.grey,
                         size: height * 0.11,
                       ),

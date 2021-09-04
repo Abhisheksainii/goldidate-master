@@ -31,14 +31,9 @@ class PrimaryBackgroundButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
           decoration: BoxDecoration(
-            color: backgroundColor,
+            color: AppColors.goldColor,
             borderRadius: BorderRadius.circular(50.0),
-            image: backgroundColor == null
-                ? DecorationImage(
-                    image: AssetImage(Common.assetsImages + backgroundImage),
-                    fit: BoxFit.fitHeight,
-                  )
-                : null,
+
           ),
           padding: padding,
           child: Text(

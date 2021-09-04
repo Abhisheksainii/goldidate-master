@@ -20,15 +20,15 @@ class _WelcomeState extends State<Welcome> {
 
   final List<Widget> introSlides = [
     WelcomeSlide(
-      centerImage: 'first_welcome_center_image.png',
+      centerImage: 'Group 514.png',
       headerText: 'Discover People',
     ),
     WelcomeSlide(
-      centerImage: "Group 514.png",
+      centerImage: "intro2.png",
       headerText: 'Match with them',
     ),
     WelcomeSlide(
-      centerImage: 'third_welcome_center_image.png',
+      centerImage: 'intro3.png',
       headerText: 'Chat with them',
     ),
   ];
@@ -162,7 +162,7 @@ class BuildSlidingDot extends StatelessWidget {
       height: 8.0,
       width: 8.0,
       decoration: BoxDecoration(
-        color: isActive ? AppColors.lightPrimaryColor : AppColors.greyColor,
+        color: isActive ? AppColors.goldColor : AppColors.greyColor,
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     );

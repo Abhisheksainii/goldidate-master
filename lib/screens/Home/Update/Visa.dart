@@ -36,7 +36,7 @@ class _VisaState extends State<Visa> {
                 Container(
                   child: Text(
                     "Payment Methods",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(

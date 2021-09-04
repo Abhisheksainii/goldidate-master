@@ -402,7 +402,130 @@ class _ClassicviewState extends State<Classicview>
                               },
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pop(context);
+                                showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  context: context,
+                                  elevation: 0,
+                                  backgroundColor: Colors.transparent.withOpacity(0.7),
+                                  builder: (context) => SingleChildScrollView(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(50.0),
+                                          topRight: Radius.circular(50.0),
+                                        ),
+                                      ),
+                                      child: Container(
+                                        child: Column(children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                top: height * 0.06, left: width * 0.06),
+                                            child: Row(
+                                              children: [
+                                                Image.asset(
+                                                  Common.assetsImages + "smallcoin.png",
+                                                  height: height * 0.06,
+                                                  width: width * 0.06,
+                                                ),
+                                                SizedBox(
+                                                  width: width * 0.01,
+                                                ),
+                                                RichText(
+                                                  text: TextSpan(
+                                                    text: "4999",
+                                                    style: TextStyle(
+                                                        fontSize: height * 0.028,
+                                                        color: AppColors.whiteColor),
+                                                    children: [
+                                                      TextSpan(
+                                                        text: 'G',
+                                                        style: TextStyle(
+                                                          color: AppColors.whiteColor,
+                                                          fontSize: height * 0.018,
+                                                        ),
+                                                      ),
+                                                      TextSpan(
+                                                        text: 'c ',
+                                                        style: TextStyle(
+                                                          color: AppColors.whiteColor,
+                                                          fontSize: height * 0.012,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          GiftCategory(
+                                            width: width,
+                                            lovegifts: lovegifts,
+                                            lovegiftsname: lovegiftsname,
+                                            lovegiftsprice: lovegiftsprice,
+                                            animation: animation,
+                                            height: height,
+                                            heading: "Love gifts",
+                                          ),
+                                          GiftCategory(
+                                              width: width,
+                                              lovegifts: Animals,
+                                              lovegiftsname: Animalsname,
+                                              lovegiftsprice: Animalsprice,
+                                              animation: animation,
+                                              height: height,
+                                              heading: "Animals"),
+                                          GiftCategory(
+                                              width: width,
+                                              lovegifts: DrinksandFood,
+                                              lovegiftsname: DrinksandFoodname,
+                                              lovegiftsprice: DrinksandFoodprice,
+                                              animation: animation,
+                                              height: height,
+                                              heading: "Drinks & Food"),
+                                          GiftCategory(
+                                              width: width,
+                                              lovegifts: Travel1,
+                                              lovegiftsname: Travel1name,
+                                              lovegiftsprice: Travel1price,
+                                              animation: animation,
+                                              height: height,
+                                              heading: "Travel"),
+                                          GiftCategory(
+                                              width: width,
+                                              lovegifts: Travel2,
+                                              lovegiftsname: Travel2name,
+                                              lovegiftsprice: Travel2price,
+                                              animation: animation,
+                                              height: height,
+                                              heading: "Travel"),
+                                          InkWell(
+                                            onTap: (){
+                                              Navigator.pushNamed(context, AppRoutes.getcoins);
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              width: width*0.7,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                border: Border.all(color: AppColors.goldColor),
+                                                borderRadius: BorderRadius.all(Radius.circular(30)),
+                                              ),
+                                              child: Text("Buy more Goldicoins",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: height*0.02,
+                                          ),
+                                        ]),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
                               child: Container(
                                 margin: EdgeInsets.symmetric(
                                     horizontal: width * 0.04),
@@ -850,7 +973,7 @@ class _ClassicviewState extends State<Classicview>
                                                 top: height * 0.19),
                                             child: InkWell(
                                               onTap: (){
-                                                submit_promotion_code(context, height, width);
+                                                report_submit(context, height, width);
                                               },
                                               child: Row(
                                                 mainAxisAlignment:
@@ -1209,6 +1332,26 @@ class _ClassicviewState extends State<Classicview>
                                     animation: animation,
                                     height: height,
                                     heading: "Travel"),
+                                InkWell(
+                                  onTap: (){
+                                    Navigator.pushNamed(context, AppRoutes.getcoins);
+                                  },
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    width: width*0.7,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: AppColors.goldColor),
+                                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                                    ),
+                                      child: Text("Buy more Goldicoins",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+
+                                      ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: height*0.02,
+                                ),
                               ]),
                             ),
                           ),

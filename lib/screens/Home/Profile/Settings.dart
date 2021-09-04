@@ -26,6 +26,9 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Color(0xFFF5F6FA),
       appBar: AppBar(
         leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
           child: Icon(
             Icons.arrow_back,
             color: Color(0xFFD19D43),
@@ -595,18 +598,23 @@ class _SettingsState extends State<Settings> {
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
-              child: Container(
-                height: height * 0.07,
-                width: width,
-                color: Color(0xFFFFFFFF),
-                child: Center(
-                  child: Text(
-                    "Submit Promotion Code",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: width * 0.045,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.goldColor,
+              child: InkWell(
+                onTap: (){
+                  submit_promotion_code(context, height, width);
+                },
+                child: Container(
+                  height: height * 0.07,
+                  width: width,
+                  color: Color(0xFFFFFFFF),
+                  child: Center(
+                    child: Text(
+                      "Submit Promotion Code",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: width * 0.045,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.goldColor,
+                      ),
                     ),
                   ),
                 ),

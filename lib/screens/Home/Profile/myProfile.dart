@@ -129,7 +129,7 @@ class _MyProfileState extends State<MyProfile> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                              elevation: 6.0,
+                              elevation: 4.0,
                               shape: CircleBorder(),
                               primary: Colors.white,
                               onPrimary: Colors.white),
@@ -162,7 +162,7 @@ class _MyProfileState extends State<MyProfile> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                              elevation: 6.0,
+                              elevation: 4.0,
                               shape: CircleBorder(),
                               primary: Colors.white,
                               onPrimary: Colors.white),
@@ -188,7 +188,7 @@ class _MyProfileState extends State<MyProfile> {
               height: height * 0.025,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+              padding: EdgeInsets.all(8.0),
               child: Container(
                 height: height * 0.08,
                 width: width * 1.0,
@@ -202,19 +202,25 @@ class _MyProfileState extends State<MyProfile> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      width: width * 0.03,
+                      width: 8.0,
                     ),
                     Text(
                       "Matching Tip: The best photos are the one\nyou are in...",
                       style: TextStyle(
                           color: Colors.white, fontSize: width * 0.035),
                     ),
+                    SizedBox(
+                      width: width * 0.07,
+                    ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Image.asset(
-                        Common.assetsImages + "Path 3072.png",
-                        height: height * 0.04,
-                        width: width * 0.04,
+                      child: Container(
+                        child: Image(
+                          height: height * 0.05,
+                          width: width * 0.05,
+                          image:
+                              AssetImage(Common.assetsImages + "Path 3072.png"),
+                        ),
                       ),
                       style: ElevatedButton.styleFrom(
                           elevation: 4.0,
@@ -227,100 +233,89 @@ class _MyProfileState extends State<MyProfile> {
               ),
             ),
             Container(
-              height: height * 0.35,
+              height: height * 0.2395,
               width: width * 4.5,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(Common.assetsImages + "Rectangle1.png"),
-                ),
                 color: Color(0xFFF5F6FA),
               ),
-              child: Container(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      Common.assetsImages + "curve1.png",
-                      height: height * 0.05,
-                    ),
-                    SizedBox(
-                      height: height * 0.03,
-                    ),
-                    Text(
-                      "Get more Gift coins",
-                      style: TextStyle(
-                          fontSize: 24.0, fontWeight: FontWeight.w500),
-                    ),
-                    SizedBox(
-                      height: height * 0.015,
-                    ),
-                    Text(
-                      "Boost your profile once a month",
-                      style: TextStyle(
-                        color: Color(0xFF757575),
-                        fontSize: 16.0,
+              child: Padding(
+                padding: EdgeInsets.only(top: height * 0.02),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Get more Gift coins",
+                        style: TextStyle(
+                            fontSize: 24.0, fontWeight: FontWeight.w500),
                       ),
-                    ),
-                    SizedBox(
-                      height: height * 0.03,
-                    ),
-                    Container(
-                      height: height * 0.02,
-                      width: width * 0.08,
-                      child: Image(
-                        image:
-                            AssetImage(Common.assetsImages + "text slider.png"),
+                      SizedBox(
+                        height: height * 0.015,
                       ),
-                    ),
-                    SizedBox(
-                      height: height * 0.02,
-                    ),
-                    Container(
-                      width: width * 0.8,
-                      height: height * 0.06,
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                Color(0xFFD9B372)),
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(22.0),
-                              ),
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context)
-                                .pushNamed(AppRoutes.goldidatePlus);
-                          },
-                          child: Row(
-                            children: [
-                              Container(
-                                height: height * 0.08,
-                                width: width * 0.08,
-                                child: Image(
-                                  image: AssetImage(
-                                    Common.assetsImages + "gifts.png",
-                                  ),
+                      Text(
+                        "Boost your profile once a month",
+                        style: TextStyle(
+                          color: Color(0xFF757575),
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      Container(
+                        height: height * 0.02,
+                        width: width * 0.08,
+                        child: Image(
+                          image: AssetImage(
+                              Common.assetsImages + "text slider.png"),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Container(
+                        width: width * 0.8,
+                        height: height * 0.06,
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Color(0xFFD9B372)),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(22.0),
                                 ),
                               ),
-                              SizedBox(
-                                width: width * 0.14,
-                              ),
-                              Text(
-                                "Send more Gifts",
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
-                              ),
-                            ],
-                          )),
-                    ),
-                  ],
+                            ),
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushNamed(AppRoutes.goldidatePlus);
+                            },
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: height * 0.08,
+                                  width: width * 0.08,
+                                  child: Image(
+                                    image: AssetImage(
+                                      Common.assetsImages + "gifts.png",
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: width * 0.14,
+                                ),
+                                Text(
+                                  "Send more Gifts",
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.white),
+                                ),
+                              ],
+                            )),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: height * 0.01,
             ),
           ],
         ),
