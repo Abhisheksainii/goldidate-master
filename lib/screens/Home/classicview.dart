@@ -945,6 +945,7 @@ class _ClassicviewState extends State<Classicview>
                                                 top: height * 0.12),
                                             child: InkWell(
                                               onTap: (){
+                                                Navigator.pop(context);
                                                 report_submit(context, height, width);
                                               },
                                               child: Row(
@@ -973,6 +974,7 @@ class _ClassicviewState extends State<Classicview>
                                                 top: height * 0.19),
                                             child: InkWell(
                                               onTap: (){
+                                                Navigator.pop(context);
                                                 report_submit(context, height, width);
                                               },
                                               child: Row(
@@ -1001,6 +1003,7 @@ class _ClassicviewState extends State<Classicview>
                                                 top: height * 0.26),
                                             child: InkWell(
                                               onTap: (){
+                                                Navigator.pop(context);
                                                 report_submit(context,height,width);
                                               },
                                               child: Row(
@@ -1030,6 +1033,7 @@ class _ClassicviewState extends State<Classicview>
                                                 bottom: height * 0.02),
                                             child: InkWell(
                                               onTap: (){
+                                                Navigator.pop(context);
                                                 custom_report(context,height,width);
                                               },
                                               child: Row(

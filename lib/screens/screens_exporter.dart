@@ -12,3 +12,4 @@ export 'package:goldidate/utils/widgets/tabview.dart';
 export 'package:goldidate/screens/Home/chat_screen.dart';
 export 'package:goldidate/screens/terms_conditions.dart';
 export 'package:goldidate/screens/Home/passion.dart';
+export 'package:goldidate/screens/splashscreen.dart';

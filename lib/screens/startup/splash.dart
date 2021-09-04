@@ -53,7 +53,7 @@ class _SplashState extends State<Splash> {
                 : Navigator.of(context).pushNamedAndRemoveUntil(
                     AppRoutes.getStartedRoute, (route) => false)
             : Navigator.of(context).pushNamedAndRemoveUntil(
-                AppRoutes.welcomeRoute, (route) => false);
+                AppRoutes.splashscreengoldi, (route) => false);
       });
     });
   }

@@ -14,6 +14,7 @@ class WelcomeClubRules extends StatefulWidget {
 class _WelcomeClubRulesState extends State<WelcomeClubRules> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       body: SafeArea(
@@ -23,7 +24,7 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
             children: [
               const SizedBox(height: 10.0),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+                padding:  EdgeInsets.only(left: 20.0),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: InkWell(
@@ -44,8 +45,8 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
               ),
               const SizedBox(height: 15.0),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 40.0,
+                padding:  EdgeInsets.symmetric(
+                  horizontal: width*0.05,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,

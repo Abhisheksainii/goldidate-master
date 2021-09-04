@@ -43,4 +43,5 @@ class AppRoutes {
   static final String paymentMethods = "payment";
   static final String paypal = "Paypal";
   static final String visa = "Visa";
+  static final String splashscreengoldi = "splash";
 }

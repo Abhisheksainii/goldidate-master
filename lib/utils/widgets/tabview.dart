@@ -77,7 +77,7 @@ class _TabBarViewState extends State<TabBarViewPage>
                         size: height * 0.11,
     ),
                     Padding(
-                      padding:  EdgeInsets.only(left: width*0.11,bottom: height*0.01),
+                      padding:  EdgeInsets.only(left: width*0.13,bottom: height*0.012),
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(

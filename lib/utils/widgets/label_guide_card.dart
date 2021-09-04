@@ -10,6 +10,7 @@ class LabelGuideCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -41,7 +42,7 @@ class LabelGuideCard extends StatelessWidget {
             description,
             style: TextStyle(
               height: 1.5,
-              fontSize: 12.0,
+              fontSize: width*0.032,
               color: Colors.grey.shade600
             ),
           ),

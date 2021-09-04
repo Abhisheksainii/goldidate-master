@@ -113,7 +113,7 @@ padding: EdgeInsets.only(
                           SizedBox(width: 6,),
                           Container(
                             height: height * 0.07,
-                            width: width * 0.12,
+                            width: width * 0.14,
                             decoration: BoxDecoration(
                               color: Color(0xff000000),
                               borderRadius: messsage[index].admin?BorderRadius.all(Radius.circular(8)):BorderRadius.all(Radius.circular(30)),
@@ -121,6 +121,7 @@ padding: EdgeInsets.only(
                               image: DecorationImage(
                                 image:
                                     AssetImage(Common.assetsImages + "Chat$index.png"),
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),

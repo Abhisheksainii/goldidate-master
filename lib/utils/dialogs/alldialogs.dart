@@ -149,6 +149,7 @@ void custom_report(BuildContext context, double height, double width) {
         style: TextStyle(fontWeight: FontWeight.w600),
       )),
       content: Container(
+
         height: height * 0.26,
         width: width * 1,
         child: Stack(
@@ -157,14 +158,15 @@ void custom_report(BuildContext context, double height, double width) {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+
                   height: height * 0.2,
-                  width: width * 0.7,
+                  width: width * 0.6,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: TextFormField(
                     maxLines: 7,
                     decoration: InputDecoration(
-                        hintText: "Please tell us what's on your mind...",
+                        hintText: "Please tell us what's on your mind... ",
                         hintStyle: TextStyle(fontSize: width * 0.034),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: AppColors.goldColor),

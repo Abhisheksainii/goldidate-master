@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.settings,
+      initialRoute: AppRoutes.splashRoute,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),
@@ -100,6 +100,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.paymentMethods: (context) => PaymentMethods(),
         AppRoutes.paypal: (context) => Paypal(),
         AppRoutes.visa: (context) => Visa(),
+        AppRoutes.splashscreengoldi:(context)=>GoldiSplash(),
       },
     );
   }
