@@ -70,6 +70,7 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                         AppColors.goldColor,
                         Color(0xFFFFFFFF),
                         Color(0xFFFFFFFF),
+                        Color(0xFFFFFFFF),
                       ],
                     ),
                   ),
@@ -135,71 +136,70 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                       Container(
                         child: Row(
                           children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: width * 0.01),
-                              child: Container(
-                                height: height * 0.26,
-                                width: height * 0.15,
-                                child: Padding(
-                                  padding: EdgeInsets.only(top: height * 0.03),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        "12",
-                                        style: TextStyle(
-                                            fontSize: width * 0.15,
-                                            fontWeight: FontWeight.w700),
+                            Container(
+                              height: height * 0.26,
+                              width: height * 0.15,
+                              child: Padding(
+                                padding: EdgeInsets.only(top: height * 0.03),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "12",
+                                      style: TextStyle(
+                                        fontSize: width * 0.15,
+                                        color: Color(0xFF213B52),
+                                        fontWeight: FontWeight.w700,
                                       ),
-                                      Text(
-                                        "months",
-                                        style: TextStyle(
-                                            fontSize: width * 0.03,
-                                            color: Color(0xFF757575)),
-                                      ),
-                                      Text(
-                                        r"$24.99/mo",
-                                        style: TextStyle(
+                                    ),
+                                    Text(
+                                      "months",
+                                      style: TextStyle(
                                           fontSize: width * 0.03,
-                                          color: Color(0xFFB5ADAD),
+                                          color: Color(0xFF757575)),
+                                    ),
+                                    Text(
+                                      r"$24.99/mo",
+                                      style: TextStyle(
+                                        fontSize: width * 0.03,
+                                        color: Color(0xFFB5ADAD),
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset(
+                                          Common.assetsImages + "bigcoin.png",
+                                          width: width * 0.055,
                                         ),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.asset(
-                                            Common.assetsImages + "bigcoin.png",
-                                            width: width * 0.055,
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Text(
-                                            "70,000 Gc",
-                                            style: TextStyle(
-                                              color: AppColors.goldColor,
-                                              fontSize: width * 0.03,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Text(
-                                        "One time gift coins",
-                                        style: TextStyle(
-                                          color: AppColors.goldColor,
-                                          fontSize: width * 0.02,
+                                        SizedBox(
+                                          width: width * 0.01,
                                         ),
+                                        Text(
+                                          "70,000 Gc",
+                                          style: TextStyle(
+                                            color: AppColors.goldColor,
+                                            fontSize: width * 0.03,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      "One time gift coins",
+                                      style: TextStyle(
+                                        color: AppColors.goldColor,
+                                        fontSize: width * 0.02,
                                       ),
-                                      SizedBox(
-                                        height: height * 0.005,
-                                      ),
-                                      Text(
-                                        r"$299.98",
-                                        style:
-                                            TextStyle(color: Color(0xFF213B52)),
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    SizedBox(
+                                      height: height * 0.005,
+                                    ),
+                                    Text(
+                                      r"$299.98",
+                                      style:
+                                          TextStyle(color: Color(0xFF213B52)),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -237,6 +237,7 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                     Text(
                                       "6",
                                       style: TextStyle(
+                                          color: Color(0xFF213B52),
                                           fontSize: width * 0.15,
                                           fontWeight: FontWeight.w700),
                                     ),
@@ -305,6 +306,7 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                       Text(
                                         "1",
                                         style: TextStyle(
+                                            color: Color(0xFF213B52),
                                             fontSize: width * 0.15,
                                             fontWeight: FontWeight.w700),
                                       ),

@@ -321,14 +321,30 @@ class _SignUpInAppState extends State<SignUpInApp> {
             },
           ),
           const SizedBox(height: 30.0),
-          Text(
-            "When you tap “Continue”, Dater will send a text with verification code. Message and data rates may apply. The verified phone number can be used to log in. Learn what happens when your number changes.",
-            style: TextStyle(
-              height: 1.5,
-            ),
+          RichText(
             textAlign: TextAlign.center,
+            text: TextSpan(
+              text:
+                  "When you tap “Continue”, Dater will send a text with verification code. Message and data rates may apply. The verified phone number can be used to log in.",
+              style: TextStyle(
+                color: Color(0xFF757575),
+                fontSize: 14.0,
+                height: 1.5,
+              ),
+              children: [
+                TextSpan(
+                  text: " Learn what happens when your number changes.",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14.0,
+                    height: 1.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: 70.0),
+          const SizedBox(height: 50.0),
           PrimaryBackgroundButton(
             buttonText: "Submit",
             backgroundColor: Color(0xFFD19D43),

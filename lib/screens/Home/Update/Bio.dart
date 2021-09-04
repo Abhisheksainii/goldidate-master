@@ -79,11 +79,17 @@ class _BioState extends State<Bio> {
                           left: width * 0.04,
                           right: width * 0.03,
                           top: height * 0.04),
-                      child: Text(
-                        "Love life, and searching for a new magical adventure. I’m a photographer, yoga enthusiast, love to relax but very adventurous and lover of superhero movies.",
-                        style: TextStyle(
-                          fontSize: width * 0.035,
-                          color: Color(0xFFD19D43),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          border: InputBorder.none,
+                          hintText:
+                              "Love life, and searching for a new magical adventure. I’m a photographer, yoga enthusiast, love to relax but very adventurous and lover of superhero movies.",
+                          hintStyle: TextStyle(
+                            fontSize: width * 0.035,
+                            color: Color(0xFFD19D43),
+                          ),
                         ),
                       ),
                     ),

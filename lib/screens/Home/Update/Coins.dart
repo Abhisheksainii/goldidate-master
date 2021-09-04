@@ -123,7 +123,10 @@ class _CoinsState extends State<Coins> {
                   width: width * 1.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9.0),
-                    color: AppColors.goldColor,
+                    gradient: LinearGradient(colors: [
+                      Color(0xFFD9B372),
+                      Color(0xFFD19D43),
+                    ]),
                   ),
                   child: Row(
                     children: [
@@ -167,7 +170,10 @@ class _CoinsState extends State<Coins> {
                   width: width * 1.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9.0),
-                    color: AppColors.goldColor,
+                    gradient: LinearGradient(colors: [
+                      Color(0xFFD9B372),
+                      Color(0xFFD19D43),
+                    ]),
                   ),
                   child: Row(
                     children: [
@@ -202,7 +208,10 @@ class _CoinsState extends State<Coins> {
                   width: width * 1.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9.0),
-                    color: AppColors.goldColor,
+                    gradient: LinearGradient(colors: [
+                      Color(0xFFD9B372),
+                      Color(0xFFD19D43),
+                    ]),
                   ),
                   child: Row(
                     children: [
@@ -236,7 +245,7 @@ class _CoinsState extends State<Coins> {
               Padding(
                 padding: EdgeInsets.only(top: height * 0.02),
                 child: Container(
-                  height: height * 0.07,
+                  height: height * 0.06,
                   width: width,
                   color: Color(0xFFFFFFFF),
                   child: Center(

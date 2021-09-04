@@ -150,7 +150,7 @@ class _FiltersState extends State<Filters> {
                   color: Color(0xFFFFFFFF),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: width * 0.04, right: width * 0.03),
+                        left: width * 0.04, right: width * 0.05),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -268,6 +268,7 @@ class _FiltersState extends State<Filters> {
   }
 }
 
+// ignore: must_be_immutable
 class Details extends StatelessWidget {
   Details({this.detailName, this.detailValue, this.haveIcon});
   bool haveIcon = false;
@@ -301,7 +302,7 @@ class Details extends StatelessWidget {
           width: double.infinity,
           color: Color(0xFFFFFFFF),
           child: Padding(
-            padding: EdgeInsets.only(left: width * 0.04, right: width * 0.03),
+            padding: EdgeInsets.only(left: width * 0.04, right: width * 0.06),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

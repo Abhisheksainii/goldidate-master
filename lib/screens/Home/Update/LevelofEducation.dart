@@ -41,7 +41,7 @@ class _LevelofEducationState extends State<LevelofEducation> {
             child: Padding(
               padding: EdgeInsets.only(
                 right: width * 0.03,
-                top: height * 0.02,
+                top: height * 0.025,
               ),
               child: Text(
                 "Done",
@@ -93,30 +93,34 @@ class _EducationLevelState extends State<EducationLevel> {
       },
       child: Column(
         children: [
-          Container(
-            height: height * 0.06,
-            width: double.infinity,
-            color: Color(0xFFFFFFFF),
-            child: Padding(
-              padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    widget.name,
-                    style: TextStyle(
-                      fontSize: width * 0.03,
-                      color: Color(0xFFD19D43),
+          Padding(
+            padding: EdgeInsets.only(right: width * 0.03),
+            child: Container(
+              height: height * 0.06,
+              width: double.infinity,
+              color: Color(0xFFFFFFFF),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: width * 0.05, right: width * 0.05),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.name,
+                      style: TextStyle(
+                        fontSize: width * 0.03,
+                        color: Color(0xFFD19D43),
+                      ),
                     ),
-                  ),
-                  Visibility(
-                    visible: isVisible,
-                    child: Image.asset(
-                      Common.assetsImages + "check button.png",
-                      width: width * 0.04,
+                    Visibility(
+                      visible: isVisible,
+                      child: Image.asset(
+                        Common.assetsImages + "check button.png",
+                        width: width * 0.04,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

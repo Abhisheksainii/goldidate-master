@@ -68,11 +68,14 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
               child: Container(
-                height: height * 0.1,
+                height: height * 0.09,
                 width: width * 1.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9.0),
-                  color: AppColors.goldColor,
+                  gradient: LinearGradient(colors: [
+                    Color(0xFFD9B372),
+                    Color(0xFFD19D43),
+                  ]),
                 ),
                 child: Row(
                   children: [
@@ -100,11 +103,14 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
               child: Container(
-                height: height * 0.085,
+                height: height * 0.078,
                 width: width * 1.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9.0),
-                  color: AppColors.goldColor,
+                  gradient: LinearGradient(colors: [
+                    Color(0xFFD9B372),
+                    Color(0xFFD19D43),
+                  ]),
                 ),
                 child: Row(
                   children: [
@@ -135,11 +141,14 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
               child: Container(
-                height: height * 0.085,
+                height: height * 0.078,
                 width: width * 1.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9.0),
-                  color: AppColors.goldColor,
+                  gradient: LinearGradient(colors: [
+                    Color(0xFFD9B372),
+                    Color(0xFFD19D43),
+                  ]),
                 ),
                 child: Row(
                   children: [
