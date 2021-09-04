@@ -26,7 +26,7 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Color(0xFFF5F6FA),
       appBar: AppBar(
         leading: InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
@@ -271,31 +271,29 @@ class _SettingsState extends State<Settings> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: width * 0.35),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Image.asset(Common.assetsImages + "bigcoin.png",
-                                  width: width * 0.05),
-                              Container(
-                                height: height * 0.05,
-                                width: width * 0.35,
-                                color: Colors.white,
-                                child: Padding(
-                                  padding: EdgeInsets.only(
-                                      left: width * 0.04, top: height * 0.014),
-                                  child: Text(
-                                    "5,000 gc",
-                                    style: TextStyle(
-                                      color: AppColors.goldColor,
-                                      fontSize: width * 0.03,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                        padding: EdgeInsets.only(left: width * 0.3),
+                        child: Row(
+                          children: [
+                            Image.asset(Common.assetsImages + "bigcoin.png",
+                                width: width * 0.05),
+                            Container(
+                              height: height * 0.05,
+                              width: width * 0.2,
+                              color: Colors.white,
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    left: width * 0.04, top: height * 0.014),
+                                child: Text(
+                                  "5,000 gc",
+                                  style: TextStyle(
+                                    color: AppColors.goldColor,
+                                    fontSize: width * 0.03,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                       Icon(
@@ -599,7 +597,7 @@ class _SettingsState extends State<Settings> {
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
               child: InkWell(
-                onTap: (){
+                onTap: () {
                   submit_promotion_code(context, height, width);
                 },
                 child: Container(

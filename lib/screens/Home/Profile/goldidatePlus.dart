@@ -58,7 +58,7 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                     left: width * 0.03,
                     right: width * 0.03),
                 child: Container(
-                  height: height * 0.74,
+                  height: height * 0.72,
                   width: width * 1.5,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(13.0),
@@ -135,6 +135,7 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                       ),
                       Container(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
                               height: height * 0.26,
@@ -203,95 +204,91 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(left: width * 0.05),
-                              child: Container(
-                                height: height * 0.265,
-                                width: width * 0.31,
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Color(0xFF579DDB),
+                            Container(
+                              height: height * 0.255,
+                              width: width * 0.31,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Color(0xFF579DDB),
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    height: height * 0.03,
+                                    width: width * 0.4,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.vertical(
+                                          top: Radius.circular(12.0)),
+                                      color: AppColors.goldColor,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      height: height * 0.03,
-                                      width: width * 0.4,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.vertical(
-                                            top: Radius.circular(12.0)),
-                                        color: AppColors.goldColor,
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          "Most popular",
-                                          style: TextStyle(
-                                              fontSize: width * 0.035,
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white),
-                                        ),
+                                    child: Center(
+                                      child: Text(
+                                        "Most popular",
+                                        style: TextStyle(
+                                            fontSize: width * 0.035,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white),
                                       ),
                                     ),
-                                    Text(
-                                      "6",
-                                      style: TextStyle(
-                                          color: Color(0xFF213B52),
-                                          fontSize: width * 0.15,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                    Text(
-                                      "months",
-                                      style: TextStyle(
-                                          fontSize: width * 0.03,
-                                          color: Color(0xFF757575)),
-                                    ),
-                                    Text(
-                                      r"$29.99/mo",
-                                      style: TextStyle(
-                                        fontSize: width * 0.03,
-                                        color: Color(0xFFB5ADAD),
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(
-                                          Common.assetsImages + "bigcoin.png",
-                                          width: width * 0.055,
-                                        ),
-                                        SizedBox(
-                                          width: width * 0.01,
-                                        ),
-                                        Text(
-                                          "30,000 Gc",
-                                          style: TextStyle(
-                                            color: AppColors.goldColor,
-                                            fontSize: width * 0.03,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      "One time gift coins",
-                                      style: TextStyle(
-                                        color: AppColors.goldColor,
-                                        fontSize: width * 0.02,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.005,
-                                    ),
-                                    Text(
-                                      r"$179.94",
-                                      style: TextStyle(
+                                  ),
+                                  Text(
+                                    "6",
+                                    style: TextStyle(
                                         color: Color(0xFF213B52),
-                                      ),
+                                        fontSize: width * 0.15,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  Text(
+                                    "months",
+                                    style: TextStyle(
+                                        fontSize: width * 0.03,
+                                        color: Color(0xFF757575)),
+                                  ),
+                                  Text(
+                                    r"$29.99/mo",
+                                    style: TextStyle(
+                                      fontSize: width * 0.03,
+                                      color: Color(0xFFB5ADAD),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        Common.assetsImages + "bigcoin.png",
+                                        width: width * 0.055,
+                                      ),
+                                      SizedBox(
+                                        width: width * 0.01,
+                                      ),
+                                      Text(
+                                        "30,000 Gc",
+                                        style: TextStyle(
+                                          color: AppColors.goldColor,
+                                          fontSize: width * 0.03,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Text(
+                                    "One time gift coins",
+                                    style: TextStyle(
+                                      color: AppColors.goldColor,
+                                      fontSize: width * 0.02,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: height * 0.005,
+                                  ),
+                                  Text(
+                                    r"$179.94",
+                                    style: TextStyle(
+                                      color: Color(0xFF213B52),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             Padding(

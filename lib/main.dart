@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Common.applicationName,
-      initialRoute: AppRoutes.splashRoute,
+      initialRoute: AppRoutes.settings,
       theme: ThemeData(
         fontFamily: "SFPro",
       ),

@@ -11,7 +11,6 @@ class GetCoins extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: height * 1,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
@@ -19,7 +18,7 @@ class GetCoins extends StatelessWidget {
                   fit: BoxFit.cover)),
           child: Padding(
             padding: EdgeInsets.fromLTRB(
-                size.width * 0.08, height * 0.04, size.width * 0.08, 0),
+                size.width * 0.08, height * 0.06, size.width * 0.08, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -205,19 +204,23 @@ class GetCoins extends StatelessWidget {
                     ),
                   ),
                 ]),
-                SizedBox(height: height*0.03,),
+                SizedBox(
+                  height: height * 0.03,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pushNamed(context, AppRoutes.Tabview);
                       },
-                      child: Text("Back",
+                      child: Text(
+                        "Back",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: height * 0.02,
-                        ),),
+                        ),
+                      ),
                     ),
                   ],
                 ),

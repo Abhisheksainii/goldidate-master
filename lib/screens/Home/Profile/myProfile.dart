@@ -129,6 +129,7 @@ class _MyProfileState extends State<MyProfile> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
+                              shadowColor: Colors.black54,
                               elevation: 4.0,
                               shape: CircleBorder(),
                               primary: Colors.white,
@@ -162,6 +163,7 @@ class _MyProfileState extends State<MyProfile> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
+                              shadowColor: Colors.black54,
                               elevation: 4.0,
                               shape: CircleBorder(),
                               primary: Colors.white,
