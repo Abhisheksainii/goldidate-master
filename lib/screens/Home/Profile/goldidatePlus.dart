@@ -197,8 +197,10 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                     ),
                                     Text(
                                       r"$299.98",
-                                      style:
-                                          TextStyle(color: Color(0xFF213B52)),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey[500],
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -285,7 +287,8 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                   Text(
                                     r"$179.94",
                                     style: TextStyle(
-                                      color: Color(0xFF213B52),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey[500],
                                     ),
                                   ),
                                 ],
@@ -352,7 +355,8 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                                       Text(
                                         r"$34.99",
                                         style: TextStyle(
-                                          color: Color(0xFF213B52),
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey[500],
                                         ),
                                       ),
                                     ],

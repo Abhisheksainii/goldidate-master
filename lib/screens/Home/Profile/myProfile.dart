@@ -200,37 +200,35 @@ class _MyProfileState extends State<MyProfile> {
                     colors: [Color(0xFFD9B372), Color(0xFFD9B372)],
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 8.0,
-                    ),
-                    Text(
-                      "Matching Tip: The best photos are the one\nyou are in...",
-                      style: TextStyle(
-                          color: Colors.white, fontSize: width * 0.035),
-                    ),
-                    SizedBox(
-                      width: width * 0.07,
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Container(
-                        child: Image(
-                          height: height * 0.05,
-                          width: width * 0.05,
-                          image:
-                              AssetImage(Common.assetsImages + "Path 3072.png"),
-                        ),
+                child: Padding(
+                  padding:
+                      EdgeInsets.only(left: width * 0.05, right: width * 0.03),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Matching Tip: The best photos are the one\nyou are in...",
+                        style: TextStyle(
+                            color: Colors.white, fontSize: width * 0.035),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          elevation: 4.0,
-                          shape: CircleBorder(),
-                          primary: Colors.white,
-                          onPrimary: Colors.white),
-                    ),
-                  ],
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Container(
+                          child: Image(
+                            height: height * 0.05,
+                            width: width * 0.05,
+                            image: AssetImage(
+                                Common.assetsImages + "Path 3072.png"),
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            elevation: 4.0,
+                            shape: CircleBorder(),
+                            primary: Colors.white,
+                            onPrimary: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -318,6 +316,9 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: height * 0.04,
             ),
           ],
         ),
