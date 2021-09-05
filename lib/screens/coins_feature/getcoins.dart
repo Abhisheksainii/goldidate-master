@@ -225,6 +225,7 @@ class GetCoins extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: height*0.03,),
                 ],
               ),
             ),

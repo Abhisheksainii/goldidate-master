@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/screens/Home/passion.dart';
 import 'package:goldidate/utils/app_colors.dart';
@@ -245,7 +246,7 @@ void submit_promotion_code(BuildContext context, double height, double width) {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   height: height * 0.06,
-                  width: width * 0.7,
+                  width: width * 0.6,
                   child: TextFormField(
                     maxLines: 7,
                     decoration: InputDecoration(
@@ -306,112 +307,61 @@ void submit_promotion_code(BuildContext context, double height, double width) {
 }
 
 void delete_account(BuildContext context, double height, double width) {
-  showDialog(
+  showDialog<void>(
+
+
     context: context,
-    builder: (ctx) => AlertDialog(
-      actions: [
-        InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            child: Text("Cancel"),
-            alignment: Alignment.center,
-            width: width * 0.372,
-            height: height * 0.06,
+    barrierDismissible: true, // user must tap button!
+    builder: (BuildContext context) {
+      return CupertinoAlertDialog(
+
+        title: Text('Delete Account?',style: TextStyle(fontSize: width*0.045),),
+        content: Text('Are you sure you want to delete account?',style: TextStyle(color: Colors.grey.shade600,fontSize: width*0.035),),
+        actions: <Widget>[
+          CupertinoDialogAction(
+            child: Text('Cancel',style: TextStyle(color: Colors.grey.shade600),),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
-        ),
-        InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            child: Text(
-              "Delete",
-              style: TextStyle(color: AppColors.goldColor),
-            ),
-            alignment: Alignment.center,
-            width: width * 0.372,
-            height: height * 0.06,
+          CupertinoDialogAction(
+            child: Text('Delete',style: TextStyle(color: AppColors.goldColor),),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
-        ),
-      ],
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      title: Center(
-          child: Text(
-        "Delete Account?",
-        style: TextStyle(fontWeight: FontWeight.w600),
-      )),
-      content: Container(
-        height: height * 0.04,
-        child: Stack(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Are you sure you want to delete account?",
-                  style: TextStyle(
-                      color: Colors.grey.shade600, fontSize: width * 0.035),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    ),
+        ],
+      );
+    },
   );
 }
 
 void logout_account(BuildContext context, double height, double width) {
-  showDialog(
+  showDialog<void>(
+
+
     context: context,
-    builder: (ctx) => AlertDialog(
-      actions: [
-        InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            child: Text("Cancel"),
-            alignment: Alignment.center,
-            width: width * 0.372,
-            height: height * 0.06,
+    barrierDismissible: true, // user must tap button!
+    builder: (BuildContext context) {
+      return CupertinoAlertDialog(
+
+        title: Text('Logout?',style: TextStyle(fontSize: width*0.045),),
+        content: Text('Are you sure you want to log out?',style: TextStyle(color: Colors.grey.shade600,fontSize: width*0.035),),
+        actions: <Widget>[
+          CupertinoDialogAction(
+            child: Text('Cancel',style: TextStyle(color: Colors.grey.shade600),),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
-        ),
-        InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            child: Text(
-              "Logout",
-              style: TextStyle(color: AppColors.goldColor),
-            ),
-            alignment: Alignment.center,
-            width: width * 0.372,
-            height: height * 0.06,
+          CupertinoDialogAction(
+            child: Text('Logout',style: TextStyle(color: AppColors.goldColor),),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
-        ),
-      ],
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      title: Center(
-          child: Text(
-        "Logout",
-        style: TextStyle(fontWeight: FontWeight.w600),
-      )),
-      content: Container(
-        height: height * 0.03,
-        child: Center(
-          child: Text(
-            "Are you sure you want to logout?",
-            style:
-                TextStyle(color: Colors.grey.shade600, fontSize: width * 0.035),
-          ),
-        ),
-      ),
-    ),
+        ],
+      );
+    },
   );
 }
