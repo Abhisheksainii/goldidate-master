@@ -4,6 +4,8 @@ import 'package:goldidate/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/dialogs/alldialogs.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 enum distance { Km, Mi }
 
@@ -15,6 +17,7 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   var selectedRange = RangeValues(0.2, 0.4);
   bool switchValue = true;
+  SfRangeValues _values = SfRangeValues(40.0, 80.0);
   bool switchValue1 = true;
   double value = 0.0;
   distance _dist = distance.Km;
@@ -380,20 +383,28 @@ class _SettingsState extends State<Settings> {
               height: height * 0.058,
               width: double.infinity,
               color: Color(0xFFFFFFFF),
-              child: SliderTheme(
-                data: SliderThemeData(
-                  thumbColor: Color(0xFFD19D43),
-                  activeTrackColor: Color(0xFFD19D43),
-                  trackHeight: 1,
-                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8),
+              child: SfSliderTheme(
+                data: SfSliderThemeData(
+                  activeTrackColor: AppColors.goldColor,
+                  inactiveTrackColor: AppColors.whiteColor,
+                  thumbColor: Colors.white,
+                  thumbStrokeWidth: 3,
+                  activeTrackHeight: 4.0,
+                  thumbStrokeColor: AppColors.goldColor,
                 ),
-                child: Slider(
-                    value: value,
-                    onChanged: (value1) {
-                      setState(() {
-                        value = value1;
-                      });
-                    }),
+                child: SfSlider(
+                  min: 0.0,
+                  max: 100.0,
+                  interval: 1,
+                  showTicks: false,
+                  showLabels: false,
+                  value: value,
+                  onChanged: (dynamic newValues) {
+                    setState(() {
+                      value = newValues;
+                    });
+                  },
+                ),
               ),
             ),
             Divider(
@@ -468,20 +479,28 @@ class _SettingsState extends State<Settings> {
               height: height * 0.058,
               width: double.infinity,
               color: Color(0xFFFFFFFF),
-              child: SliderTheme(
-                data: SliderThemeData(
-                  thumbColor: Color(0xFFD19D43),
-                  activeTrackColor: Color(0xFFD19D43),
-                  trackHeight: 1,
-                  thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4),
+              child: SfRangeSliderTheme(
+                data: SfRangeSliderThemeData(
+                  activeTrackColor: AppColors.goldColor,
+                  inactiveTrackColor: AppColors.whiteColor,
+                  thumbColor: Colors.white,
+                  thumbStrokeWidth: 3,
+                  activeTrackHeight: 4.0,
+                  thumbStrokeColor: AppColors.goldColor,
                 ),
-                child: RangeSlider(
-                    values: selectedRange,
-                    onChanged: (value1) {
-                      setState(() {
-                        selectedRange = value1;
-                      });
-                    }),
+                child: SfRangeSlider(
+                  min: 0.0,
+                  max: 100.0,
+                  interval: 1,
+                  showTicks: false,
+                  showLabels: false,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                ),
               ),
             ),
             Divider(

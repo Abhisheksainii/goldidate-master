@@ -348,7 +348,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                     right: width * 0.05),
                 child: InkWell(
                   onTap: () =>
-                      Navigator.of(context).pushNamed(AppRoutes.paymentMethods),
+                      Navigator.of(context).pushNamed(AppRoutes.filters),
                   child: Container(
                     height: height * 0.07,
                     width: width * 1.0,

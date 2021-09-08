@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/app_colors.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 enum Relationships {
   Friendship,
@@ -26,6 +28,7 @@ class Filters extends StatefulWidget {
 class _FiltersState extends State<Filters> {
   bool switchValue = true;
   var selectedRange = RangeValues(0.2, 0.4);
+  SfRangeValues _values = SfRangeValues(40.0, 80.0);
   double value = 0.0;
 
   @override
@@ -125,20 +128,28 @@ class _FiltersState extends State<Filters> {
                   height: height * 0.058,
                   width: double.infinity,
                   color: Color(0xFFFFFFFF),
-                  child: SliderTheme(
-                    data: SliderThemeData(
-                      thumbColor: Color(0xFFD19D43),
-                      activeTrackColor: Color(0xFFD19D43),
-                      trackHeight: 1,
-                      thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8),
+                  child: SfSliderTheme(
+                    data: SfSliderThemeData(
+                      activeTrackColor: AppColors.goldColor,
+                      inactiveTrackColor: AppColors.whiteColor,
+                      thumbColor: Colors.white,
+                      thumbStrokeWidth: 3,
+                      activeTrackHeight: 4.0,
+                      thumbStrokeColor: AppColors.goldColor,
                     ),
-                    child: Slider(
-                        value: value,
-                        onChanged: (value1) {
-                          setState(() {
-                            value = value1;
-                          });
-                        }),
+                    child: SfSlider(
+                      min: 0.0,
+                      max: 100.0,
+                      interval: 1,
+                      showTicks: false,
+                      showLabels: false,
+                      value: value,
+                      onChanged: (dynamic newValues) {
+                        setState(() {
+                          value = newValues;
+                        });
+                      },
+                    ),
                   ),
                 ),
                 Divider(
@@ -195,20 +206,28 @@ class _FiltersState extends State<Filters> {
                   height: height * 0.058,
                   width: double.infinity,
                   color: Color(0xFFFFFFFF),
-                  child: SliderTheme(
-                    data: SliderThemeData(
-                      thumbColor: Color(0xFFD19D43),
-                      activeTrackColor: Color(0xFFD19D43),
-                      trackHeight: 1,
-                      thumbShape: RoundSliderThumbShape(enabledThumbRadius: 4),
+                  child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                      activeTrackColor: AppColors.goldColor,
+                      inactiveTrackColor: AppColors.whiteColor,
+                      thumbColor: Colors.white,
+                      thumbStrokeWidth: 3,
+                      activeTrackHeight: 4.0,
+                      thumbStrokeColor: AppColors.goldColor,
                     ),
-                    child: RangeSlider(
-                        values: selectedRange,
-                        onChanged: (value1) {
-                          setState(() {
-                            selectedRange = value1;
-                          });
-                        }),
+                    child: SfRangeSlider(
+                      min: 0.0,
+                      max: 100.0,
+                      interval: 1,
+                      showTicks: false,
+                      showLabels: false,
+                      values: _values,
+                      onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                          _values = newValues;
+                        });
+                      },
+                    ),
                   ),
                 ),
                 Sexuality1(),
