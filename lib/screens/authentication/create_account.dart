@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/widgets/widgets_exporter.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class CreateAccount extends StatefulWidget {
   const CreateAccount({Key key}) : super(key: key);
 
@@ -15,6 +15,7 @@ class _CreateAccountState extends State<CreateAccount> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     final size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -53,16 +54,79 @@ class _CreateAccountState extends State<CreateAccount> {
                           letterSpacing: 2.4,
                         ),
                       ),
-                      const SizedBox(height: 30.0),
-                      Text(
-                        "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
-                        style: TextStyle(
-                          color: AppColors.whiteColor,
-                          fontSize: size.height * 0.017,
-                          fontWeight: FontWeight.bold,
+                       SizedBox(height: 20.0),
+                      Text.rich(
+                        TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'By clicking “Sign In”, you agree with our ',
+                                style: TextStyle(
+                                  color: AppColors.whiteColor,
+                                  fontSize: width * 0.036,
+
+                                ),
+                              ),
+                              WidgetSpan(
+                                  child: InkWell(
+                                    child: Text( 'Terms.  ',
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: width * 0.036,
+                                          fontWeight: FontWeight.bold
+
+                                      ),),
+                                    onTap: () {
+                                      launch("http://goldidate.com/terms-and-conditions/");
+                                    },
+                                  )
+                              ),
+
+
+                              TextSpan(text: 'Learn how we process your data in our ',style: TextStyle(
+                                color: AppColors.whiteColor,
+                                fontSize: width * 0.036,
+
+                              ),),
+                              WidgetSpan(
+                                  child: InkWell(
+                                    child: Text( 'Privacy and Policy',
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: width * 0.036,
+                                          fontWeight: FontWeight.bold
+
+                                      ),),
+                                    onTap: () {
+                                      launch("http://goldidate.com/privacy-policy/");
+                                    },
+                                  )
+                              ),
+                              TextSpan(text: ' and', style: TextStyle(
+                                color: AppColors.whiteColor,
+                                fontSize: width * 0.036,
+
+                              ),),
+                              WidgetSpan(
+                                  child: InkWell(
+                                    child: Text( ' Cookies Policy.',
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: width * 0.036,
+                                          fontWeight: FontWeight.bold
+
+                                      ),),
+                                    onTap: () {
+                                      launch("http://goldidate.com/cookie-policy/");
+                                    },
+                                  )
+                              ),
+                            ]
                         ),
                         textAlign: TextAlign.center,
+
+
                       ),
+
                       SizedBox(height: 20.0),
                       Column(
                         children: [
@@ -160,14 +224,19 @@ class _CreateAccountState extends State<CreateAccount> {
                     ],
                   ),
                   Spacer(),
-                  Text(
-                    "Trouble Logging in?",
-                    style: TextStyle(
-                      color: AppColors.whiteColor,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold,
+                  InkWell(
+                    onTap: (){
+                      launch('http://goldidate.com/help-support/');
+                    },
+                    child: Text(
+                      "Trouble Logging in?",
+                      style: TextStyle(
+                        color: AppColors.whiteColor,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

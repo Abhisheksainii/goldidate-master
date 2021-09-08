@@ -6,6 +6,7 @@ import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/dialogs/alldialogs.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 enum distance { Km, Mi }
 
@@ -691,14 +692,19 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "Help & Support",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Colors.black,
-              colorIcon: Colors.black,
-              isBold: false,
+            InkWell(
+              onTap: (){
+                launch('http://goldidate.com/help-support/');
+              },
+              child: Details(
+                detailValue: "Help & Support",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Colors.black,
+                colorIcon: Colors.black,
+                isBold: false,
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
@@ -749,23 +755,33 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "Privacy",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Colors.black,
-              colorIcon: Colors.black,
-              isBold: false,
+            InkWell(
+              onTap: (){
+                launch('http://goldidate.com/privacy-policy/');
+              },
+              child: Details(
+                detailValue: "Privacy",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Colors.black,
+                colorIcon: Colors.black,
+                isBold: false,
+              ),
             ),
-            Details(
-              detailValue: "Terms of Services",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Colors.black,
-              colorIcon: Colors.black,
-              isBold: false,
+            InkWell(
+              onTap: (){
+                launch('http://goldidate.com/terms-and-conditions/');
+              },
+              child: Details(
+                detailValue: "Terms of Services",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Colors.black,
+                colorIcon: Colors.black,
+                isBold: false,
+              ),
             ),
             Details(
               detailValue: "Licenses",

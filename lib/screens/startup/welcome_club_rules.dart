@@ -4,6 +4,7 @@ import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/widgets/label_guide_card.dart';
 import 'package:goldidate/utils/widgets/primary_background_button.dart';
 
+import 'package:url_launcher/url_launcher.dart';
 class WelcomeClubRules extends StatefulWidget {
   const WelcomeClubRules({Key key}) : super(key: key);
 
@@ -94,8 +95,7 @@ class _WelcomeClubRulesState extends State<WelcomeClubRules> {
                     ),
                     const SizedBox(height: 40.0),
                     InkWell(
-                      onTap: () => Navigator.of(context)
-                          .pushNamed(AppRoutes.terms_condititons),
+                      onTap: () =>launch("http://goldidate.com/terms-and-conditions/"),
                       child: Text(
                         "Terms of Use and Privacy Policy",
                         textAlign: TextAlign.center,

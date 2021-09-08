@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/widgets/widgets_exporter.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class LoginSocial extends StatefulWidget {
   const LoginSocial({Key key}) : super(key: key);
 
@@ -57,14 +57,76 @@ class _LoginSocialState extends State<LoginSocial> {
                             ),
                           ),
                           const SizedBox(height: 6.0),
-                          Text(
-                            "By clicking “Sign In”, you agree with our Terms.\nLearn how we process your data in our Privacy Policy and Cookies Policy.",
-                            style: TextStyle(
-                              color: AppColors.whiteColor,
-                              fontSize: height * 0.017,
-                              fontWeight: FontWeight.bold,
+                          Text.rich(
+                            TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'By clicking “Sign In”, you agree with our ',
+                                    style: TextStyle(
+                                      color: AppColors.whiteColor,
+                                      fontSize: width * 0.036,
+
+                                    ),
+                                  ),
+                                  WidgetSpan(
+                                      child: InkWell(
+                                        child: Text( 'Terms.  ',
+                                          style: TextStyle(
+                                              color: AppColors.whiteColor,
+                                              fontSize: width * 0.036,
+                                              fontWeight: FontWeight.bold
+
+                                          ),),
+                                        onTap: () {
+                                          launch("http://goldidate.com/terms-and-conditions/");
+                                        },
+                                      )
+                                  ),
+
+
+                                  TextSpan(text: 'Learn how we process your data in our ',style: TextStyle(
+                                    color: AppColors.whiteColor,
+                                    fontSize: width * 0.036,
+
+                                  ),),
+                                  WidgetSpan(
+                                      child: InkWell(
+                                        child: Text( 'Privacy and Policy',
+                                          style: TextStyle(
+                                              color: AppColors.whiteColor,
+                                              fontSize: width * 0.036,
+                                              fontWeight: FontWeight.bold
+
+                                          ),),
+                                        onTap: () {
+                                          launch("http://goldidate.com/privacy-policy/");
+                                        },
+                                      )
+                                  ),
+                                  TextSpan(text: ' and', style: TextStyle(
+                                    color: AppColors.whiteColor,
+                                    fontSize: width * 0.036,
+
+                                  ),),
+                                  WidgetSpan(
+                                      child: InkWell(
+                                        child: Text( ' Cookies Policy.',
+                                          style: TextStyle(
+                                              color: AppColors.whiteColor,
+                                              fontSize: width * 0.036,
+                                              fontWeight: FontWeight.bold
+
+                                          ),),
+                                        onTap: () {
+                                          launch("http://goldidate.com/cookie-policy/");
+                                        },
+                                      )
+                                  ),
+                                ]
                             ),
                             textAlign: TextAlign.center,
+
+
                           ),
                           const SizedBox(height: 15.0),
                           Row(
@@ -122,14 +184,19 @@ class _LoginSocialState extends State<LoginSocial> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.03),
-                        child: Text(
-                          "Trouble Logging in?",
-                          style: TextStyle(
-                            color: AppColors.whiteColor,
-                            fontSize: height * 0.018,
-                            fontWeight: FontWeight.bold,
+                        child: InkWell(
+                          onTap: (){
+                            launch("http://goldidate.com/help-support/");
+                          },
+                          child: Text(
+                            "Trouble Logging in?",
+                            style: TextStyle(
+                              color: AppColors.whiteColor,
+                              fontSize: height * 0.018,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
