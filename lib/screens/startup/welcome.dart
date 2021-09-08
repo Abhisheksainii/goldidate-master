@@ -35,7 +35,7 @@ class _WelcomeState extends State<Welcome> {
 
   final List<Widget> slidesDescription = [
     DescriptiveSlideText(
-        descriptiveText: "Find like minded people to connect with"),
+        descriptiveText: "Find like minded people to       connect with"),
     DescriptiveSlideText(
         descriptiveText:
             "See who you like and who likes you and connect with them"),

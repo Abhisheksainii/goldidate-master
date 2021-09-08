@@ -100,7 +100,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.paymentMethods: (context) => PaymentMethods(),
         AppRoutes.paypal: (context) => Paypal(),
         AppRoutes.visa: (context) => Visa(),
-        AppRoutes.splashscreengoldi:(context)=>GoldiSplash(),
+        AppRoutes.splashscreengoldi: (context) => GoldiSplash(),
       },
     );
   }
