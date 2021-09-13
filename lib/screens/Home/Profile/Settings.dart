@@ -726,14 +726,19 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
             ),
-            Details(
-              detailValue: "Safety Tips",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Colors.black,
-              colorIcon: Colors.black,
-              isBold: false,
+            InkWell(
+              onTap: (){
+                launch("http://goldidate.com/gift-giving-types/");
+              },
+              child: Details(
+                detailValue: "Safety Tips",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Colors.black,
+                colorIcon: Colors.black,
+                isBold: false,
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(top: height * 0.02),
@@ -783,14 +788,19 @@ class _SettingsState extends State<Settings> {
                 isBold: false,
               ),
             ),
-            Details(
-              detailValue: "Licenses",
-              haveExtraDetail: false,
-              extradetailName: "Info@goldidate.com",
-              colorExtra: AppColors.goldColor,
-              colorName: Colors.black,
-              colorIcon: Colors.black,
-              isBold: false,
+            InkWell(
+              onTap: (){
+                launch('http://goldidate.com/security/');
+              },
+              child: Details(
+                detailValue: "Licenses",
+                haveExtraDetail: false,
+                extradetailName: "Info@goldidate.com",
+                colorExtra: AppColors.goldColor,
+                colorName: Colors.black,
+                colorIcon: Colors.black,
+                isBold: false,
+              ),
             ),
             Container(
               height: height * 0.055,
