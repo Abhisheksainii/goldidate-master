@@ -227,7 +227,7 @@ class _SignUpInAppState extends State<SignUpInApp> {
                     child: Text(
                       "None of the above".toUpperCase(),
                       style: TextStyle(
-                        color: AppColors.lightPrimaryColor,
+                        color: AppColors.goldColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

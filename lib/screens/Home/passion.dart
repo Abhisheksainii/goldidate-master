@@ -3,78 +3,98 @@ import 'package:flutter/services.dart';
 import 'package:goldidate/utils/app_colors.dart';
 
 class Passions extends StatefulWidget {
-
-
   @override
   _PassionsState createState() => _PassionsState();
 }
 
-
 class _PassionsState extends State<Passions> {
   @override
-
-
   Widget build(BuildContext context) {
-
     final width1 = MediaQuery.of(context).size.width;
     final height1 = MediaQuery.of(context).size.height;
     return Scaffold(
-      body:
-
-       SafeArea(
-           child: SingleChildScrollView(
-             child: Container(
-
-         child:  Column(
-             crossAxisAlignment: CrossAxisAlignment.start,
-             children: [
-
-               Container(
-                 height: height1*0.08,
-                 alignment: Alignment.bottomCenter,
-                 padding: EdgeInsets.only(bottom: 10),
-                 color: Colors.grey.shade200,
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.end ,
-                   children: [
-                     Text("Passions",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: width1*0.06),),
-                    SizedBox(width: width1*0.22),
-                         Text("Done",style: TextStyle(color: AppColors.goldColor,fontSize: width1*0.045),),
-                     SizedBox(width: width1*0.03,),
-
-                   ],
-                 ),
-               ),
-               SizedBox(height: height1*0.02,),
-               chipp(heading: "Health and Activities:", width: width1, height: height1),
-               SizedBox(height: height1*0.04,),
-               chipp1(heading: "Learning and Growing:", width: width1, height: height1),
-               SizedBox(height: height1*0.04,),
-               chipp2(heading: "Living a Good Life:", width: width1, height: height1),
-               SizedBox(height: height1*0.04,),
-               chipp3(heading: "Health and Activities:", width: width1, height: height1),
-               SizedBox(height: height1*0.04,),
-
-
-             ],
-         ),
-       ),
-           )),
-
-
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: height1 * 0.08,
+                alignment: Alignment.bottomCenter,
+                padding: EdgeInsets.only(bottom: 10),
+                color: Colors.grey.shade200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Passions",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: width1 * 0.06),
+                    ),
+                    SizedBox(width: width1 * 0.22),
+                    InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          "Done",
+                          style: TextStyle(
+                              color: AppColors.goldColor,
+                              fontSize: width1 * 0.045),
+                        )),
+                    SizedBox(
+                      width: width1 * 0.03,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height1 * 0.02,
+              ),
+              chipp(
+                  heading: "Health and Activities:",
+                  width: width1,
+                  height: height1),
+              SizedBox(
+                height: height1 * 0.04,
+              ),
+              chipp1(
+                  heading: "Learning and Growing:",
+                  width: width1,
+                  height: height1),
+              SizedBox(
+                height: height1 * 0.04,
+              ),
+              chipp2(
+                  heading: "Living a Good Life:",
+                  width: width1,
+                  height: height1),
+              SizedBox(
+                height: height1 * 0.04,
+              ),
+              chipp3(
+                  heading: "Health and Activities:",
+                  width: width1,
+                  height: height1),
+              SizedBox(
+                height: height1 * 0.04,
+              ),
+            ],
+          ),
+        ),
+      )),
     );
   }
 }
 
-
-
-
 class chipp extends StatefulWidget {
-   chipp({
+  chipp({
     Key key,
     @required this.heading,
     @required this.width,
-
     @required this.height,
   }) : super(key: key);
   final String heading;
@@ -87,11 +107,8 @@ class chipp extends StatefulWidget {
 }
 
 class _chippState extends State<chipp> {
-
-
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -99,125 +116,258 @@ class _chippState extends State<chipp> {
           padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
-            style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
+            style: TextStyle(
+                color: Colors.grey.shade600, fontSize: widget.width * 0.038),
           ),
         ),
-        SizedBox(height: widget.height*0.02,),
+        SizedBox(
+          height: widget.height * 0.02,
+        ),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.06,right: widget.width*0.06),
+          padding: EdgeInsets.only(
+              left: widget.width * 0.06, right: widget.width * 0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               CHIP(
-                heading: "Walking",widht:widget.width,height: widget.height,),
+                heading: "Walking",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Running",widht:widget.width,height: widget.height,),
+                heading: "Running",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Dancing",widht:widget.width,height: widget.height,),
+                heading: "Dancing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Yoga",widht:widget.width,height: widget.height,),
+                heading: "Yoga",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Crossfit",widht:widget.width,height: widget.height,),
+                heading: "Crossfit",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Pilates",widht:widget.width,height: widget.height,),
+                heading: "Pilates",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Swimming",widht:widget.width,height: widget.height,),
-
+                heading: "Swimming",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Hiking",widht:widget.width,height: widget.height,),
+                heading: "Hiking",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Horse Riding",widht:widget.width,height: widget.height,),
+                heading: "Horse Riding",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Gymnastics", widht:widget.width,height: widget.height,),
+                heading: "Gymnastics",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Weight Lifting",widht:widget.width,height: widget.height,),
+                heading: "Weight Lifting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Bowling",widht:widget.width,height: widget.height,),
+                heading: "Bowling",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Tennis", widht:widget.width,height: widget.height,),
+                heading: "Tennis",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:  "Tennis",widht:widget.width,height: widget.height,),
+                heading: "Tennis",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Soccer",widht:widget.width,height: widget.height,),
+                heading: "Soccer",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Football", widht:widget.width,height: widget.height,),
+                heading: "Football",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Volleyball",widht:widget.width,height: widget.height,),
+                heading: "Volleyball",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Rugby", widht:widget.width,height: widget.height,),
+                heading: "Rugby",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"BasketBall", widht:widget.width,height: widget.height,),
+                heading: "BasketBall",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Golf", widht:widget.width,height: widget.height,),
+                heading: "Golf",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Juggling",widht:widget.width,height: widget.height,),
+                heading: "Juggling",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Table tennis", widht:widget.width,height: widget.height,),
+                heading: "Table tennis",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Ice skating",widht:widget.width,height: widget.height,),
+                heading: "Ice skating",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:  "Ice hockey",widht:widget.width,height: widget.height,),
-
+                heading: "Ice hockey",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: 'Snowboarding',widht:widget.width,height: widget.height,),
-
+                heading: 'Snowboarding',
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Skateboarding",widht:widget.width,height: widget.height,),
+                heading: "Skateboarding",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:  "Roller skating ",widht:widget.width,height: widget.height,),
+                heading: "Roller skating ",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Skiing", widht:widget.width,height: widget.height,),
+                heading: "Skiing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Water Skiing", widht:widget.width,height: widget.height,),
+                heading: "Water Skiing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Scuba driving", widht:widget.width,height: widget.height,),
+                heading: "Scuba driving",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Wind surfing", widht:widget.width,height: widget.height,),
-            CHIP(
-                heading: "surfing",widht:widget.width,height: widget.height,),
+                heading: "Wind surfing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Jet skiing", widht:widget.width,height: widget.height,),
+                heading: "surfing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Sky diving",widht:widget.width,height: widget.height,),
+                heading: "Jet skiing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Rock climbing",widht:widget.width,height: widget.height,),
+                heading: "Sky diving",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Cross country", widht:widget.width,height: widget.height,),
+                heading: "Rock climbing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Fishing", widht:widget.width,height: widget.height,),
+                heading: "Cross country",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Archery",widht:widget.width,height: widget.height,),
+                heading: "Fishing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Boxing", widht:widget.width,height: widget.height,),
+                heading: "Archery",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Kickboxing",widht:widget.width,height: widget.height,),
+                heading: "Boxing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Capoeira",widht:widget.width,height: widget.height,),
+                heading: "Kickboxing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Tai chi",widht:widget.width,height: widget.height,),
+                heading: "Capoeira",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Karate",widht:widget.width,height: widget.height,),
+                heading: "Tai chi",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Taekwondo",widht:widget.width,height: widget.height,),
+                heading: "Karate",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading:"Healthy eating", widht:widget.width,height: widget.height,),
+                heading: "Taekwondo",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Massage",widht:widget.width,height: widget.height,),
+                heading: "Healthy eating",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Personal hygiene",widht:widget.width,height: widget.height,),
-
-
-
-
-
-
+                heading: "Massage",
+                widht: widget.width,
+                height: widget.height,
+              ),
+              CHIP(
+                heading: "Personal hygiene",
+                widht: widget.width,
+                height: widget.height,
+              ),
             ],
           ),
         ),
-
-
-
       ],
     );
   }
@@ -228,7 +378,6 @@ class chipp1 extends StatefulWidget {
     Key key,
     @required this.heading,
     @required this.width,
-
     @required this.height,
   }) : super(key: key);
   final String heading;
@@ -241,11 +390,8 @@ class chipp1 extends StatefulWidget {
 }
 
 class _chipp1State extends State<chipp1> {
-
-
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -253,52 +399,83 @@ class _chipp1State extends State<chipp1> {
           padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
-            style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
+            style: TextStyle(
+                color: Colors.grey.shade600, fontSize: widget.width * 0.038),
           ),
         ),
-        SizedBox(height: widget.height*0.02,),
+        SizedBox(
+          height: widget.height * 0.02,
+        ),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.06 ,right: widget.width*0.06),
+          padding: EdgeInsets.only(
+              left: widget.width * 0.06, right: widget.width * 0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               CHIP(
-                heading: "Researching",widht:widget.width,height: widget.height,),
+                heading: "Researching",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Experimenting",widht:widget.width,height: widget.height,),
+                heading: "Experimenting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Reading",widht:widget.width,height: widget.height,),
+                heading: "Reading",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Self-help",widht:widget.width,height: widget.height,),
+                heading: "Self-help",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "books",widht:widget.width,height: widget.height,),
+                heading: "books",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Online Courses",widht:widget.width,height: widget.height,),
-
+                heading: "Online Courses",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Journaling",widht:widget.width,height: widget.height,),
+                heading: "Journaling",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Practicing",widht:widget.width,height: widget.height,),
+                heading: "Practicing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Learning new skills",widht:widget.width,height: widget.height,),
+                heading: "Learning new skills",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Knowledge",widht:widget.width,height: widget.height,),
+                heading: "Knowledge",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Wisdom",widht:widget.width,height: widget.height,),
+                heading: "Wisdom",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Personal finance",widht:widget.width,height: widget.height,),
-
-
-
-
-
+                heading: "Personal finance",
+                widht: widget.width,
+                height: widget.height,
+              ),
             ],
           ),
         ),
-
-
-
       ],
     );
   }
@@ -309,7 +486,6 @@ class chipp2 extends StatefulWidget {
     Key key,
     @required this.heading,
     @required this.width,
-
     @required this.height,
   }) : super(key: key);
   final String heading;
@@ -322,11 +498,8 @@ class chipp2 extends StatefulWidget {
 }
 
 class _chipp2State extends State<chipp2> {
-
-
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -334,45 +507,63 @@ class _chipp2State extends State<chipp2> {
           padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
-            style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
+            style: TextStyle(
+                color: Colors.grey.shade600, fontSize: widget.width * 0.038),
           ),
         ),
-        SizedBox(height: widget.height*0.02,),
+        SizedBox(
+          height: widget.height * 0.02,
+        ),
         Padding(
-          padding:  EdgeInsets.only(left: widget.width*0.06 ,right: widget.width*0.06),
+          padding: EdgeInsets.only(
+              left: widget.width * 0.06, right: widget.width * 0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               CHIP(
-                heading: "Business",widht:widget.width,height: widget.height,),
+                heading: "Business",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Entrepreneurship",widht:widget.width,height: widget.height,),
+                heading: "Entrepreneurship",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Work",widht:widget.width,height: widget.height,),
+                heading: "Work",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Leadership",widht:widget.width,height: widget.height,),
+                heading: "Leadership",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Coaching",widht:widget.width,height: widget.height,),
+                heading: "Coaching",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Training",widht:widget.width,height: widget.height,),
-
+                heading: "Training",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Donating",widht:widget.width,height: widget.height,),
+                heading: "Donating",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Volunteering",widht:widget.width,height: widget.height,),
-
-
-
-
-
-
+                heading: "Volunteering",
+                widht: widget.width,
+                height: widget.height,
+              ),
             ],
           ),
         ),
-
-
-
       ],
     );
   }
@@ -383,7 +574,6 @@ class chipp3 extends StatefulWidget {
     Key key,
     @required this.heading,
     @required this.width,
-
     @required this.height,
   }) : super(key: key);
   final String heading;
@@ -396,11 +586,8 @@ class chipp3 extends StatefulWidget {
 }
 
 class _chipp3State extends State<chipp3> {
-
-
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -408,104 +595,198 @@ class _chipp3State extends State<chipp3> {
           padding: EdgeInsets.only(left: widget.width * 0.025),
           child: Text(
             widget.heading,
-            style: TextStyle(color: Colors.grey.shade600,fontSize: widget.width*0.038),
+            style: TextStyle(
+                color: Colors.grey.shade600, fontSize: widget.width * 0.038),
           ),
         ),
-        SizedBox(height: widget.height*0.02,),
+        SizedBox(
+          height: widget.height * 0.02,
+        ),
         Padding(
-          padding:  EdgeInsets.only(left:  widget.width*0.06 ,right: widget.width*0.06),
+          padding: EdgeInsets.only(
+              left: widget.width * 0.06, right: widget.width * 0.06),
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               CHIP(
-                heading: "Writing",widht:widget.width,height: widget.height,),
+                heading: "Writing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Reading",widht:widget.width,height: widget.height,),
+                heading: "Reading",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Sketching",widht:widget.width,height: widget.height,),
+                heading: "Sketching",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Crafting",widht:widget.width,height: widget.height,),
+                heading: "Crafting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Crocheting",widht:widget.width,height: widget.height,),
+                heading: "Crocheting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Swimming",widht:widget.width,height: widget.height,),
-
+                heading: "Swimming",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Designing",widht:widget.width,height: widget.height,),
+                heading: "Designing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Creating",widht:widget.width,height: widget.height,),
+                heading: "Creating",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Editing",widht:widget.width,height: widget.height,),
+                heading: "Editing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Building",widht:widget.width,height: widget.height,),
+                heading: "Building",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Repairing",widht:widget.width,height: widget.height,),
+                heading: "Repairing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Collecting",widht:widget.width,height: widget.height,),
+                heading: "Collecting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Organizing",widht:widget.width,height: widget.height,),
+                heading: "Organizing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Decluttering",widht:widget.width,height: widget.height,),
-
+                heading: "Decluttering",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Cleaning",widht:widget.width,height: widget.height,),
+                heading: "Cleaning",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Playing an instrument",widht:widget.width,height: widget.height,),
+                heading: "Playing an instrument",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Singing",widht:widget.width,height: widget.height,),
+                heading: "Singing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Acting",widht:widget.width,height: widget.height,),
+                heading: "Acting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Movies",widht:widget.width,height: widget.height,),
+                heading: "Movies",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "TV series",widht:widget.width,height: widget.height,),
+                heading: "TV series",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Documentaries",widht:widget.width,height: widget.height,),
+                heading: "Documentaries",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Music",widht:widget.width,height: widget.height,),
-
+                heading: "Music",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Podcasts",widht:widget.width,height: widget.height,),
+                heading: "Podcasts",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Photography",widht:widget.width,height: widget.height,),
+                heading: "Photography",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Event hosting",widht:widget.width,height: widget.height,),
+                heading: "Event hosting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Composing",widht:widget.width,height: widget.height,),
+                heading: "Composing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Programming",widht:widget.width,height: widget.height,),
+                heading: "Programming",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Collecting",widht:widget.width,height: widget.height,),
+                heading: "Collecting",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Gaming",widht:widget.width,height: widget.height,),
+                heading: "Gaming",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Playing",widht:widget.width,height: widget.height,),
-
+                heading: "Playing",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Archery",widht:widget.width,height: widget.height,),
+                heading: "Archery",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Gardening",widht:widget.width,height: widget.height,),
+                heading: "Gardening",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Animals",widht:widget.width,height: widget.height,),
-
+                heading: "Animals",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Nature",widht:widget.width,height: widget.height,),
+                heading: "Nature",
+                widht: widget.width,
+                height: widget.height,
+              ),
               CHIP(
-                heading: "Travel",widht:widget.width,height: widget.height,),
-
-
-
-
-
-
-
+                heading: "Travel",
+                widht: widget.width,
+                height: widget.height,
+              ),
             ],
           ),
         ),
-
-
-
       ],
     );
   }
@@ -517,12 +798,10 @@ class CHIP extends StatefulWidget {
     @required this.heading,
     @required this.widht,
     @required this.height,
-
   }) : super(key: key);
   final String heading;
   final double widht;
   final double height;
-
 
   @override
   _CHIPState createState() => _CHIPState();
@@ -533,29 +812,30 @@ class _CHIPState extends State<CHIP> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         setState(() {
-          if(_isselcted==false){
-           _isselcted=true;
-          }else{
-            _isselcted=false;
+          if (_isselcted == false) {
+            _isselcted = true;
+          } else {
+            _isselcted = false;
           }
         });
       },
       child: Container(
-
-        padding: EdgeInsets.symmetric(horizontal: 5,vertical: 1),
+        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 1),
         decoration: BoxDecoration(
-          color: _isselcted ?Color(0xffD19D43) :Colors.white,
-          borderRadius: BorderRadius.all(
-            Radius.circular(20),
-
-          ),
-          border: Border.all(color: _isselcted ?Colors.transparent : Colors.grey.shade500)
+            color: _isselcted ? Color(0xffD19D43) : Colors.white,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+            border: Border.all(
+                color: _isselcted ? Colors.transparent : Colors.grey.shade500)),
+        child: Text(
+          widget.heading,
+          style: TextStyle(
+              color: _isselcted ? Colors.white : Colors.grey.shade600,
+              fontSize: widget.widht * 0.036),
         ),
-
-
-        child:Text(widget.heading,style: TextStyle(color: _isselcted ?Colors.white: Colors.grey.shade600,fontSize:  widget.widht*0.036),),
       ),
     );
   }

@@ -17,7 +17,7 @@ class _EducationState extends State<Education> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Bio",
+          "Education",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -71,29 +71,37 @@ class _EducationState extends State<Education> {
                 height: height * 0.33,
                 width: width,
                 color: Color(0xFFFFFFFF),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                      top: height * 0.03,
-                      left: width * 0.06,
-                      right: width * 0.03),
-                  child: Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: [
-                      CHIP(
-                          heading: "Ruppin technological college of engineers",
-                          widht: width,
-                          height: height),
-                      CHIP(
-                          heading: "Apple seeds academy",
-                          widht: width,
-                          height: height),
-                      CHIP(
-                          heading: "Qa Experts College ",
-                          widht: width,
-                          height: height)
-                    ],
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: width * 0.04,
+                          right: width * 0.03,
+                          top: height * 0.04),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          border: InputBorder.none,
+                          hintText:
+                              "Love life, and searching for a new magical adventure. I’m a photographer, yoga enthusiast, love to relax but very adventurous and lover of superhero movies.",
+                          hintStyle: TextStyle(
+                            fontSize: width * 0.035,
+                            color: Color(0xFFD19D43),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          right: width * 0.02, bottom: height * 0.02),
+                      child: Container(
+                        child: Text("500"),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
