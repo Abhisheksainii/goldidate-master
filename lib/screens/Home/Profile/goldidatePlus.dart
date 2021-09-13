@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/app_colors.dart';
 import 'package:goldidate/utils/common.dart';
+import 'package:goldidate/utils/utils_exporter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GoldidatePlus extends StatefulWidget {
   @override
@@ -33,21 +35,62 @@ class _GoldidatePlusState extends State<GoldidatePlus> {
                         height: height * 0.005,
                       ),
                       InkWell(
-                        onTap: () {
-                          Navigator.of(context)
-                              .pushNamed(AppRoutes.terms_condititons);
-                        },
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              "By tapping “Continue”, your payment will be charged to your Apple account, and your subscription will automatically renew for the same package length at the same price untill you cancel in settings in the App store. By tapping “Continue”, you agree to our Privacy Policy and Terms.",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.grey, fontSize: width * 0.035),
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(AppRoutes.terms_condititons);
+                          },
+                          child: Container(
+                            child: Center(
+                              child: Text.rich(
+                                TextSpan(children: [
+                                  TextSpan(
+                                    text:
+                                        'By tapping “Continue”, your payment will be charged to your Apple account, and your subscription will automatically renew for the same package length at the same price untill you cancel in settings in the App store. By tapping “Continue”, you agree to our ',
+                                    style: TextStyle(
+                                      color: Colors.grey.withOpacity(0.7),
+                                      fontSize: width * 0.035,
+                                    ),
+                                  ),
+                                  WidgetSpan(
+                                    child: InkWell(
+                                      child: Text(
+                                        'Privacy ',
+                                        style: TextStyle(
+                                            color: AppColors.whiteColor,
+                                            fontSize: width * 0.036,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      onTap: () {
+                                        launch(
+                                            "http://goldidate.com/privacy-policy/");
+                                      },
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'and ',
+                                    style: TextStyle(
+                                      color: Colors.grey.withOpacity(0.7),
+                                      fontSize: width * 0.035,
+                                    ),
+                                  ),
+                                  WidgetSpan(
+                                      child: InkWell(
+                                    child: Text(
+                                      'Terms.  ',
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: width * 0.036,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    onTap: () {
+                                      launch(
+                                          "http://goldidate.com/terms-and-conditions/");
+                                    },
+                                  )),
+                                ]),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
+                          ))
                     ],
                   ),
                 ),
