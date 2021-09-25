@@ -29,6 +29,7 @@ dependencies:
   syncfusion_flutter_sliders: ^19.2.60
   syncfusion_flutter_core: ^19.2.60
   url_launcher:
+  carousel_slider: ^4.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -112,15 +112,30 @@ class _FiltersState extends State<Filters> {
                   width: double.infinity,
                   color: Color(0xFFF5F6FA),
                   child: Padding(
-                    padding:
-                        EdgeInsets.only(left: width * 0.04, top: height * 0.02),
-                    child: Text(
-                      "HEIGHT",
-                      style: TextStyle(
-                        color: Colors.grey[800],
-                        fontSize: width * 0.03,
-                        fontWeight: FontWeight.w400,
-                      ),
+                    padding: EdgeInsets.only(
+                        left: width * 0.04,
+                        top: height * 0.02,
+                        right: width * 0.04),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "HEIGHT",
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: width * 0.03,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          "1m 69cm",
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: width * 0.03,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -131,8 +146,9 @@ class _FiltersState extends State<Filters> {
                   child: SfSliderTheme(
                     data: SfSliderThemeData(
                       activeTrackColor: AppColors.goldColor,
-                      inactiveTrackColor: AppColors.whiteColor,
+                      inactiveTrackColor: Color(0xFFE0E0E0),
                       thumbColor: Colors.white,
+                      inactiveTrackHeight: 2.4,
                       thumbStrokeWidth: 3,
                       activeTrackHeight: 4.0,
                       thumbStrokeColor: AppColors.goldColor,
@@ -190,15 +206,30 @@ class _FiltersState extends State<Filters> {
                   width: double.infinity,
                   color: Color(0xFFF5F6FA),
                   child: Padding(
-                    padding:
-                        EdgeInsets.only(left: width * 0.04, top: height * 0.02),
-                    child: Text(
-                      "AGE RANGE",
-                      style: TextStyle(
-                        color: Colors.grey[800],
-                        fontSize: width * 0.03,
-                        fontWeight: FontWeight.w400,
-                      ),
+                    padding: EdgeInsets.only(
+                        left: width * 0.04,
+                        top: height * 0.02,
+                        right: width * 0.04),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "AGE RANGE",
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: width * 0.03,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          "27-34",
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: width * 0.03,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -209,8 +240,9 @@ class _FiltersState extends State<Filters> {
                   child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
                       activeTrackColor: AppColors.goldColor,
-                      inactiveTrackColor: AppColors.whiteColor,
+                      inactiveTrackColor: Color(0xFFE0E0E0),
                       thumbColor: Colors.white,
+                      inactiveTrackHeight: 2.4,
                       thumbStrokeWidth: 3,
                       activeTrackHeight: 4.0,
                       thumbStrokeColor: AppColors.goldColor,

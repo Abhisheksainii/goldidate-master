@@ -230,14 +230,29 @@ class _ImagesGridState extends State<ImagesGrid> {
             color: Color(0xFFF5F6FA),
             child: Padding(
               padding: EdgeInsets.only(
-                  left: widget.width * 0.04, top: widget.height * 0.02),
-              child: Text(
-                "HEIGHT",
-                style: TextStyle(
-                  color: Colors.grey[800],
-                  fontSize: widget.width * 0.03,
-                  fontWeight: FontWeight.w400,
-                ),
+                  left: widget.width * 0.04,
+                  top: widget.height * 0.02,
+                  right: width * 0.04),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "HEIGHT",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(
+                    "1m 69cm",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: width * 0.03,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

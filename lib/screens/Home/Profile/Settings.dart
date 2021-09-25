@@ -387,8 +387,9 @@ class _SettingsState extends State<Settings> {
               child: SfSliderTheme(
                 data: SfSliderThemeData(
                   activeTrackColor: AppColors.goldColor,
-                  inactiveTrackColor: AppColors.whiteColor,
+                  inactiveTrackColor: Color(0xFFE0E0E0),
                   thumbColor: Colors.white,
+                  inactiveTrackHeight: 2.4,
                   thumbStrokeWidth: 3,
                   activeTrackHeight: 4.0,
                   thumbStrokeColor: AppColors.goldColor,
@@ -464,15 +465,30 @@ class _SettingsState extends State<Settings> {
               width: double.infinity,
               color: Color(0xFFF5F6FA),
               child: Padding(
-                padding:
-                    EdgeInsets.only(left: width * 0.04, top: height * 0.02),
-                child: Text(
-                  "AGE RANGE",
-                  style: TextStyle(
-                    color: Colors.grey[800],
-                    fontSize: width * 0.03,
-                    fontWeight: FontWeight.w400,
-                  ),
+                padding: EdgeInsets.only(
+                    left: width * 0.04,
+                    top: height * 0.02,
+                    right: width * 0.04),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "AGE RANGE",
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: width * 0.03,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    Text(
+                      "27-34",
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: width * 0.03,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -483,8 +499,10 @@ class _SettingsState extends State<Settings> {
               child: SfRangeSliderTheme(
                 data: SfRangeSliderThemeData(
                   activeTrackColor: AppColors.goldColor,
-                  inactiveTrackColor: AppColors.whiteColor,
+                  inactiveTrackColor: Color(0xFFE0E0E0),
                   thumbColor: Colors.white,
+                  inactiveTrackHeight: 2.4,
+                  // thumbColor: Colors.white,
                   thumbStrokeWidth: 3,
                   activeTrackHeight: 4.0,
                   thumbStrokeColor: AppColors.goldColor,
@@ -693,7 +711,7 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 launch('http://goldidate.com/help-support/');
               },
               child: Details(
@@ -727,7 +745,7 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 launch("http://goldidate.com/gift-giving-types/");
               },
               child: Details(
@@ -761,7 +779,7 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 launch('http://goldidate.com/privacy-policy/');
               },
               child: Details(
@@ -775,7 +793,7 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 launch('http://goldidate.com/terms-and-conditions/');
               },
               child: Details(
@@ -789,7 +807,7 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 launch('http://goldidate.com/security/');
               },
               child: Details(

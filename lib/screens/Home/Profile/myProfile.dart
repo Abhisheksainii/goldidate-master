@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class MyProfile extends StatefulWidget {
   @override
@@ -232,95 +233,150 @@ class _MyProfileState extends State<MyProfile> {
                 ),
               ),
             ),
-            Container(
-              height: height * 0.2395,
-              width: width * 4.5,
-              decoration: BoxDecoration(
-                color: Color(0xFFF5F6FA),
-              ),
-              child: Padding(
-                padding: EdgeInsets.only(top: height * 0.02),
-                child: Container(
-                  child: Column(
-                    children: [
-                      Text(
-                        "Get more Gift coins",
-                        style: TextStyle(
-                            fontSize: 24.0, fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: height * 0.015,
-                      ),
-                      Text(
-                        "Boost your profile once a month",
-                        style: TextStyle(
-                          color: Color(0xFF757575),
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      SizedBox(
-                        height: height * 0.03,
-                      ),
-                      Container(
-                        height: height * 0.02,
-                        width: width * 0.08,
-                        child: Image(
-                          image: AssetImage(
-                              Common.assetsImages + "text slider.png"),
-                        ),
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Container(
-                        width: width * 0.8,
-                        height: height * 0.06,
-                        child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Color(0xFFD9B372)),
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(22.0),
-                                ),
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushNamed(AppRoutes.goldidatePlus);
-                            },
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: height * 0.08,
-                                  width: width * 0.08,
-                                  child: Image(
-                                    image: AssetImage(
-                                      Common.assetsImages + "gifts.png",
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: width * 0.14,
-                                ),
-                                Text(
-                                  "Send more Gifts",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                              ],
-                            )),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            CarouselSlider1(),
             SizedBox(
               height: height * 0.04,
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CarouselSlider1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    return CarouselSlider(
+      options: CarouselOptions(
+        height: 200.0,
+        enlargeCenterPage: true,
+        autoPlay: true,
+        aspectRatio: 16 / 9,
+        autoPlayCurve: Curves.fastOutSlowIn,
+        enableInfiniteScroll: true,
+        autoPlayAnimationDuration: Duration(milliseconds: 800),
+        viewportFraction: 0.8,
+      ),
+      items: [
+        GiftsCard(
+          height: height,
+          width: width,
+          name: "Send more Gifts",
+          imagePath: "gifts.png",
+        ),
+        GiftsCard(
+          imagePath: "Chat0.png",
+          height: height,
+          width: width,
+          name: "Get a monthly deal",
+        ),
+        GiftsCard(
+          imagePath: "smallcoin.png",
+          height: height,
+          width: width,
+          name: "Get more coins",
+        ),
+      ],
+    );
+  }
+}
+
+class GiftsCard extends StatelessWidget {
+  const GiftsCard({
+    Key key,
+    @required this.name,
+    @required this.height,
+    @required this.width,
+    @required this.imagePath,
+  }) : super(key: key);
+
+  final double height;
+  final String imagePath;
+  final String name;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height * 0.25,
+      width: width * 4.5,
+      decoration: BoxDecoration(
+        color: Color(0xFFF5F6FA),
+      ),
+      child: Padding(
+        padding: EdgeInsets.only(top: height * 0.02),
+        child: Container(
+          child: Column(
+            children: [
+              Text(
+                "Get more Gift coins",
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: height * 0.015,
+              ),
+              Text(
+                "Boost your profile once a month",
+                style: TextStyle(
+                  color: Color(0xFF757575),
+                  fontSize: 16.0,
+                ),
+              ),
+              SizedBox(
+                height: height * 0.03,
+              ),
+              Container(
+                height: height * 0.02,
+                width: width * 0.08,
+                child: Image(
+                  image: AssetImage(Common.assetsImages + "text slider.png"),
+                ),
+              ),
+              SizedBox(
+                height: height * 0.02,
+              ),
+              Container(
+                width: width * 0.8,
+                height: height * 0.06,
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Color(0xFFD9B372)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(22.0),
+                        ),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(AppRoutes.goldidatePlus);
+                    },
+                    child: Row(
+                      children: [
+                        Container(
+                          height: height * 0.1,
+                          width: width * 0.08,
+                          child: Image(
+                            image: AssetImage(
+                              Common.assetsImages + imagePath,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * 0.14,
+                        ),
+                        Text(
+                          name,
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        ),
+                      ],
+                    )),
+              ),
+            ],
+          ),
         ),
       ),
     );
