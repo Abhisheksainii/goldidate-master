@@ -6,7 +6,7 @@ import 'package:goldidate/modals/modals_exporter.dart';
 import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/utils/widgets/widgets_exporter.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+
 import 'package:mobile_number/mobile_number.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
@@ -42,7 +42,7 @@ class _SignUpInAppState extends State<SignUpInApp> {
 
   // initial for phone input field
   String dialCode = "+92";
-  PhoneNumber _initialNumber = PhoneNumber(dialCode: "+92", isoCode: "PK");
+  //PhoneNumber _initialNumber = PhoneNumber(dialCode: "+92", isoCode: "PK");
 
   //initial state
   MobileVerification currentState = MobileVerification.PHONE_SIGNUP_SATE;
@@ -156,8 +156,8 @@ class _SignUpInAppState extends State<SignUpInApp> {
     else
       finalNumber = phoneNumber.substring(1, phoneNumber.length);
 
-    _initialNumber =
-        PhoneNumber(dialCode: countryCode, isoCode: isoCode.toUpperCase());
+   // _initialNumber =
+       // PhoneNumber(dialCode: countryCode, isoCode: isoCode.toUpperCase());
 
     // add country code in dial code as well
     dialCode = "+$countryCode";
@@ -311,6 +311,7 @@ class _SignUpInAppState extends State<SignUpInApp> {
         children: [
           _AppBar(),
           const SizedBox(height: 20.0),
+          /*
           InternationalPhoneNumberInput(
             initialValue: _initialNumber,
             textFieldController: phoneController,
@@ -320,6 +321,8 @@ class _SignUpInAppState extends State<SignUpInApp> {
               });
             },
           ),
+          */
+
           const SizedBox(height: 30.0),
           RichText(
             textAlign: TextAlign.center,
