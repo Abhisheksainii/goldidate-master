@@ -523,6 +523,7 @@ class _CardsSectionState extends State<CardsSection> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  /*
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Container(
@@ -548,6 +549,8 @@ class _CardsSectionState extends State<CardsSection> {
                               .toList()),
                     ),
                   ),
+                  */
+
                   /*
                   GestureDetector(
                       onTap: (){
@@ -622,20 +625,7 @@ class _CardsSectionState extends State<CardsSection> {
                   ),
                   InkWell(
                     onTap: () {
-                      setState(() {
-                        print(currentIndex);
-                        double swipeAngle = math.pi;
-                        changeCardProgress(CardGesture.skip, currentIndex);
-                        currentIndex == 0
-                            ? controller1.add(swipeAngle)
-                            : currentIndex == 1
-                                ? controller2.add(swipeAngle)
-                                : currentIndex == 2
-                                    ? controller3.add(swipeAngle)
-                                    : currentIndex == 3
-                                        ? controller4.add(swipeAngle)
-                                        : controller5.add(swipeAngle);
-                      });
+
                     },
                     child: RoundButton(
                       width1: width * 0.07,
@@ -643,7 +633,22 @@ class _CardsSectionState extends State<CardsSection> {
                       height: height * 0.15,
                       width: width * 0.15,
                       iconasset: Common.assetsImages + "dislike icon.png",
-                      onpressed: () {},
+                      onpressed: () {
+                        setState(() {
+                          print(currentIndex);
+                          double swipeAngle = math.pi;
+                          changeCardProgress(CardGesture.skip, currentIndex);
+                          currentIndex == 0
+                              ? controller1.add(swipeAngle)
+                              : currentIndex == 1
+                              ? controller2.add(swipeAngle)
+                              : currentIndex == 2
+                              ? controller3.add(swipeAngle)
+                              : currentIndex == 3
+                              ? controller4.add(swipeAngle)
+                              : controller5.add(swipeAngle);
+                        });
+                      },
                     ),
                   ),
                   InkWell(
@@ -796,20 +801,7 @@ class _CardsSectionState extends State<CardsSection> {
                   ),
                   InkWell(
                     onTap: () {
-                      setState(() {
-                        print(currentIndex);
-                        double swipeAngle = math.pi / 4;
-                        changeCardProgress(CardGesture.skip, currentIndex);
-                        currentIndex == 0
-                            ? controller1.add(swipeAngle)
-                            : currentIndex == 1
-                                ? controller2.add(swipeAngle)
-                                : currentIndex == 2
-                                    ? controller3.add(swipeAngle)
-                                    : currentIndex == 3
-                                        ? controller4.add(swipeAngle)
-                                        : controller5.add(swipeAngle);
-                      });
+
                     },
                     child: RoundButton(
                       width1: width * 0.08,
@@ -817,7 +809,22 @@ class _CardsSectionState extends State<CardsSection> {
                       height: height * 0.15,
                       width: width * 0.15,
                       iconasset: Common.assetsImages + "Vector-2.png",
-                      onpressed: () {},
+                      onpressed: () {
+                        setState(() {
+                          print(currentIndex);
+                          double swipeAngle = math.pi / 4;
+                          changeCardProgress(CardGesture.skip, currentIndex);
+                          currentIndex == 0
+                              ? controller1.add(swipeAngle)
+                              : currentIndex == 1
+                              ? controller2.add(swipeAngle)
+                              : currentIndex == 2
+                              ? controller3.add(swipeAngle)
+                              : currentIndex == 3
+                              ? controller4.add(swipeAngle)
+                              : controller5.add(swipeAngle);
+                        });
+                      },
                     ),
                   ),
                   RoundButton(
@@ -1190,7 +1197,8 @@ class _CardState extends State<Card> {
                               width: width * 0.16,
                               iconasset: Common.assetsImages + "Vector-2.png",
                               onpressed: () {
-                                // _matchEngine.currentItem.like();
+                                //_matchEngine.currentItem.like();
+
                               },
                             ),
                           ],
@@ -1834,131 +1842,145 @@ class _CardState extends State<Card> {
             },
             child: Stack(
               children: [
-                AnimatedContainer(
-                  duration: Duration(milliseconds: 300),
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xff000000).withOpacity(0.03),
-                        blurRadius: 5.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          0, // Move to right 10  horizontally
-                          5.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(16.0),
-                    color: leftOpacity == 1
-                        ? Colors.red.shade100
-                        : rightOpacity == 1
-                            ? Colors.green.shade100
-                            : widget.color,
-                  ),
-                  child: Container(
+                Transform.rotate(
+                  angle:0,
+
+
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: 300),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(width * 0.04),
-                      border: Border.all(
-                        color: AppColors.goldColor,
-                        width: 4,
-                      ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(0.0, 1.0), //(x,y)
-                          blurRadius: 6.0,
+                          color: Color(0xff000000).withOpacity(0.03),
+                          blurRadius: 5.0, // soften the shadow
+                          spreadRadius: 5.0, //extend the shadow
+                          offset: Offset(
+                            0, // Move to right 10  horizontally
+                            5.0, // Move to bottom 10 Vertically
+                          ),
                         ),
                       ],
-                      image: DecorationImage(
-                        image:
-                            AssetImage(Common.assetsImages + "swipeimage.png"),
-                        fit: BoxFit.cover,
-                        colorFilter: leftOpacity == 1
-                            ? ColorFilter.mode(Colors.white70.withOpacity(0.6),
-                                BlendMode.srcOver)
-                            : rightOpacity == 1
-                                ? ColorFilter.mode(
-                                    AppColors.goldColor.withOpacity(0.6),
-                                    BlendMode.srcOver)
-                                : ColorFilter.mode(
-                                    AppColors.goldColor, BlendMode.dstATop),
-                      ),
+                      borderRadius: BorderRadius.circular(16.0),
+                      color: leftOpacity == 1
+                          ? Colors.red.shade100
+                          : rightOpacity == 1
+                              ? Colors.green.shade100
+                              : widget.color,
                     ),
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(
-                          width * 0.04, height * 0.51, width * 0.04, 0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Ethel W. Washington",
-                                style: TextStyle(
-                                    color: AppColors.whiteColor,
-                                    fontSize: height * 0.027),
-                              ),
-                              InkWell(
-                                onTap: () => _onButtonPressed(context),
-                                child: Container(
-                                  width: width * 0.077,
-                                  height: height * 0.077,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                          Common.assetsImages + "i2.png"),
-                                      fit: BoxFit.scaleDown,
-                                    ),
-                                    shape: BoxShape.circle,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Art Manager",
-                                style: TextStyle(
-                                    color: AppColors.whiteColor,
-                                    fontSize: height * 0.019),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(
-                                    width * 0.04, 0, width * 0.01, 0),
-                                child: Image.asset(
-                                  Common.assetsImages + "location.png",
-                                  height: height * 0.03,
-                                  width: width * 0.03,
-                                  color: AppColors.goldColor,
-                                ),
-                              ),
-                              Text(
-                                "10 miles",
-                                style: TextStyle(
-                                    color: AppColors.whiteColor,
-                                    fontSize: height * 0.015),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: AutoSizeText(
-                                  "description",
-                                  style: TextStyle(
-                                      color: AppColors.whiteColor,
-                                      fontSize: height * 0.019),
-                                  maxLines: 2,
-                                ),
-                              ),
-                            ],
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(width * 0.04),
+                        border: Border.all(
+                          color: AppColors.goldColor,
+                          width: 4,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
                           ),
                         ],
+                        image: DecorationImage(
+                          image:
+                              AssetImage(Common.assetsImages + "swipeimage.png"),
+                          fit: BoxFit.cover,
+                          colorFilter: leftOpacity == 1
+                              ? ColorFilter.mode(Colors.white70.withOpacity(0.6),
+                                  BlendMode.srcOver)
+                              : rightOpacity == 1
+                                  ? ColorFilter.mode(
+                                      AppColors.goldColor.withOpacity(0.6),
+                                      BlendMode.srcOver)
+                                  : ColorFilter.mode(
+                                      AppColors.blackColor.withOpacity(0.2), BlendMode.srcOver),
+                        ),
+                      ),
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: width*0.04,right:width*0.04,top:height*0.02,bottom: height*0.01),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              Common.assetsImages + "Group 12.png",
+
+
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Ethel W. Washington",
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: height * 0.027),
+                                    ),
+                                    InkWell(
+                                      onTap: () => _onButtonPressed(context),
+                                      child: Container(
+                                        width: width * 0.077,
+                                        height: height * 0.077,
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            image: AssetImage(
+                                                Common.assetsImages + "i2.png"),
+                                            fit: BoxFit.scaleDown,
+                                          ),
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Art Director",
+                                      style: TextStyle(
+                                          color: AppColors.whiteColor,
+                                          fontSize: height * 0.019),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.fromLTRB(
+                                          width * 0.04, 0, width * 0.01, 0),
+                                      child: Image.asset(
+                                        Common.assetsImages + "location.png",
+                                        height: height * 0.023,
+                                        width: width * 0.023,
+                                        color: AppColors.goldColor,
+                                      ),
+                                    ),
+                                    Text(
+                                      "10 miles",
+                                      style: TextStyle(
+                                          color: AppColors.greyColor,
+                                          fontSize: height * 0.015),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        "Academic Center of Advanced Studies Love Life, and searching for a new magic adventure",
+                                        style: TextStyle(
+                                            color: AppColors.whiteColor,
+                                            fontSize: height * 0.019),
+                                        maxLines: 3,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -1967,7 +1989,7 @@ class _CardState extends State<Card> {
                   top: 40,
                   right: 30,
                   child: Transform.rotate(
-                    angle: 0,
+                    angle: 45,
                     child: AnimatedOpacity(
                       opacity: leftOpacity,
                       duration: Duration(milliseconds: 300),
@@ -2086,75 +2108,78 @@ class SwippedCard extends StatelessWidget {
         ),
       ),
       alignment: Alignment.center,
-      child: Padding(
-        padding:
-            EdgeInsets.fromLTRB(width * 0.04, height * 0.56, width * 0.04, 0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Ethel W. Washington",
-                  style: TextStyle(
-                      color: AppColors.whiteColor, fontSize: height * 0.027),
-                ),
-                InkWell(
-                  //onTap: () => _onButtonPressed(context),
-                  child: Container(
-                    width: width * 0.077,
-                    height: height * 0.077,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(Common.assetsImages + "i2.png"),
-                        fit: BoxFit.scaleDown,
+      child: Column(
+        children: [
+          Text("ff",style: TextStyle(color: Colors.white70),),
+
+
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Ethel W. Washingtn",
+                    style: TextStyle(
+                        color: AppColors.whiteColor, fontSize: height * 0.027),
+                  ),
+                  InkWell(
+                    //onTap: () => _onButtonPressed(context),
+                    child: Container(
+                      width: width * 0.077,
+                      height: height * 0.077,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(Common.assetsImages + "i2.png"),
+                          fit: BoxFit.scaleDown,
+                        ),
+                        shape: BoxShape.circle,
+                        color: Colors.white,
                       ),
-                      shape: BoxShape.circle,
-                      color: Colors.white,
                     ),
                   ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Art Manager",
-                  style: TextStyle(
-                      color: AppColors.whiteColor, fontSize: height * 0.019),
-                ),
-                Padding(
-                  padding:
-                      EdgeInsets.fromLTRB(width * 0.04, 0, width * 0.01, 0),
-                  child: Image.asset(
-                    Common.assetsImages + "location.png",
-                    height: height * 0.03,
-                    width: width * 0.03,
-                  ),
-                ),
-                Text(
-                  "10 miles",
-                  style: TextStyle(
-                      color: AppColors.whiteColor, fontSize: height * 0.015),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: AutoSizeText(
-                    "description",
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Art Manager",
                     style: TextStyle(
                         color: AppColors.whiteColor, fontSize: height * 0.019),
-                    maxLines: 2,
                   ),
-                ),
-              ],
-            ),
-          ],
-        ),
+                  Padding(
+                    padding:
+                        EdgeInsets.fromLTRB(width * 0.04, 0, width * 0.01, 0),
+                    child: Image.asset(
+                      Common.assetsImages + "location.png",
+                      height: height * 0.03,
+                      width: width * 0.03,
+                    ),
+                  ),
+                  Text(
+                    "10 miles",
+                    style: TextStyle(
+                        color: AppColors.whiteColor, fontSize: height * 0.015),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: AutoSizeText(
+                      "description",
+                      style: TextStyle(
+                          color: AppColors.whiteColor, fontSize: height * 0.019),
+                      maxLines: 2,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
