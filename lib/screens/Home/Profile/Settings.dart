@@ -85,20 +85,29 @@ class _SettingsState extends State<Settings> {
                   ]),
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(
-                      width: width * 0.02,
+                    // SizedBox(
+                    //   height: height * 0.02,
+                    // ),
+                    Padding(
+                      padding: EdgeInsets.only(top: height * 0.005),
+                      child: Image.asset(
+                        Common.assetsImages + "Group 638@3x.png",
+                      ),
                     ),
-                    Image.asset(Common.assetsImages + "logo.png"),
                     SizedBox(
                       width: width * 0.09,
                     ),
-                    Text(
-                      "Get the best Deal",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: width * 0.046,
-                          fontWeight: FontWeight.bold),
+                    Padding(
+                      padding: EdgeInsets.only(right: width * 0.2),
+                      child: Text(
+                        "Get the best Deal",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: width * 0.046,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(
                       width: width * 0.07,
