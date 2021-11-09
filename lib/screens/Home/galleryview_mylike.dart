@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 
-class GalleryView extends StatefulWidget {
+class GalleryViewMyLike extends StatefulWidget {
   @override
-  _GalleryViewState createState() => _GalleryViewState();
+  _GalleryViewMyLikeState createState() => _GalleryViewMyLikeState();
 }
 
-class _GalleryViewState extends State<GalleryView> {
+class _GalleryViewMyLikeState extends State<GalleryViewMyLike> {
   List<String> images = [
     "https://placeimg.com/500/500/any",
     "https://placeimg.com/500/500/any",
@@ -21,25 +21,21 @@ class _GalleryViewState extends State<GalleryView> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: Container(
-        child: Container(
-            child: GridView.builder(
-          padding: EdgeInsets.all(width * 0.08),
-          itemCount: images.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 0.88,
-              crossAxisCount: 2,
-              crossAxisSpacing: width * 0.06,
-              mainAxisSpacing: height * 0.03),
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () => setState(() => indexx = index),
-              child: _buildwidget(height, width, index),
-            );
-          },
-        ),
-        ),
+    return Container(
+      child: GridView.builder(
+        padding: EdgeInsets.all(width * 0.08),
+        itemCount: images.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 0.88,
+            crossAxisCount: 2,
+            crossAxisSpacing: width * 0.06,
+            mainAxisSpacing: height * 0.03),
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onTap: () => setState(() => indexx = index),
+            child: _buildwidget(height, width, index),
+          );
+        },
       ),
     );
   }
@@ -108,7 +104,7 @@ class _GalleryViewState extends State<GalleryView> {
                         Common.assetsImages + "location.png",
                         height: height * 0.02,
                         width: width * 0.02,
-                        color: selectedd ? Colors.white :  AppColors.goldColor,
+                        color: selectedd ? Colors.white : AppColors.goldColor,
                       ),
                       SizedBox(
                         width: 3,

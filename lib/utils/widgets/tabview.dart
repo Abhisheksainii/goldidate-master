@@ -3,9 +3,11 @@ import 'package:goldidate/routes/app_routes.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:goldidate/screens/coins_feature/getcoins.dart';
 import 'package:goldidate/screens/Home/classicview.dart';
-import 'package:goldidate/screens/Home/galleryview.dart';
+import 'package:goldidate/screens/Home/galleryview_mylike.dart';
 import 'package:goldidate/screens/Home/allchats.dart';
 import 'package:goldidate/screens/Home/Profile/myProfile.dart';
+
+import 'gallery_tabview.dart';
 
 class TabBarViewPage extends StatefulWidget {
   @override
@@ -65,35 +67,36 @@ class _TabBarViewState extends State<TabBarViewPage>
                       ),
                     ),
                     Tab(
-                      child:
-                      Stack(
+                      child: Stack(
                         clipBehavior: Clip.none,
                         children: [
-                      ImageIcon(
-                AssetImage(Common.assetsImages + "message icon.png"),
-                        color: _tabController.index == 2
-                            ? AppColors.goldColor
-                            : Colors.grey,
-                        size: height * 0.11,
-    ),
-                    Positioned(
-                      left: width*0.13,
-                      bottom: height*0.016,
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-    color: Colors.red,
-                        ),
-                       child: Text("3",style: TextStyle(color: Colors.white),),width: width*0.04,),
-                    ),
-                      ],),
-
-
-
-
+                          ImageIcon(
+                            AssetImage(
+                                Common.assetsImages + "message icon.png"),
+                            color: _tabController.index == 2
+                                ? AppColors.goldColor
+                                : Colors.grey,
+                            size: height * 0.11,
+                          ),
+                          Positioned(
+                            left: width * 0.13,
+                            bottom: height * 0.016,
+                            child: Container(
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.red,
+                              ),
+                              child: Text(
+                                "3",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              width: width * 0.04,
+                            ),
+                          ),
+                        ],
                       ),
-
+                    ),
                     Tab(
                       icon: ImageIcon(
                         AssetImage(Common.assetsImages + "user icon.png"),
@@ -112,7 +115,8 @@ class _TabBarViewState extends State<TabBarViewPage>
                     controller: _tabController,
                     children: [
                       Classicview(),
-                      GalleryView(),
+                      // GalleryView(),
+                      GalleryTabBarViewPage(),
                       AllChats(),
                       MyProfile(),
                     ]),

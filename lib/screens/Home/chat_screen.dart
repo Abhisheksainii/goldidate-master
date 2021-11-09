@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldidate/screens/Home/video_date_page.dart';
 import 'package:goldidate/utils/app_colors.dart';
 import 'package:goldidate/utils/common.dart';
 import 'package:flutter/cupertino.dart';
@@ -362,11 +363,19 @@ class ChatScreen extends StatelessWidget {
                   SizedBox(
                     width: width * 0.04,
                   ),
-                  Image.asset(
-                    Common.assetsIcons + "camera.png",
-                    height: height * 0.05,
-                    width: width * 0.044,
-                    color: AppColors.goldColor,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VideoDatePage()));
+                    },
+                    child: Image.asset(
+                      Common.assetsIcons + "camera.png",
+                      height: height * 0.05,
+                      width: width * 0.044,
+                      color: AppColors.goldColor,
+                    ),
                   ),
                   SizedBox(
                     width: width * 0.027,

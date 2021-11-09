@@ -1,7 +1,7 @@
 name: goldidate
 description: Goldidate Flutter based application for android and ios
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -31,12 +31,13 @@ dependencies:
   url_launcher:
   carousel_slider: ^4.0.0
   flutter_swipable: ^0.1.1
+  image_picker: ^0.8.4+4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:

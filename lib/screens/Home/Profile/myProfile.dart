@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:goldidate/utils/utils_exporter.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import '../auth_verify_page.dart';
+
 class MyProfile extends StatefulWidget {
   @override
   _MyProfileState createState() => _MyProfileState();
@@ -19,22 +21,57 @@ class _MyProfileState extends State<MyProfile> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: width * 0.04, top: height * 0.03),
-              child: InkWell(
-                onTap: () {
-                  Navigator.of(context).pushNamed(AppRoutes.settings);
-                },
+                padding:
+                    EdgeInsets.only(left: width * 0.04, top: height * 0.03),
                 child: Container(
-                  height: height * 0.2,
-                  width: width * 0.4,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        image: AssetImage(Common.assetsImages + "1p.png")),
+                  child: Stack(
+                    children: <Widget>[
+                      // Container(
+                      //   decoration: new BoxDecoration(color: Colors.white),
+                      // alignment: Alignment.center,
+                      // height: 240,
+                      //   child: Image.network(
+                      //     used_car.imageUrl,
+                      //     fit: BoxFit.fill,
+                      //   ),
+                      // ),
+                      Container(
+                        alignment: Alignment.center,
+                        // height: 240,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed(AppRoutes.settings);
+                          },
+                          child: Container(
+                            height: height * 0.2,
+                            width: width * 0.4,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      Common.assetsImages + "1p.png")),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Positioned(
+                        top: 110,
+                        left: 210,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AuthVerifyPage()));
+                          },
+                          child: Icon(Icons.check_circle,
+                              color: Colors.green, size: 30),
+                        ),
+                      )
+                    ],
                   ),
-                ),
-              ),
-            ),
+                )),
             Container(
               height: height * 0.18,
               width: width * 1.0,
@@ -202,13 +239,14 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                 ),
                 child: Padding(
-                  padding:
-                      EdgeInsets.only(left: width * 0.05, right: width * 0.03),
+                  padding: EdgeInsets.only(
+                    left: width * 0.03,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Matching Tip: The best photos are the one\nyou are in...",
+                        "Matching Tip: The best photos are the\none you are in...",
                         style: TextStyle(
                             color: Colors.white, fontSize: width * 0.035),
                       ),
@@ -216,8 +254,8 @@ class _MyProfileState extends State<MyProfile> {
                         onPressed: () {},
                         child: Container(
                           child: Image(
-                            height: height * 0.05,
-                            width: width * 0.05,
+                            height: height * 0.04,
+                            width: width * 0.04,
                             image: AssetImage(
                                 Common.assetsImages + "Path 3072.png"),
                           ),
@@ -307,7 +345,7 @@ class GiftsCard extends StatelessWidget {
         color: Color(0xFFF5F6FA),
       ),
       child: Padding(
-        padding: EdgeInsets.only(top: height * 0.02),
+        padding: EdgeInsets.only(top: height * 0.01),
         child: Container(
           child: Column(
             children: [
@@ -316,7 +354,7 @@ class GiftsCard extends StatelessWidget {
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500),
               ),
               SizedBox(
-                height: height * 0.015,
+                height: height * 0.014,
               ),
               Text(
                 "Boost your profile once a month",
@@ -340,7 +378,7 @@ class GiftsCard extends StatelessWidget {
               ),
               Container(
                 width: width * 0.8,
-                height: height * 0.06,
+                height: height * 0.05,
                 child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor:
