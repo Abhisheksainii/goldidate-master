@@ -71,7 +71,7 @@ class _GalleryViewLikeMeState extends State<GalleryViewLikeMe> {
                 Text(
                   "Goldidate - Everyone love to get gifts",
                   style: TextStyle(
-                      fontSize: width * 0.04, color: Color(0xff532253)),
+                      fontSize: width * 0.041, color: Color(0xff532253)),
                 ),
                 SizedBox(
                   height: height * 0.04,
